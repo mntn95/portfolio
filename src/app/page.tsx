@@ -1,13 +1,7 @@
 import * as React from "react";
 
-import Hero from "@/components/Hero";
+import Hero from "@/components/hero";
 
-const Home = () => {
-    return (
-        <div>
-            <Hero />
-        </div>
-    );
-};
+const Home = () => <Hero />;
 
 export default Home;
