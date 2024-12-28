@@ -1,7 +1,12 @@
 import * as React from "react";
 
-import Hero from "@/components/hero";
+import { About, Hero } from "@/components";
 
-const Home = () => <Hero />;
+const Home = () => (
+    <>
+        <Hero />
+        <About />
+    </>
+);
 
 export default Home;
