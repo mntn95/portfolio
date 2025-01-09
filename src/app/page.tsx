@@ -1,11 +1,12 @@
 import * as React from "react";
 
-import { About, Hero } from "@/components";
+import { About, Hero, Experiences } from "@/components";
 
 const Home = () => (
     <>
         <Hero />
         <About />
+        <Experiences />
     </>
 );
 
