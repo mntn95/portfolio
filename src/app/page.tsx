@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { About, Hero, Experiences, Skills } from "@/components";
+import { About, Experiences, Hero, Reviews, Skills } from "@/components";
 
 const Home = () => (
     <>
@@ -8,6 +8,7 @@ const Home = () => (
         <About />
         <Experiences />
         <Skills />
+        <Reviews />
     </>
 );
 

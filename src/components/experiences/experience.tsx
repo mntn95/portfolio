@@ -7,7 +7,7 @@ import { arrowLeftIcon } from "@/assets";
 
 import { motion } from "framer-motion";
 
-import { isPair } from "./helpers";
+import { isPair } from "../base-components/helpers";
 
 const Experience = ({
     education,
