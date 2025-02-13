@@ -3,3 +3,4 @@ export * from "./experiences";
 export * from "./hero";
 export * from "./reviews";
 export * from "./skills";
+export * from "./projects";
