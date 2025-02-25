@@ -6,6 +6,7 @@ import {
     Hero,
     Reviews,
     Skills,
+    PricingPlans,
     Projects,
 } from "@/components";
 
@@ -17,6 +18,7 @@ const Home = () => (
         <Skills />
         <Reviews />
         <Projects />
+        <PricingPlans />
     </>
 );
 
