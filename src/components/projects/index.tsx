@@ -4,7 +4,7 @@ import React from "react";
 
 import { animate, motion } from "framer-motion";
 
-import Heading from "../base-components/heading";
+import { Heading } from "@/base-components";
 
 import Project from "./project";
 

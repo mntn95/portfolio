@@ -2,12 +2,11 @@
 // This section has client side interactions, we tell next.js to use client side rendering for a smoother experience
 
 import * as React from "react";
+import { motion } from "framer-motion";
 
 import { arrowLeftIcon } from "@/assets";
 
-import { motion } from "framer-motion";
-
-import { isPair } from "../base-components/helpers";
+import { isPair } from "../../base-components/helpers";
 
 const Experience = ({
     education,

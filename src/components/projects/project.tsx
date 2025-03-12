@@ -1,11 +1,10 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import { isPair } from "../base-components/helpers";
+import { Image, isPair } from "@/base-components";
 
 const Project = ({
     data,
@@ -34,8 +33,6 @@ const Project = ({
         >
             <Image
                 src={url}
-                width={400}
-                height={400}
                 className="rounded-lg opacity-70"
                 alt="project-image"
             />

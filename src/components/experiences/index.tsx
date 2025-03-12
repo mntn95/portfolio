@@ -2,19 +2,15 @@
 // This section has client side interactions, we tell next.js to use client side rendering for a smoother experience
 
 import * as React from "react";
-import Image from "next/image";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 import { experiences } from "@/assets";
-
-import { motion, useScroll, useSpring } from "framer-motion";
-import { useRef } from "react";
-
-import Heading from "../base-components/heading";
+import { Heading, Image } from "@/base-components";
 
 import Experience from "./experience";
 
 const Experiences = () => {
-    const containerRef = useRef(null);
+    const containerRef = React.useRef(null);
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -30,8 +26,6 @@ const Experiences = () => {
                 className="absolute -top-4 right-96 opacity-70 lg:hidden"
                 src={"/education.png"}
                 alt="Experience Image"
-                width={400}
-                height={400}
             />
 
             <div
