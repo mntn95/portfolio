@@ -4,10 +4,11 @@ import * as React from "react";
 
 import { aboutData, aboutText, downloadIcon, arrowLeftIcon } from "@/assets";
 import { Image, Heading, Link } from "@/base-components";
+import type { AboutData } from "@/types";
 
 import { Achievements } from "./achievements";
 
-const About = (): React.ReactNode => (
+const About: React.FC = () => (
     <div className="min-h-screen px-96 flex flex-col items-center justify-center">
         <Heading text="About Me" />
         <div className="w-full flex items-center justify-between md:justify-center">
@@ -34,11 +35,13 @@ const About = (): React.ReactNode => (
             </div>
         </div>
         <div className="mt-20 w-full flex flex-wrap items-center justify-between gap-x-7 gap-y-10">
-            {aboutData.map(({ amount, icon, title }, index) => (
-                <Achievements key={index} title={title} amount={amount}>
-                    {icon}
-                </Achievements>
-            ))}
+            {aboutData.map(
+                ({ amount, icon, title }: AboutData, index: number) => (
+                    <Achievements key={index} title={title} amount={amount}>
+                        {icon}
+                    </Achievements>
+                ),
+            )}
         </div>
     </div>
 );

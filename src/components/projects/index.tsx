@@ -5,12 +5,13 @@ import React from "react";
 import { animate, motion } from "framer-motion";
 
 import { Heading } from "@/base-components";
+import type { ProjectData, ProjectsButtonType } from "@/types";
 
 import Project from "./project";
 
 import { projectsData, projectsButton } from "@/assets";
 
-const Projects = (): React.ReactNode => {
+const Projects: React.FC = () => {
     const [tech, setTech] = React.useState<string>("All");
     const [index, setIndex] = React.useState<number>(0);
     const prevIndex = React.useRef<number>(0);
@@ -32,26 +33,28 @@ const Projects = (): React.ReactNode => {
         <div className="min-h-screen py-20 px-80">
             <Heading text="Projects" />
             <div className="flex flex-wrap items-center justify-between gap-4 py-10">
-                {projectsButton.map((label, index) => (
-                    <motion.button
-                        initial={{
-                            opacity: index === 0 ? 1 : 0.5,
-                            scale: index === 0 ? 1.2 : 1,
-                        }}
-                        key={`button-${index}`}
-                        // @ts-expect-error : Typescript doesn't understand slides must be typed as an array to use push
-                        ref={(element: HTMLDivElement) =>
-                            buttonsRef.current.push(element)
-                        }
-                        onClick={() => {
-                            setTech(label);
-                            setIndex(index);
-                        }}
-                        className="border border-yellow-500 rounded-xl px-2 py-1 text-sm font-light tracking-wider text-gray-400"
-                    >
-                        {label}
-                    </motion.button>
-                ))}
+                {projectsButton.map(
+                    (label: ProjectsButtonType, index: number) => (
+                        <motion.button
+                            initial={{
+                                opacity: index === 0 ? 1 : 0.5,
+                                scale: index === 0 ? 1.2 : 1,
+                            }}
+                            key={`button-${index}`}
+                            // @ts-expect-error : Typescript doesn't understand slides must be typed as an array to use push
+                            ref={(element: HTMLDivElement) =>
+                                buttonsRef.current.push(element)
+                            }
+                            onClick={() => {
+                                setTech(label);
+                                setIndex(index);
+                            }}
+                            className="border border-yellow-500 rounded-xl px-2 py-1 text-sm font-light tracking-wider text-gray-400"
+                        >
+                            {label}
+                        </motion.button>
+                    ),
+                )}
             </div>
             <div className="flex flex-wrap items-center justify-center gap-5">
                 {projectsData
@@ -60,7 +63,7 @@ const Projects = (): React.ReactNode => {
                             tech === "All" ? true : item === tech,
                         ),
                     )
-                    .map((data, index) => (
+                    .map((data: ProjectData, index: number) => (
                         <motion.div key={`data-${index}`} layout>
                             <Project index={index} data={data} />
                         </motion.div>

@@ -1,8 +1,9 @@
-export {default as About} from './about'
-export {default as Contact} from './contact'
-export {default as Experiences} from './experiences'
-export {default as Hero} from './hero'
-export {default as PricingPlans} from './pricingPlans'
-export {default as Projects} from './projects'
-export {default as Reviews} from './reviews'
-export {default as Skills} from './skills'
+export { default as About } from "./about";
+export { default as Contact } from "./contact";
+export { default as Experiences } from "./experiences";
+export { default as Hero } from "./hero";
+export { default as PricingPlans } from "./pricingPlans";
+export { default as Projects } from "./projects";
+export { default as Questions } from "./questions";
+export { default as Reviews } from "./reviews";
+export { default as Skills } from "./skills";

@@ -5,23 +5,17 @@ import * as React from "react";
 import { motion } from "framer-motion";
 
 import { arrowLeftIcon } from "@/assets";
+import type { ExperienceProps } from "@/types";
 
 import { isPair } from "../../base-components/helpers";
 
-const Experience = ({
+const Experience: React.FC<ExperienceProps> = ({
     education,
     experience,
     index,
     key,
     title,
     year,
-}: {
-    education: string;
-    experience: Array<string>;
-    index: number;
-    key: string;
-    title: string;
-    year: number;
 }) => (
     <div
         className={`w-[600px] xl:w-[480px] sm:w-full px-12 sm:px-0 relative ${

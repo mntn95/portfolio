@@ -5,10 +5,11 @@ import { animate, motion } from "framer-motion";
 
 import { arrowIcons, reviews } from "@/assets";
 import { Heading, isPair } from "@/base-components";
+import type { ReviewData } from "@/types";
 
 import Review from "./review";
 
-const Reviews = (): React.ReactNode => {
+const Reviews: React.FC = () => {
     const [index, setIndex] = React.useState<number>(0);
     const [direction, setDirection] = React.useState<boolean>(false);
 
@@ -48,7 +49,7 @@ const Reviews = (): React.ReactNode => {
                     transition={{ duration: 0.4 }}
                     className=" relative w-[800px] lg:w-[600px] md:w-[95%] sm:w-[280px] h-[500px] lg:h-[450px] md:h-[400px] sm:h-[600px] flex items-center justify-center overflow-hidden"
                 >
-                    {reviews.map((review, index) => (
+                    {reviews.map((review: ReviewData, index: number) => (
                         <Review
                             {...review}
                             key={index}

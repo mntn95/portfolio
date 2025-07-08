@@ -2,17 +2,10 @@ import * as React from "react";
 import { motion } from "framer-motion";
 
 import { Image } from "@/base-components";
+import type { SkillProps, SkillAnimationVariants } from "@/types";
 
-const Skill = ({
-    icon,
-    index,
-    name,
-}: {
-    icon: string;
-    name: string;
-    index: number;
-}) => {
-    const animationParams = {
+const Skill: React.FC<SkillProps> = ({ icon, index, name }) => {
+    const animationParams: SkillAnimationVariants = {
         visible: (index: number) => ({
             opacity: 1,
             y: 0,
