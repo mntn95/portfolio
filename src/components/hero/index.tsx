@@ -2,17 +2,13 @@
 
 import * as React from "react";
 import { useMotionValue } from "framer-motion";
+import type { WindowOffSet, MouseEventCoords } from "@/types";
 
 import HeroLogo from "./heroLogo";
 import HeroButtons from "./heroButtons";
 
-type HeroT = ({}) => React.ReactNode;
-
-const Hero: HeroT = () => {
-    const [windowOffSet, setWindowOffSet] = React.useState<{
-        innerWidth: number;
-        innerHeight: number;
-    }>({
+const Hero: React.FC = () => {
+    const [windowOffSet, setWindowOffSet] = React.useState<WindowOffSet>({
         innerWidth: 0,
         innerHeight: 0,
     });
@@ -24,13 +20,7 @@ const Hero: HeroT = () => {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
-    const handleMouseMove = ({
-        clientX,
-        clientY,
-    }: {
-        clientX: number;
-        clientY: number;
-    }) => {
+    const handleMouseMove = ({ clientX, clientY }: MouseEventCoords) => {
         x.set(clientX);
         y.set(clientY);
     };

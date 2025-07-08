@@ -5,20 +5,9 @@ import * as React from "react";
 import { motion } from "framer-motion";
 
 import { CheckIcon } from "@/assets";
+import type { PricingPlanProps } from "@/types";
 
-const PricingPlan = ({
-    index,
-    plan,
-}: {
-    index: number;
-    plan: {
-        features: Array<string>;
-        isHighlighted: boolean;
-        pricing: string;
-        recommended: string;
-        title: string;
-    };
-}): React.ReactNode => {
+const PricingPlan: React.FC<PricingPlanProps> = ({ index, plan }) => {
     const { features, isHighlighted, pricing, recommended, title } = plan;
     return (
         <motion.div

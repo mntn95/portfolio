@@ -5,19 +5,9 @@ import * as React from "react";
 import { motion } from "framer-motion";
 
 import { Image, isPair } from "@/base-components";
+import type { ProjectProps } from "@/types";
 
-const Project = ({
-    data,
-    index,
-}: {
-    data: {
-        name: string;
-        desc: string;
-        url: string;
-        tech: (string | undefined)[];
-    };
-    index: number;
-}): React.ReactNode => {
+const Project: React.FC<ProjectProps> = ({ data, index }) => {
     const [show, setShow] = React.useState(false);
 
     const { name, desc, url } = data;

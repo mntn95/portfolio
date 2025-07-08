@@ -2,21 +2,16 @@ import * as React from "react";
 import { motion } from "framer-motion";
 
 import { Image } from "@/base-components";
+import type { ReviewProps } from "@/types";
 
 import { getStarIcon, getStarValue } from "./helpers";
 
-const Review = ({
+const Review: React.FC<ReviewProps> = ({
     comment,
     image,
     name,
     slides,
     stars,
-}: {
-    comment: string;
-    image: string;
-    name: string;
-    slides: Array<HTMLDivElement>;
-    stars: number[];
 }) => (
     <motion.div
         initial={{ x: "100%" }}

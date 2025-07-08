@@ -1,14 +1,11 @@
 import React from "react";
 import { motion, useMotionValue } from "framer-motion";
+import type { AchievementsProps } from "@/types";
 
-const Achievements = ({
+const Achievements: React.FC<AchievementsProps> = ({
     amount,
     children,
     title,
-}: {
-    amount: number;
-    children: React.ReactNode;
-    title: string;
 }) => {
     const number = useMotionValue(0);
 

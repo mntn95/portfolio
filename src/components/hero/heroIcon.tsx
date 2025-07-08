@@ -1,6 +1,7 @@
 import * as React from "react";
+import type { HeroIconProps } from "@/types";
 
-const HeroIcon = ({ icon }: { icon: React.ReactNode }): React.ReactNode => (
+const HeroIcon: React.FC<HeroIconProps> = ({ icon }) => (
     <a
         href="#"
         className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"

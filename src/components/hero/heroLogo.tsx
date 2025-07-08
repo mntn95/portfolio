@@ -6,23 +6,15 @@ import {
     useSpring,
     type MotionValue,
 } from "framer-motion";
+import type { HeroLogoProps } from "@/types";
 
-const HeroLogo = ({
+const HeroLogo: React.FC<HeroLogoProps> = ({
     axisX,
     axisY,
     buttonHover,
     isMouseMoving,
     windowOffSet,
-}: {
-    axisX: MotionValue<number>;
-    axisY: MotionValue<number>;
-    buttonHover: boolean;
-    isMouseMoving: boolean;
-    windowOffSet: {
-        innerWidth: number;
-        innerHeight: number;
-    };
-}): React.ReactNode => {
+}) => {
     const xSpring: MotionValue<number> = useSpring(axisX, {
         stiffness: 100,
         damping: 10,
