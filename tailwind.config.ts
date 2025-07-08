@@ -1,10 +1,22 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".contactField": {
+          padding: ".5rem 1rem",
+          borderRadius: ".25rem",
+          fontWeight: "600",
+        },
+      });
+    }),
   ],
   theme: {
     extend: {
@@ -20,6 +32,5 @@ const config: Config = {
       sm: {max: '639px'}
     }
   },
-  plugins: [],
 };
 export default config;

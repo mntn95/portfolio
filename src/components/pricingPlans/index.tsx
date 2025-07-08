@@ -2,7 +2,8 @@
 
 import * as React from "react";
 
-import Heading from "../base-components/heading";
+import { Heading } from "@/base-components";
+
 import PricingPlan from "./pricingPlan";
 
 import { pricingPlans } from "@/assets";

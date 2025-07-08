@@ -4,10 +4,9 @@ import * as React from "react";
 import { animate, motion } from "framer-motion";
 
 import { arrowIcons, reviews } from "@/assets";
+import { Heading, isPair } from "@/base-components";
 
 import Review from "./review";
-import Heading from "../base-components/heading";
-import { isPair } from "../base-components/helpers";
 
 const Reviews = (): React.ReactNode => {
     const [index, setIndex] = React.useState<number>(0);

@@ -3,8 +3,8 @@
 import * as React from "react";
 
 import { skills } from "@/assets";
+import { Heading } from "@/base-components";
 
-import Heading from "../base-components/heading";
 import Skill from "./skill";
 
 const Skills = (): React.ReactNode => (
