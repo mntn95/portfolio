@@ -5,7 +5,10 @@ import { Heading } from "@/base-components";
 import SkillsList from "./skillsList";
 
 const Skills: React.FC = () => (
-    <div className="min-h-screen flex flex-col items-center justify-center gap-y-20 px-96">
+    <div
+        id="skills"
+        className="min-h-screen flex flex-col items-center justify-center gap-y-20 px-96"
+    >
         <Heading text="Skills" />
         <SkillsList />
     </div>
