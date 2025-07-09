@@ -12,6 +12,7 @@ import {
     Skills,
     PricingPlans,
     Projects,
+    Toggle,
 } from "@/components";
 
 const Home = () => {
@@ -44,9 +45,9 @@ const Home = () => {
     }, []);
 
     return (
-        <>
+        <Toggle>
             <NavBar id={id} />
-            <div ref={componentsRef}>
+            <div className="w-min" ref={componentsRef}>
                 <Hero />
                 <About />
                 <Experiences />
@@ -57,7 +58,7 @@ const Home = () => {
                 <Contact />
                 <Questions />
             </div>
-        </>
+        </Toggle>
     );
 };
 

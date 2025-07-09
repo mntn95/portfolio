@@ -8,3 +8,4 @@ export { default as Projects } from "./projects";
 export { default as Questions } from "./questions";
 export { default as Reviews } from "./reviews";
 export { default as Skills } from "./skills";
+export { default as Toggle } from "./toggle";

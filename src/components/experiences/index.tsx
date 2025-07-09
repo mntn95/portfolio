@@ -21,7 +21,7 @@ const Experiences: React.FC = () => {
     const scrollY = useSpring(scrollYProgress, { stiffness: 200, damping: 20 });
 
     return (
-        <div id="experiences" className="py-20 px-96 relative">
+        <div id="experiences" className="py-20 relative">
             <Heading text={"Experience & Education"} />
             <ExperienceImage src="/education.png" alt="Experience Image" />
 

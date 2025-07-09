@@ -10,7 +10,7 @@ import AboutAchievements from "./aboutAchievements";
 const About: React.FC = () => (
     <div
         id="about"
-        className="min-h-screen px-96 flex flex-col items-center justify-center"
+        className="min-h-screen flex flex-col items-center justify-center"
     >
         <Heading text="About Me" />
         <div className="w-full flex items-center justify-between md:justify-center">

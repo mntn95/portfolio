@@ -5,7 +5,7 @@ import { Heading } from "@/base-components";
 import PricingPlansList from "./pricingPlansList";
 
 const PricingPlans: React.FC = () => (
-    <div id="pricing" className="py-20 px-96">
+    <div id="pricing" className="py-20">
         <Heading text="Pricing Plans" />
         <PricingPlansList />
     </div>
