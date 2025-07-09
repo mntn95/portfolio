@@ -21,12 +21,14 @@ const PricingPlan: React.FC<PricingPlanProps> = ({ index, plan }) => {
             }}
             viewport={{ once: true }}
             key={index}
-            className={`sm:w-[270px] bg-zinc-50 flex flex-col gap-y-6 p-6 border border-red-400 rounded-xl text-gray-600 ${isHighlighted ? "w-[370px] xl:w-[320px] bg-white" : "w-[350px] xl:w-[300px] bg-zinc-50"}`}
+            className={`sm:w-[270px] bg-zinc-50 flex flex-col gap-y-6 p-6 border border-red-400 rounded-xl text-gray-600 dark:bg-zinc-700 transition-colors ${isHighlighted ? "w-[370px] xl:w-[320px] bg-white" : "w-[350px] xl:w-[300px] bg-zinc-50"}`}
         >
-            <h1 className="text-3xl lg:text-lg font-light tracking-wide text-center">
+            <h1 className="text-3xl lg:text-lg font-light tracking-wide text-center dark:text-white transition-colors">
                 {title}
             </h1>
-            <span className="text-2xl lg:text-xl text-center">{pricing}</span>
+            <span className="text-2xl lg:text-xl text-center dark:text-white transition-colors">
+                {pricing}
+            </span>
             <ul className="flex flex-col gap-y-2">
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-x-3">
@@ -35,13 +37,13 @@ const PricingPlan: React.FC<PricingPlanProps> = ({ index, plan }) => {
                         >
                             {CheckIcon}
                         </span>
-                        <span className="text-[15px] font-light tracking-wide">
+                        <span className="text-[15px] font-light tracking-wide dark:text-white transition-colors">
                             {feature}
                         </span>
                     </li>
                 ))}
             </ul>
-            <p className="text-sm font-light text-center">
+            <p className="text-sm font-light text-center dark:text-gray-200 transition-colors">
                 <span className="font-semibold">Ideal for:</span>
                 {recommended}
             </p>

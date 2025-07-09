@@ -15,9 +15,10 @@ const Review: React.FC<ReviewProps> = ({
 }) => (
     <motion.div
         initial={{ x: "100%" }}
-        className="absolute inset-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-4 border border-yellow-500 bg-zinc-50 p-14 lg:p-5 rounded-xl"
-        // @ts-expect-error : Typescript doesn't understand slides must be typed as an array to use push
-        ref={(element: HTMLDivElement) => slides && slides.push(element)}
+        className="absolute inset-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-4 border border-yellow-500 bg-zinc-50 p-14 lg:p-5 rounded-xl dark:bg-zinc-700 transition-colors"
+        ref={(element: HTMLDivElement) => {
+            if (slides) slides.push(element);
+        }}
     >
         <Image
             className="w-[130px] aspect-square rounded-full border border-yellow-500 p-4 object-contain"
@@ -29,7 +30,7 @@ const Review: React.FC<ReviewProps> = ({
         <h1 className="text-2xl md:text-xl text-center tracking-wider text-yellow-600">
             {name}
         </h1>
-        <p className="text-lg md:text-sm text-justify font-extralight tracking-wide text-gray-600 first-letter:pl-2">
+        <p className="text-lg md:text-sm text-justify font-extralight tracking-wide text-gray-600 first-letter:pl-2 dark:text-white transition-colors">
             {comment}
         </p>
         <div className="flex flex-col items-center justify-center gap-y-2">

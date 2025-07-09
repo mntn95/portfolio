@@ -17,7 +17,7 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({ currentId }) => (
                     {item.icon}
                 </span>
                 <span
-                    className={`text-[10px] tracking-wide opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 text-center ${isPair(index) ? "translate-x-2" : "-translate-x-2"} ${item.id === currentId && "translate-x-0 opacity-100"}`}
+                    className={`text-[10px] tracking-wide opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 text-center dark:text-white ${isPair(index) ? "translate-x-2" : "-translate-x-2"} ${item.id === currentId && "translate-x-0 opacity-100"}`}
                 >
                     {item.name}
                 </span>

@@ -12,7 +12,7 @@ type ExperienceImageT = {
 const ExperienceImage: React.FC<ExperienceImageT> = ({
     src,
     alt,
-    className = "absolute -top-4 right-96 opacity-70 lg:hidden",
+    className = "absolute -top-4 right-0 opacity-70 lg:hidden",
 }) => <Image className={className} src={src} alt={alt} />;
 
 export default ExperienceImage;

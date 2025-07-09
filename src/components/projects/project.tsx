@@ -29,12 +29,12 @@ const Project: React.FC<ProjectProps> = ({ data, index }) => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: show ? 1 : 0 }}
-                className="absolute top-0 w-full h-full flex flex-col items-center justify-center grap-y-2 bg-white/95 p-6 rounded-lg"
+                className="absolute top-0 w-full h-full flex flex-col items-center justify-center grap-y-2 bg-white/95 p-6 rounded-lg dark:bg-zinc-700/95 transition-colors"
             >
-                <h2 className="text-lg font-bold tracking-wide text-gray-500">
+                <h2 className="text-lg font-bold tracking-wide text-gray-500 dark:text-white transition-colors">
                     {name}
                 </h2>
-                <p className="text-justify text-gray-500 first-letter:pl-2">
+                <p className="text-justify text-gray-500 first-letter:pl-2 dark:text-gray-100 transition-colors">
                     {desc}
                 </p>
             </motion.div>

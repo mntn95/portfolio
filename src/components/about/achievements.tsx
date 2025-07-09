@@ -36,7 +36,7 @@ const Achievements: React.FC<AchievementsProps> = ({
                 >
                     {number}
                 </motion.span>
-                <span className="text-sm tracking-wide text-gray-500">
+                <span className="text-sm tracking-wide text-gray-500 dark:text-white transition-colors">
                     {title}
                 </span>
             </h1>
