@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
     const [index, setIndex] = React.useState<number>(0);
 
     return (
-        <div className="min-h-screen py-20 px-80">
+        <div id="projects" className="min-h-screen py-20 px-80">
             <Heading text="Projects" />
             <ProjectsButtons
                 setTech={setTech}

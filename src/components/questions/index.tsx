@@ -5,7 +5,7 @@ import { Heading } from "@/base-components";
 import QuestionsList from "./questionsList";
 
 const Questions: React.FC = () => (
-    <div className="py-20 px-96">
+    <div id="questions" className="py-20 px-96">
         <Heading text="Questions and Answers" />
         <QuestionsList />
     </div>
