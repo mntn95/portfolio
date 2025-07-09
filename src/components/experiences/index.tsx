@@ -2,13 +2,13 @@
 // This section has client side interactions, we tell next.js to use client side rendering for a smoother experience
 
 import * as React from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
-
+import { useScroll, useSpring } from "framer-motion";
 import { experiences } from "@/assets";
-import { Heading, Image } from "@/base-components";
+import { Heading } from "@/base-components";
 import type { ExperienceData } from "@/types";
-
 import Experience from "./experience";
+import ExperienceTimeline from "./experienceTimeline";
+import ExperienceImage from "./experienceImage";
 
 const Experiences: React.FC = () => {
     const containerRef = React.useRef(null);
@@ -23,11 +23,7 @@ const Experiences: React.FC = () => {
     return (
         <div className="py-20 px-96 relative">
             <Heading text={"Experience & Education"} />
-            <Image
-                className="absolute -top-4 right-96 opacity-70 lg:hidden"
-                src={"/education.png"}
-                alt="Experience Image"
-            />
+            <ExperienceImage src="/education.png" alt="Experience Image" />
 
             <div
                 ref={containerRef}
@@ -40,11 +36,7 @@ const Experiences: React.FC = () => {
                         key={`experience-${index}`}
                     />
                 ))}
-                <motion.div
-                    className="absolute w-1 h-full rounded-full bg-gray-300 origin-top"
-                    initial={{ scaleY: 0 }}
-                    style={{ scaleY: scrollY }}
-                ></motion.div>
+                <ExperienceTimeline scrollY={scrollY} />
             </div>
         </div>
     );

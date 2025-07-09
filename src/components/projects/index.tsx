@@ -1,74 +1,23 @@
 "use client";
 
 import React from "react";
-
-import { animate, motion } from "framer-motion";
-
 import { Heading } from "@/base-components";
-import type { ProjectData, ProjectsButtonType } from "@/types";
-
-import Project from "./project";
-
-import { projectsData, projectsButton } from "@/assets";
+import ProjectsButtons from "./projectsButtons";
+import ProjectsList from "./projectsList";
 
 const Projects: React.FC = () => {
     const [tech, setTech] = React.useState<string>("All");
     const [index, setIndex] = React.useState<number>(0);
-    const prevIndex = React.useRef<number>(0);
-    const buttonsRef = React.useRef<Array<HTMLDivElement>>([]);
-
-    React.useEffect(() => {
-        animate(buttonsRef.current[prevIndex.current], {
-            opacity: 0.5,
-            scale: 1,
-        });
-        animate(buttonsRef.current[index], {
-            opacity: 1,
-            scale: 1.2,
-        });
-        prevIndex.current = index;
-    }, [index]);
 
     return (
         <div className="min-h-screen py-20 px-80">
             <Heading text="Projects" />
-            <div className="flex flex-wrap items-center justify-between gap-4 py-10">
-                {projectsButton.map(
-                    (label: ProjectsButtonType, index: number) => (
-                        <motion.button
-                            initial={{
-                                opacity: index === 0 ? 1 : 0.5,
-                                scale: index === 0 ? 1.2 : 1,
-                            }}
-                            key={`button-${index}`}
-                            // @ts-expect-error : Typescript doesn't understand slides must be typed as an array to use push
-                            ref={(element: HTMLDivElement) =>
-                                buttonsRef.current.push(element)
-                            }
-                            onClick={() => {
-                                setTech(label);
-                                setIndex(index);
-                            }}
-                            className="border border-yellow-500 rounded-xl px-2 py-1 text-sm font-light tracking-wider text-gray-400"
-                        >
-                            {label}
-                        </motion.button>
-                    ),
-                )}
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-5">
-                {projectsData
-                    .filter((project) =>
-                        project.tech.some((item) =>
-                            tech === "All" ? true : item === tech,
-                        ),
-                    )
-                    .map((data: ProjectData, index: number) => (
-                        <motion.div key={`data-${index}`} layout>
-                            <Project index={index} data={data} />
-                        </motion.div>
-                    ))}
-            </div>
+            <ProjectsButtons
+                setTech={setTech}
+                index={index}
+                setIndex={setIndex}
+            />
+            <ProjectsList tech={tech} />
         </div>
     );
 };
