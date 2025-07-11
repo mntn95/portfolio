@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-interface ThemeIconProps {
-    darkTheme: boolean;
-    showWhenDark: boolean;
-    children: React.ReactNode;
-}
+import type { ThemeIconProps } from "@/types";
 
 const ThemeIcon: React.FC<ThemeIconProps> = ({
     darkTheme,

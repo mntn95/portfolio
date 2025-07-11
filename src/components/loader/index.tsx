@@ -1,0 +1,32 @@
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Image } from "@/base-components";
+
+const Loader = () => {
+    const [isLoading, setIsLoading] = React.useState(true);
+
+    React.useEffect(() => {
+        setIsLoading(true);
+    }, []);
+
+    return (
+        <motion.div
+            initial={{ top: 0 }}
+            animate={{ top: isLoading ? "-100%" : 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-full h-full fixed left-0 top-0 flex items-center justify-center bg-gradient-to-t from-yellow-50 to-red-50 z-50"
+        >
+            {isLoading && (
+                <Image
+                    width={150}
+                    height={150}
+                    src="/catloader.gif"
+                    alt="spinner"
+                />
+            )}
+        </motion.div>
+    );
+};
+
+export default Loader;

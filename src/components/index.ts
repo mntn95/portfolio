@@ -2,6 +2,7 @@ export { default as About } from "./about";
 export { default as Contact } from "./contact";
 export { default as Experiences } from "./experiences";
 export { default as Hero } from "./hero";
+export { default as Loader } from "./loader";
 export { default as NavBar } from "./navBar";
 export { default as PricingPlans } from "./pricingPlans";
 export { default as Projects } from "./projects";

@@ -8,4 +8,5 @@ export * from "./contact";
 export * from "./experiences";
 export * from "./reviews";
 export * from "./skills";
+export * from "./toggle";
 export * from "./base-components";

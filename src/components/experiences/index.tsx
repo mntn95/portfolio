@@ -27,7 +27,7 @@ const Experiences: React.FC = () => {
 
             <div
                 ref={containerRef}
-                className="w-full h-full flex flex-col items-center justify-center gap-y-10 lg:gap-y-20 py-10"
+                className="relative w-full h-full flex flex-col items-center justify-center gap-y-10 lg:gap-y-20 py-10"
             >
                 {experiences.map((item: ExperienceData, index: number) => (
                     <Experience

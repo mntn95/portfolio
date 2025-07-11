@@ -28,7 +28,7 @@ const ExperienceCard: React.FC<ExperienceCardT> = ({
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        className="relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 tracking-wide sm:text-sm dark:bg-zinc-700 transition-colors"
+        className="relative flex flex-col gap-y-3 rounded-md border border-red-300 bg-white p-4 tracking-wide sm:text-sm dark:bg-zinc-700 transition-colors z-20"
     >
         <h1 className="text-xl sm:text-lg font-light text-gray-700 dark:text-white">
             {title}

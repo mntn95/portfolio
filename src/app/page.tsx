@@ -6,6 +6,7 @@ import {
     Contact,
     Experiences,
     Hero,
+    Loader,
     Questions,
     NavBar,
     Reviews,
@@ -45,20 +46,23 @@ const Home = () => {
     }, []);
 
     return (
-        <Toggle>
-            <NavBar id={id} />
-            <div className="w-min" ref={componentsRef}>
-                <Hero />
-                <About />
-                <Experiences />
-                <Skills />
-                <Reviews />
-                <Projects />
-                <PricingPlans />
-                <Contact />
-                <Questions />
-            </div>
-        </Toggle>
+        <>
+            <Loader />
+            <Toggle>
+                <NavBar id={id} />
+                <div className="w-min" ref={componentsRef}>
+                    <Hero />
+                    <About />
+                    <Experiences />
+                    <Skills />
+                    <Reviews />
+                    <Projects />
+                    <PricingPlans />
+                    <Contact />
+                    <Questions />
+                </div>
+            </Toggle>
+        </>
     );
 };
 

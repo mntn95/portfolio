@@ -3,7 +3,6 @@
 import * as React from "react";
 import { useMotionValue } from "framer-motion";
 import type { WindowOffSet, MouseEventCoords } from "@/types";
-import HeroLogo from "./heroLogo";
 import HeroButtons from "./heroButtons";
 import HeroContent from "./heroContent";
 
@@ -42,14 +41,13 @@ const Hero: React.FC = () => {
             onMouseEnter={handleMouseEnter}
         >
             <div>
-                <HeroLogo
+                <HeroContent
                     axisX={x}
                     axisY={y}
                     buttonHover={buttonHover}
                     isMouseMoving={isMouseMoving}
                     windowOffSet={windowOffSet}
                 />
-                <HeroContent />
                 <HeroButtons setButtonHover={setButtonHover} />
             </div>
         </div>

@@ -7,7 +7,7 @@ import SkillsList from "./skillsList";
 const Skills: React.FC = () => (
     <div
         id="skills"
-        className="min-h-screen flex flex-col items-center justify-center gap-y-20"
+        className="min-h-screen flex flex-col justify-center gap-y-20"
     >
         <Heading text="Skills" />
         <SkillsList />

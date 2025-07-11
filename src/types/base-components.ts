@@ -9,7 +9,7 @@ export interface BaseImageProps {
     alt: string;
     width?: number;
     height?: number;
-    className: string;
+    className?: string;
 }
 
 export interface LinkProps {

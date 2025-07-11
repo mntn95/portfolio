@@ -4,7 +4,7 @@ import { navbarData } from "@/assets";
 import type { NavBarNavigationProps } from "@/types";
 
 const NavBarNavigation: React.FC<NavBarNavigationProps> = ({ currentId }) => (
-    <div className="flex flex-col gap-y-3 sm:gap-y-2">
+    <div className="flex flex-col gap-y-3 sm:gap-y-2 xl:gap-y-1 xs:gap-y-0">
         {navbarData.map((item, index) => (
             <Link
                 key={index}
@@ -12,7 +12,7 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({ currentId }) => (
                 href={`/#${item.id}`}
             >
                 <span
-                    className={`text-2xl group-hover:scale-125 transition-all ${item.id === currentId ? "text-red-500 scale-110" : "text-yellow-600 scale-100"}`}
+                    className={`text-2xl group-hover:scale-125 xl:group-hover:scale-115 xs:group-hover:scale-100 transition-all ${item.id === currentId ? "text-red-500 scale-110 xl:scale-100 xs:scale-80" : "text-yellow-600 scale-100 xl:scale-90 xs:scale-70"}`}
                 >
                     {item.icon}
                 </span>

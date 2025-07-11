@@ -45,7 +45,7 @@ const HeroLogo: React.FC<HeroLogoProps> = ({
             }}
         >
             <Image
-                src={"/person.png"}
+                src={"/avataaarsmat1.png"}
                 alt="My Image"
                 width={400}
                 height={400}

@@ -18,6 +18,8 @@ export interface HeroLogoProps {
     windowOffSet: WindowOffSet;
 }
 
+export type HeroContentProps = HeroLogoProps;
+
 export interface HeroButtonsProps {
     setButtonHover: (bool: boolean) => void;
 }

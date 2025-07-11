@@ -2,10 +2,11 @@
 import React from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 import { sunIcon, moonIcon } from "@/assets";
+import type { ToggleProps } from "@/types";
 
 import ThemeIcon from "./themeIcon";
 
-const Toggle: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const Toggle: React.FC<ToggleProps> = ({ children }) => {
     const [darkTheme, setDarkTheme] = React.useState(false);
 
     const mainRef = React.useRef<HTMLDivElement>(null);
@@ -39,8 +40,8 @@ const Toggle: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div className="bg-zinc-50 dark:bg-zinc-800">
                 <div className="max-w-[1200px] xl:w-full mx-auto flex justify-center xl:px-[90px] sm:pl-[80px] sm:pr-5 overflow-hidden">
                     <button
-                        onClick={() => toggleDarkTheme(darkTheme)}
-                        className="fixed right-14 sm:right-10 top-10 text-yellow-600 hover:text-yellow-500"
+                        onClick={() => toggleDarkTheme(!darkTheme)}
+                        className="fixed right-14 sm:right-10 top-10 text-yellow-600 hover:text-yellow-500 z-40"
                     >
                         <ThemeIcon darkTheme={darkTheme} showWhenDark={false}>
                             {moonIcon}

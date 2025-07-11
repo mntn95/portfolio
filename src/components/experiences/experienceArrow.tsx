@@ -9,7 +9,7 @@ type ExperienceArrowT = {
 
 const ExperienceArrow: React.FC<ExperienceArrowT> = ({ isPair }) => (
     <span
-        className={`absolute top-20 text-red-300 -translate-y-1/2 ${
+        className={`absolute top-20 text-red-300 -translate-y-1/2 lg:hidden ${
             isPair ? "left-full rotate-180" : "right-full"
         }`}
     >

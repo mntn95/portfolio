@@ -14,7 +14,7 @@ const About: React.FC = () => (
     >
         <Heading text="About Me" />
         <div className="w-full flex items-center justify-between md:justify-center">
-            <AboutImage src="/about-me.png" alt="About Image" />
+            <AboutImage src="/aboutme.gif" alt="About Image" />
             <AboutTextContent text={aboutText} />
         </div>
         <AboutAchievements />
