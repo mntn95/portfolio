@@ -21,6 +21,8 @@ export interface LinkProps {
 
 export interface HeroIconProps {
     icon: React.ReactNode;
+    href: string;
+    index: number;
 }
 
 export interface NavBarProps {

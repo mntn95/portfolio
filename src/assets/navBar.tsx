@@ -6,7 +6,6 @@ export const copyRightIcon = <CopyrightLineIcon />;
 
 import Home5LineIcon from "remixicon-react/Home5LineIcon";
 import UserLineIcon from "remixicon-react/UserLineIcon";
-import HistoryLineIcon from "remixicon-react/HistoryLineIcon";
 import BriefcaseLineIcon from "remixicon-react/BriefcaseLineIcon";
 import UserStarLineIcon from "remixicon-react/UserStarLineIcon";
 import ProjectorLineIcon from "remixicon-react/ProjectorLineIcon";
@@ -26,24 +25,19 @@ export const navbarData = [
         icon: <UserLineIcon />,
     },
     {
-        id: "experiences",
-        name: "MyRoad",
-        icon: <HistoryLineIcon />,
-    },
-    {
         id: "skills",
         name: "Skills",
         icon: <BriefcaseLineIcon />,
     },
     {
-        id: "reviews",
-        name: "Reviews",
-        icon: <UserStarLineIcon />,
-    },
-    {
         id: "projects",
         name: "Projects",
         icon: <ProjectorLineIcon />,
+    },
+    {
+        id: "reviews",
+        name: "Reviews",
+        icon: <UserStarLineIcon />,
     },
     {
         id: "pricing",

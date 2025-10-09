@@ -5,6 +5,7 @@ import { useMotionValue } from "framer-motion";
 import type { WindowOffSet, MouseEventCoords } from "@/types";
 import HeroButtons from "./heroButtons";
 import HeroContent from "./heroContent";
+import ParticlesBackground from "./particlesBackground";
 
 const Hero: React.FC = () => {
     const [windowOffSet, setWindowOffSet] = React.useState<WindowOffSet>({
@@ -36,19 +37,22 @@ const Hero: React.FC = () => {
     return (
         <div
             id="home"
-            className="h-screen grid place-items-center"
+            className="h-screen w-full relative grid place-items-center"
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
         >
-            <div>
-                <HeroContent
-                    axisX={x}
-                    axisY={y}
-                    buttonHover={buttonHover}
-                    isMouseMoving={isMouseMoving}
-                    windowOffSet={windowOffSet}
-                />
-                <HeroButtons setButtonHover={setButtonHover} />
+            <ParticlesBackground />
+            <div className="relative z-10 w-full flex justify-center pointer-events-none">
+                <div className="w-full max-w-[calc(100vw-70px)]">
+                    <HeroContent
+                        axisX={x}
+                        axisY={y}
+                        buttonHover={buttonHover}
+                        isMouseMoving={isMouseMoving}
+                        windowOffSet={windowOffSet}
+                    />
+                    <HeroButtons setButtonHover={setButtonHover} />
+                </div>
             </div>
         </div>
     );

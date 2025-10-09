@@ -12,7 +12,7 @@ type AboutImageT = {
 const AboutImage: React.FC<AboutImageT> = ({
     src,
     alt,
-    className = "w-[300px] lg:w-[200px] md:hidden",
+    className = "w-[300px] lg:w-[200px] md:hidden lg:hidden",
 }) => <Image src={src} alt={alt} className={className} />;
 
 export default AboutImage;

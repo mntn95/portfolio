@@ -3,6 +3,7 @@ export * from "./experiences";
 export * from "./hero";
 export * from "./navBar";
 export * from "./pricing";
+export * from "./particlesConfig";
 export * from "./projects";
 export * from "./questions";
 export * from "./reviews";

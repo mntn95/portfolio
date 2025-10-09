@@ -4,7 +4,6 @@ import * as React from "react";
 import {
     About,
     Contact,
-    Experiences,
     Hero,
     Loader,
     Questions,
@@ -50,13 +49,15 @@ const Home = () => {
             <Loader />
             <Toggle>
                 <NavBar id={id} />
-                <div className="w-min" ref={componentsRef}>
+                <div
+                    className="w-full mx-auto max-w-[calc(100vw-600px)] lg:max-w-[calc(100vw-400px)] md:max-w-[calc(100vw-200px)] sm:max-w-[calc(100vw-100px)]"
+                    ref={componentsRef}
+                >
                     <Hero />
                     <About />
-                    <Experiences />
                     <Skills />
-                    <Reviews />
                     <Projects />
+                    <Reviews />
                     <PricingPlans />
                     <Contact />
                     <Questions />

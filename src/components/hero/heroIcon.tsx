@@ -1,10 +1,15 @@
 import * as React from "react";
 import type { HeroIconProps } from "@/types";
 
-const HeroIcon: React.FC<HeroIconProps> = ({ icon }) => (
+const HeroIcon: React.FC<HeroIconProps> = ({ icon, href, index }) => (
     <a
-        href="#"
-        className="rounded-lg hover:bg-red-400 hover:text-white transition-colors"
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative rounded-lg hover:bg-red-400 hover:text-white transition-colors"
+        style={{
+            top: index === 1 ? "1px" : "0px",
+        }}
     >
         {icon}
     </a>

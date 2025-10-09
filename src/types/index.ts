@@ -10,3 +10,10 @@ export * from "./reviews";
 export * from "./skills";
 export * from "./toggle";
 export * from "./base-components";
+
+// Déclaration globale pour particles.js
+declare global {
+    interface Window {
+        particlesJS: (id: string, config: unknown) => void;
+    }
+}

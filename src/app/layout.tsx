@@ -1,28 +1,23 @@
 import type { Metadata } from "next";
-import {Outfit} from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 
 import "./globals.css";
 
-
-const outfit = Outfit({subsets: ['latin']});
+const outfit = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mathieu Nguyen",
-  description: "My Portfolio Website",
+    title: "Mathieu Nguyen",
+    description: "My Portfolio Website",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={outfit.className}
-      >
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={outfit.className}>{children}</body>
+        </html>
+    );
 }

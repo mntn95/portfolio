@@ -10,7 +10,7 @@ type AboutTextContentT = {
 
 const AboutTextContent: React.FC<AboutTextContentT> = ({ text }) => (
     <div className="relative max-w-[800px] rounded-xl bg-zinc-100 p-5 text-justify dark:bg-zinc-700 translate-x-0">
-        <span className="absolute -left-5 top-20 scale-[2.5] text-zinc-100 md:hidden dark:text-zinc-700 transition-colors">
+        <span className="absolute -left-5 top-20 scale-[2.5] text-zinc-100 md:hidden lg:hidden dark:text-zinc-700 transition-colors">
             {arrowLeftIcon}
         </span>
         <p className="text-lg font-light text-gray-700 first-letter:pl-3 lg:text-[16px] sm:text-[14px] dark:text-white transition-colors">
