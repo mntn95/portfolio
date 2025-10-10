@@ -3,11 +3,12 @@ import React from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 import { sunIcon, moonIcon } from "@/assets";
 import type { ToggleProps } from "@/types";
+import { useTheme } from "@/hooks/useTheme";
 
 import ThemeIcon from "./themeIcon";
 
 const Toggle: React.FC<ToggleProps> = ({ children }) => {
-    const [darkTheme, setDarkTheme] = React.useState(false);
+    const { darkTheme, setDarkTheme } = useTheme();
 
     const mainRef = React.useRef<HTMLDivElement>(null);
 
@@ -56,4 +57,5 @@ const Toggle: React.FC<ToggleProps> = ({ children }) => {
         </main>
     );
 };
+
 export default Toggle;

@@ -6,6 +6,7 @@ import type { WindowOffSet, MouseEventCoords } from "@/types";
 import HeroButtons from "./heroButtons";
 import HeroContent from "./heroContent";
 import ParticlesBackground from "./particlesBackground";
+import ScrollArrow from "./scrollArrow";
 
 const Hero: React.FC = () => {
     const [windowOffSet, setWindowOffSet] = React.useState<WindowOffSet>({
@@ -37,12 +38,12 @@ const Hero: React.FC = () => {
     return (
         <div
             id="home"
-            className="h-screen w-full relative grid place-items-center"
+            className="h-screen w-full relative flex flex-col"
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
         >
             <ParticlesBackground />
-            <div className="relative z-10 w-full flex justify-center pointer-events-none">
+            <div className="relative z-10 w-full flex-1 flex justify-center items-center pointer-events-none">
                 <div className="w-full max-w-[calc(100vw-70px)]">
                     <HeroContent
                         axisX={x}
@@ -54,6 +55,7 @@ const Hero: React.FC = () => {
                     <HeroButtons setButtonHover={setButtonHover} />
                 </div>
             </div>
+            <ScrollArrow />
         </div>
     );
 };
