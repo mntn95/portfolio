@@ -10,17 +10,17 @@ type AboutTextContentT = {
 
 const AboutTextContent: React.FC<AboutTextContentT> = ({ text }) => (
     <div className="relative max-w-[800px] text-justify translate-x-0">
-        <p className="text-lg font-light text-gray-700 lg:text-[16px] sm:text-[14px] dark:text-white/70 transition-colors">
+        <ul className="text-lg sm:text-sm font-light text-gray-700 lg:text-[16px] sm:text-[14px] dark:text-white/70 transition-colors">
             {text.map((item, index) => (
-                <p key={index}>{item}</p>
+                <li key={index}>{item}</li>
             ))}
-        </p>
+        </ul>
         <Link
             className="w-max flex items-center gap-x-2 mt-6 rounded-full border border-gray-300 bg-red-400 px-3 py-2 font-light text-white hover:bg-red-500 transition-colors"
             href="/my-cv.pdf"
             isDownloadLink
         >
-            <span>Download CV</span>
+            <span>Télécharger CV</span>
             <span className="text-xl">{downloadIcon}</span>
         </Link>
     </div>

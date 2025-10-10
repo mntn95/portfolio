@@ -8,7 +8,7 @@ import AboutTextContent from "./aboutTextContent";
  */
 const About: React.FC = () => (
     <div id="about" className="min-h-screen flex flex-col justify-center">
-        <Heading text="About Me" />
+        <Heading text="À propos de moi" />
         <div className="w-full flex items-center justify-between md:justify-center">
             <AboutTextContent text={aboutText} />
         </div>

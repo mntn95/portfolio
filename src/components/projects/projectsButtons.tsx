@@ -49,7 +49,7 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
                             setTech(label);
                             setIndex(buttonIndex);
                         }}
-                        className="border border-yellow-500 rounded-xl px-2 py-1 text-sm font-light tracking-wider text-gray-400"
+                        className="border border-yellow-500 rounded-xl px-2 py-1 text-sm font-light tracking-wider bg-zinc-200 dark:bg-zinc-700 text-gray-600 dark:text-white"
                     >
                         {label}
                     </motion.button>

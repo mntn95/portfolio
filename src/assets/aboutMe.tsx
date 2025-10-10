@@ -33,8 +33,8 @@ export const downloadIcon = <DownloadLineIcon />;
 export const arrowLeftIcon = <ArrowLeftSFillIcon />;
 
 export const aboutText = [
-    "Je suis un développeur front-end passionné par la création d’interfaces web où design, performance et accessibilité se rencontrent. Ce que j’aime, c’est transformer une idée en une expérience fluide et intuitive, où chaque interaction compte.",
-    "Au fil de mes expériences, j’ai eu l’occasion de travailler sur des projets variés, du site e-commerce international aux outils internes d’entreprise, toujours avec la même exigence: concevoir des produits performants, durables et agréables à utiliser.",
-    "Je me spécialise dans l'écosystème Javascript tout en restant ouvert et adaptable à d’autres technologies selon les besoins.",
-    "Chaque projet est une nouvelle aventure. Si vous voulez construire la vôtre, je serais ravi de collaborer avec vous !",
+    "Je suis développeur front-end. Mon truc c’est concevoir des interfaces web claires, rapides et durables, qui montrent clairement ce que vous faites et pourquoi on devrait vous faire confiance. J’aime prendre vos idées et les faire grandir, pour qu’elles deviennent plus fortes, plus claires et plus impactantes que vous ne l’imaginiez.",
+    "J’ai déjà exploré plusieurs domaines : e-commerce, restauration, CRM, SaaS... et je suis impatient de me lancer dans de nouvelles expériences. Mon objectif reste le même : réaliser des produits solides, agréables à utiliser et faits pour durer.",
+    "Je me sens chez moi dans l’écosystème JavaScript, mais j’aime aussi explorer d’autres technologies quand le contexte l’exige.",
+    "Pour moi, chaque projet est une aventure unique. Si vous avez envie de donner vie à une idée ou de créer quelque chose de nouveau, je serais ravi d’en discuter avec vous !",
 ];
