@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
 
     return (
         <div id="projects" className="min-h-screen py-20 xs:py-10">
-            <Heading text="Projects" />
+            <Heading text="Projets" />
             <ProjectsButtons
                 setTech={setTech}
                 index={index}

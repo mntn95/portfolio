@@ -1,18 +1,11 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
-import { Image } from "@/base-components";
 import type { ReviewProps } from "@/types";
 
 import { getStarIcon, getStarValue } from "./helpers";
 
-const Review: React.FC<ReviewProps> = ({
-    comment,
-    image,
-    name,
-    slides,
-    stars,
-}) => (
+const Review: React.FC<ReviewProps> = ({ comment, name, slides, stars }) => (
     <motion.div
         initial={{ x: "100%" }}
         className="absolute inset-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-4 border border-yellow-500 bg-zinc-50 p-14 lg:p-5 rounded-xl dark:bg-zinc-700 transition-colors"
@@ -20,13 +13,6 @@ const Review: React.FC<ReviewProps> = ({
             if (slides) slides.push(element);
         }}
     >
-        <Image
-            className="w-[130px] aspect-square rounded-full border border-yellow-500 p-4 object-contain"
-            src={image}
-            alt="Reviews Image"
-            width={130}
-            height={130}
-        />
         <h1 className="text-2xl md:text-xl text-center tracking-wider text-yellow-600">
             {name}
         </h1>
