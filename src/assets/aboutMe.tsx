@@ -32,5 +32,9 @@ import ArrowLeftSFillIcon from "remixicon-react/ArrowLeftSFillIcon";
 export const downloadIcon = <DownloadLineIcon />;
 export const arrowLeftIcon = <ArrowLeftSFillIcon />;
 
-export const aboutText =
-    "Hi, I'm Mathieu, a Front-End Web Developer specializing in React. I build dynamic, responsive user interfaces using a modern tech stack that includes Next.js for server-side rendering, TypeScript or Flow for robust, type-safe code and Tailwind CSS for streamlined styling. With a strong attention to detail and a passion for delivering smooth user experiences, I’m dedicated to creating scalable applications that make a real impact. Let’s bring your vision to life!";
+export const aboutText = [
+    "Je suis un développeur front-end passionné par la création d’interfaces web où design, performance et accessibilité se rencontrent. Ce que j’aime, c’est transformer une idée en une expérience fluide et intuitive, où chaque interaction compte.",
+    "Au fil de mes expériences, j’ai eu l’occasion de travailler sur des projets variés, du site e-commerce international aux outils internes d’entreprise, toujours avec la même exigence: concevoir des produits performants, durables et agréables à utiliser.",
+    "Je me spécialise dans l'écosystème Javascript tout en restant ouvert et adaptable à d’autres technologies selon les besoins.",
+    "Chaque projet est une nouvelle aventure. Si vous voulez construire la vôtre, je serais ravi de collaborer avec vous !",
+];
