@@ -7,6 +7,7 @@ export * from "./about";
 export * from "./contact";
 export * from "./experiences";
 export * from "./reviews";
+export * from "./services";
 export * from "./skills";
 export * from "./toggle";
 export * from "./base-components";

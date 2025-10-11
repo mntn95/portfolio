@@ -10,3 +10,4 @@ export { default as Questions } from "./questions";
 export { default as Reviews } from "./reviews";
 export { default as Skills } from "./skills";
 export { default as Toggle } from "./toggle";
+export { default as Services } from "./services";

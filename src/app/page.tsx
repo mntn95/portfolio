@@ -10,9 +10,9 @@ import {
     NavBar,
     Reviews,
     Skills,
-    PricingPlans,
     Projects,
     Toggle,
+    Services,
 } from "@/components";
 
 const Home = () => {
@@ -58,7 +58,7 @@ const Home = () => {
                     <Skills />
                     <Projects />
                     <Reviews />
-                    <PricingPlans />
+                    <Services />
                     <Contact />
                     <Questions />
                 </div>

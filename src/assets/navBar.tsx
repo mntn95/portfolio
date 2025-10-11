@@ -40,8 +40,8 @@ export const navbarData = [
         icon: <UserStarLineIcon />,
     },
     {
-        id: "pricing",
-        name: "Pricing",
+        id: "services",
+        name: "Services",
         icon: <PriceTag3LineIcon />,
     },
     {
