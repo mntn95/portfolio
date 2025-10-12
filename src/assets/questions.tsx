@@ -1,49 +1,41 @@
 export const questions = [
     {
-        question: "How much do you charge for a website?",
-        answer: "Our website packages usually range from £2997 – £4997. However it really depends on what kind of website you need. We recently wrote a full guide on how much it costs for a website to give you an idea of the different options available.",
-    },
-    {
-        question: "Why are you so expensive?",
-        answer: "he process we use to build your website takes a certain amount of time and a lot of planning and research. Unlike other agencies, we DON’T use templates. We build your website from scratch, which means you get a unique design tailored around your business. Buying a website from us should not just simply be seen as a business expense as your website is a sales tool that should earn you money",
-    },
-    {
-        question: "How long does it take to build a website?",
-        answer: "It takes approximately 6-10 weeks to build a website from start to finish, providing we have all the information from you. Our full web design process is broken down here. Generally speaking, the website will only take a long time if we are still waiting for text and images from yourself.",
-    },
-    {
-        question: "How do we communicate throughout the website build?",
-        answer: "Before we begin working together, we’ll usually have an initially chat on the phone or via Skype to discuss the project. Once we get started, most of the communication will take place over email. This makes the process a lot easier as we’ll have all of the information saved and can come back to it later. Once we’ve finished the project, we will book in your 1hr digital marketing training session.",
-    },
-    {
-        question: "What will you need from me?",
-        answer: "It really depends on what type of website you want. We’ll be able to discuss this on our discovery call before we start working together. Depending on which package we agree on we could need…",
-    },
-    {
-        question: "What if I don’t like the website?",
-        answer: "You’re in luck. We offer a risk-free guarantee. Before we build your new website, we’ll design a mockup of your homepage. We’ll design a layout in Photoshop first, that way you’ll get to see our initial designs within approximately ten days. This is your opportunity to give us feedback and if you really don’t like it, you don’t have to move forward. Best part is, this won’t cost you anything.",
-    },
-    {
-        question: "Do you offer a payment schedule?",
-        answer: "Yes, we split the payment into two. The first 50% is usually taken once you have seen the mockup of your homepage and you’re happy to move forward. The following 50% is taken 30 days after this.",
+        question: "Combien coûte un site web ?",
+        answer: "Le tarif dépend surtout du type de projet et du niveau de personnalisation. Pour vous donner une idée, une landing page est à partir de 500€ tandis qu’une version plus aboutie, optimisée pour la conversion, se situe plutôt entre 1000€ et 1500€. Un site vitrine coûte généralement entre 1500€ et 3000€. Pour les projets plus complexes, nous pourrons discuter ensemble du budget.",
     },
     {
         question:
-            "Can I make the final payment when the site is ready to go live?",
-        answer: "No. In the past we have found that projects can take a lot longer than expected to complete. We might be waiting for information from you and this can delay the process. Sometimes these delays can take months. This is why we always invoice 30 days after the original payment. At this point we’ll be well on our way with your new website and you’ll be able to see the progress.",
+            "Pourquoi vos tarifs peuvent sembler plus élevés qu'ailleurs ?",
+        answer: "Le processus que j'utilise pour construire votre site web prend un certain temps car il nécessite beaucoup de planning et de recherche. Contrairement à d'autres collègues, je n'utilise pas de templates. Votre site web est construit à partir de zéro, ce qui signifie que vous obtenez un résultat unique adapté à votre demande. M'acheter un site web ne doit pas simplement être vu comme une dépense mais plutôt comme un investissement. C'est un outil de vente qui vous rapportera de l'argent à terme et vous remboursera largement le coût initial.",
     },
     {
-        question: "Who hosts the website?",
-        answer: "If we build your website, we will generally manage the hosting for you so you don’t need to do anything. We use the same hosting company for our own website and for ALL our clients. Each website is managed individually to avoid any security issues. Every website we build has unlimited bandwidth, 20GB of disk space, 2GB Ram and 99.9% uptime. We’ve used the same company for 5 years and we don’t plan on changing this anytime soon.",
+        question: "Combien de temps faut-il pour créer un site ?",
+        answer: "Une landing page peut être créée en environ 1 semaine, tandis qu'un site vitrine prend généralement entre 3 et 6 semaines selon la taille du projet et la réactivité des échanges. Les projets plus complexes, la durée est définie au cas par cas après analyse, car chaque projet est unique.",
     },
     {
-        question: "Can I update the website myself once it’s been built?",
-        answer: "Yes. We like to offer the ability for our clients to update the website themselves. We we’ll give you all the training and tools to be able to make website amendments. We use a easy to use platform called WordPress so you can add edit and delete content without paying us to do it for you.",
+        question: "Comment se déroule la communication pendant le projet ?",
+        answer: "Tout commence par un appel découverte pour comprendre vos besoins. Ensuite, nous communiquerons principalement par email ou par messages, pour garder une trace claire des échanges.Je vous enverrai des points d'avancement réguliers et vous pourrez suivre le développement à chaque étape.",
+    },
+    {
+        question: "Et si le site ne me plaît pas ?",
+        answer: "Pas d’inquiétude. Avant de commencer le développement, je vous présente une maquette ou un aperçu du rendu final. Vous pourrez me faire vos retours à cette étape et nous ajusterons jusqu’à obtenir un résultat conforme à vos attentes. Rien n’est lancé sans votre validation.",
+    },
+    {
+        question: "Comment fonctionnent les paiements ?",
+        answer: "Tout dépend du type de projet. Pour les créations de sites web, je vous demanderai un acompte de 50% avant de commencer le développement. Le reste sera payé à la livraison du projet. Pour les missions en freelance, je propose une tarification au TJM ou au livrable mais nous pourrons en rediscuter ensemble. Pour la maintenance, je propose un paiement mensuel ou annuel.",
+    },
+    {
+        question: "Puis-je payer uniquement lorsque le site est en ligne ?",
+        answer: "Non, car la plus grande partie du travail est réalisée bien avant la mise en ligne. Je facture selon le calendrier convenu au départ. Cela permet d’assurer un rythme régulier et une bonne organisation de part et d’autre.",
+    },
+    {
+        question: "Qui s’occupe de l’hébergement ?",
+        answer: "Deux options s’offrent à vous : Vous gérez votre propre hébergement (je vous accompagne pour le configurer), ou je m’en occupe dans le cadre d’un forfait de maintenance mensuel. J'utilise le même hébergeur pour tous mes clients (sauf demande particulière), ce qui rend la gestion plus simple et permet de garantir une sécurité optimale.",
     },
     {
         question:
-            "What if I don’t want to manage the website at all. Can you do it all for me?",
-        answer: "Yes, we can arrange a maintenance package to suit your needs. This can range from 1hr per month to 10 hours per month and we can discuss a package that’s right for you.",
+            "Puis-je avoir accès au code source une fois le projet terminé ?",
+        answer: "Absolument. Le code vous appartient une fois le projet livré. Vous pourrez y accéder librement pour le modifier, le faire évoluer ou le transmettre à un autre développeur. Si vous optez pour une offre de maintenance, j’en reste le responsable technique tant que le suivi est actif, afin d’assurer la cohérence du projet.",
     },
 ];
 

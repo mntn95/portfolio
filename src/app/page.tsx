@@ -3,7 +3,6 @@ import * as React from "react";
 
 import {
     About,
-    Contact,
     Hero,
     Loader,
     Questions,
@@ -59,7 +58,6 @@ const Home = () => {
                     <Projects />
                     <Reviews />
                     <Services />
-                    <Contact />
                     <Questions />
                 </div>
             </Toggle>

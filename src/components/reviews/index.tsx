@@ -11,7 +11,7 @@ const Reviews: React.FC = () => {
 
     return (
         <div id="reviews" className="my-20">
-            <Heading text="Reviews" />
+            <Heading text="Avis" />
             <div className="mt-5 flex flex-col items-center justify-center">
                 <ReviewsCarousel index={index} direction={direction} />
                 <ReviewsNavigation

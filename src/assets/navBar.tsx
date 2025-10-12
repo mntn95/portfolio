@@ -10,18 +10,17 @@ import BriefcaseLineIcon from "remixicon-react/BriefcaseLineIcon";
 import UserStarLineIcon from "remixicon-react/UserStarLineIcon";
 import ProjectorLineIcon from "remixicon-react/ProjectorLineIcon";
 import PriceTag3LineIcon from "remixicon-react/PriceTag3LineIcon";
-import ContactsBook2LineIcon from "remixicon-react/ContactsBook2LineIcon";
 import QuestionAnswerLineIcon from "remixicon-react/QuestionAnswerLineIcon";
 
 export const navbarData = [
     {
         id: "home",
-        name: "Home",
+        name: "Accueil",
         icon: <Home5LineIcon />,
     },
     {
         id: "about",
-        name: "About",
+        name: "À propos",
         icon: <UserLineIcon />,
     },
     {
@@ -31,23 +30,18 @@ export const navbarData = [
     },
     {
         id: "projects",
-        name: "Projects",
+        name: "Projets",
         icon: <ProjectorLineIcon />,
     },
     {
         id: "reviews",
-        name: "Reviews",
+        name: "Avis",
         icon: <UserStarLineIcon />,
     },
     {
         id: "services",
-        name: "Services",
+        name: "Prestations",
         icon: <PriceTag3LineIcon />,
-    },
-    {
-        id: "contact",
-        name: "Contact",
-        icon: <ContactsBook2LineIcon />,
     },
     {
         id: "questions",

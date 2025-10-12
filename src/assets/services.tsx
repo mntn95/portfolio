@@ -2,43 +2,43 @@ export const services = [
     {
         variant: "software-dev" as const,
         title: "Création de sites web sur mesure",
-        subtitle: "Concevez un site moderne, rapide et adapté à vos besoins.",
+        subtitle:
+            "Je crée des sites qui inspirent confiance et convertissent vos visiteurs en clients.",
         description: [
             "Chaque projet est unique : je m’adapte à votre identité, vos objectifs et votre budget.",
-            "Avec ou sans maquette (je peux travailler à partir de vos designs ou en créer un avec un designer partenaire).",
+            "Avec ou sans maquette : je peux travailler à partir de vos designs ou en créer avec un designer partenaire.",
         ],
         examples: [
             {
-                title: "Exemples de formats",
+                title: "Exemples",
                 content: [
-                    "- Site vitrine : artisan, PME, startup, coach, agence, indépendant.",
-                    "- Landing page : lancement produit, campagne marketing, événement, SaaS, application mobile.",
-                    "- Portfolio / site créatif : photographe, designer, artiste, freelance, studio.",
-                    "- Site e-commerce : boutique custom (Next.js, React) ou CMS (Shopify, WooCommerce) selon les besoins.",
-                    "- Blog ou magazine : site éditorial, blog pro, contenu SEO-friendly (custom ou CMS).",
+                    "- Site vitrine pour votre activité ou entreprise.",
+                    "- Landing page axée sur la conversion.",
+                    "- Portfolio créatif ou site personnel.",
+                    "- Plateforme e-commerce",
+                    "- Blog ou magazine",
                 ],
             },
         ],
     },
     {
         variant: "frontend-dev" as const,
-        title: "Développement front-end",
+        title: "Collaboration front-end",
         subtitle:
-            "Je vous rejoins sur votre projet web pour booster votre front.",
+            "J’intègre vos effectifs pour construire ou faire évoluer votre projet web.",
         description: [
-            "Je peux intervenir en freelance en début ou en cours de projet, selon vos besoins.",
+            "Je rejoins vos équipes en freelance pour assurer la qualité et la continuité de votre développement.",
+            "Je m’adapte à vos outils, process et rythme de travail.",
         ],
         examples: [
             {
-                title: "Ce que je peux apporter",
+                title: "Exemples",
                 content: [
-                    "- Intégration de maquettes (Figma, XD, Sketch) → HTML/CSS/JS propres et responsives.",
-                    "- Développement front avec React, Next.js, SCSS, Twig, etc.",
-                    "- Création de composants UI réutilisables & design systems modulaires (Storybook, shadcn/ui, Tailwind).",
-                    "- Optimisation de performance (Core Web Vitals, Lighthouse, images, code splitting).",
-                    "- Accessibilité (a11y) et respect des standards W3C.",
-                    "- Intégration d’API (CMS headless, formulaires, envois d’emails, paiements, etc.).",
-                    "- SEO technique & structure front optimisée.",
+                    "- Mission courte ou longue en collaboration directe avec votre staff.",
+                    "- Intégration ou refonte d’interfaces existantes.",
+                    "- Participation aux revues de code.",
+                    "- Mise en place ou évolution d’un design system.",
+                    "- Collaboration avec les designers et le backend.",
                 ],
             },
         ],
@@ -47,21 +47,18 @@ export const services = [
         variant: "flutter-dev" as const,
         title: "Maintenance & support",
         subtitle: "Restez concentré sur votre activité, je m'occupe du reste.",
-        description: ["blablabla"],
+        description: [
+            "Je prends en charge l'hébergement et la maintenance de votre produit.",
+        ],
         examples: [
             {
-                title: "Maintenance technique",
+                title: "Exemples",
                 content: [
                     "- Hébergement, mises à jour, sauvegardes automatiques.",
                     "- Vérification sécurité et performance.",
                     "- Suivi continu + rapports réguliers.",
-                ],
-            },
-            {
-                title: "Support & évolutions",
-                content: [
-                    "- Correction de bugs, ajustements ou évolutions visuelles.",
-                    "- Petites nouvelles fonctionnalités, intégrations d’API ou contenus.",
+                    "- Interventions correctives sur demande.",
+                    "- Nouvelles fonctionnalités, intégrations d’API ou contenus.",
                 ],
             },
         ],
