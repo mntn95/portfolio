@@ -8,8 +8,8 @@ const HeroButtons: React.FC<HeroButtonsProps> = () => (
     <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className="mt-8 flex justify-center gap-x-5 text-3xl text-yellow-600 sm:text-2xl pointer-events-auto"
+        transition={{ delay: 1.8 }}
+        className="mt-8 flex justify-center gap-x-5 text-3xl text-link sm:text-2xl pointer-events-auto"
     >
         {heroLinks.map(({ href, icon }, index) => (
             <HeroIcon href={href} icon={icon} key={index} index={index} />

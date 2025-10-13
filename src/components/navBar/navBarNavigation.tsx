@@ -12,12 +12,12 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({ currentId }) => (
                 href={`/#${item.id}`}
             >
                 <span
-                    className={`text-2xl group-hover:scale-125 xl:group-hover:scale-115 xs:group-hover:scale-100 transition-all ${item.id === currentId ? "text-red-500 scale-110 xl:scale-100 xs:scale-80" : "text-yellow-600 scale-100 xl:scale-90 xs:scale-70"}`}
+                    className={`text-2xl group-hover:scale-125 xl:group-hover:scale-115 xs:group-hover:scale-100 transition-all ${item.id === currentId ? "text-warning scale-110 xl:scale-100 xs:scale-80" : "text-link scale-100 xl:scale-90 xs:scale-70"}`}
                 >
                     {item.icon}
                 </span>
                 <span
-                    className={`text-[10px] tracking-wide opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 text-center dark:text-white ${isPair(index) ? "translate-x-2" : "-translate-x-2"} ${item.id === currentId && "translate-x-0 opacity-100"}`}
+                    className={`text-[10px] tracking-wide opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 text-center text-theme-light-text dark:text-theme-dark-text ${isPair(index) ? "translate-x-2" : "-translate-x-2"} ${item.id === currentId && "translate-x-0 opacity-100"}`}
                 >
                     {item.name}
                 </span>

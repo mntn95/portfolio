@@ -18,7 +18,7 @@ const ReviewsNavigation: React.FC<ReviewsNavigationT> = ({
     const isIndexLength = index === reviews.length - 1;
 
     return (
-        <div className="flex gap-x-4 text-4xl text-yellow-500 mt-5">
+        <div className="flex gap-x-4 text-4xl text-link mt-5">
             <button
                 className={`${isIndexZero ? "opacity-30 pointer-events-none" : "opacity-100 pointer-events-auto"} hover:scale-150 transition-all`}
                 onClick={() => {

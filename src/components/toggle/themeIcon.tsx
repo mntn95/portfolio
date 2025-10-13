@@ -9,7 +9,7 @@ const ThemeIcon: React.FC<ThemeIconProps> = ({
 }) => (
     <motion.span
         animate={{ scale: darkTheme === showWhenDark ? 1 : 0 }}
-        className="absolute block rounded-full bg-zinc-50 p-1 text-4xl dark:bg-zinc-800"
+        className="absolute block rounded-full bg-white p-1 text-4xl dark:bg-theme-dark-background"
     >
         {children}
     </motion.span>

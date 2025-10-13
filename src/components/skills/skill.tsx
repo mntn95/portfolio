@@ -28,7 +28,7 @@ const Skill: React.FC<SkillProps> = ({ icon, index, name }) => {
             whileHover={{ scale: 1.1 }}
             viewport={{ margin: "50px", once: true }}
             key={index}
-            className="flex items-center justify-center gap-x-3 rounded-xl border border-yellow-500 bg-zinc-200 dark:bg-zinc-700 px-5 py-2 lg:px-2"
+            className="flex items-center justify-center gap-x-3 rounded-xl border border-border bg-theme-light-surface dark:bg-theme-dark-surface px-5 py-2 lg:px-2"
         >
             <Image
                 src={icon}
@@ -37,7 +37,9 @@ const Skill: React.FC<SkillProps> = ({ icon, index, name }) => {
                 height={100}
                 className="h-[40px] w-auto"
             />
-            <p className="text-sm text-gray-600 dark:text-white">{name}</p>
+            <p className="text-sm text-theme-light-text dark:text-theme-dark-text">
+                {name}
+            </p>
         </motion.div>
     );
 };

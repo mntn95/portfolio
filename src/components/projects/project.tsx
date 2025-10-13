@@ -15,7 +15,7 @@ const Project: React.FC<ProjectProps> = ({ data, index }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: isPair(index) ? 100 : -100 }}
-            className="relative w-[350px] sm:w-full h-max border border-yellow-400 rounded-lg cursor-pointer"
+            className="relative w-[350px] sm:w-full h-max border border-border rounded-lg cursor-pointer"
             whileInView={{ opacity: 1, y: 0 }}
             onClick={() => setShow(!show)}
             viewport={{ once: true }}
@@ -29,12 +29,12 @@ const Project: React.FC<ProjectProps> = ({ data, index }) => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: show ? 1 : 0 }}
-                className="absolute top-0 w-full h-full flex flex-col items-center justify-center grap-y-2 bg-white p-6 rounded-lg dark:bg-zinc-700/95 transition-colors"
+                className="absolute top-0 w-full h-full flex flex-col items-center justify-center grap-y-2 bg-text-white p-6 rounded-lg dark:bg-theme-dark-surface/95 transition-colors"
             >
-                <h2 className="text-lg font-bold tracking-wide text-gray-500 dark:text-white transition-colors">
+                <h2 className="text-lg font-bold tracking-wide text-theme-light-text dark:text-theme-dark-text transition-colors">
                     {name}
                 </h2>
-                <p className="text-justify text-gray-500 first-letter:pl-2 dark:text-gray-100 transition-colors">
+                <p className="text-justify text-theme-light-text first-letter:pl-2 dark:text-theme-dark-text transition-colors">
                     {desc}
                 </p>
             </motion.div>

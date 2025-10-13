@@ -10,7 +10,7 @@ const getParticlesConfig = (isDarkTheme: boolean) => ({
             },
         },
         color: {
-            value: isDarkTheme ? "#ffffff" : "#374151", // Blanc pour dark, gris foncé pour light
+            value: isDarkTheme ? "#ffffff" : "#374151", // mapped in theme: particle.dark / particle.light
         },
         shape: {
             type: "circle",
@@ -42,7 +42,7 @@ const getParticlesConfig = (isDarkTheme: boolean) => ({
         line_linked: {
             enable: true,
             distance: 150,
-            color: isDarkTheme ? "#ffffff" : "#374151", // Lignes adaptées au thème
+            color: isDarkTheme ? "#ffffff" : "#374151", // mapped in theme: particle.dark / particle.light
             opacity: isDarkTheme ? 0.2 : 0.5, // Plus visibles en light
             width: 1,
         },

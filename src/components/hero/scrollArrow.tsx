@@ -19,12 +19,12 @@ const ScrollArrow: React.FC = () => {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 0.8 }}
+            transition={{ delay: 2, duration: 0.8 }}
             className="flex justify-center items-end pb-8 z-20 pointer-events-auto"
         >
             <motion.button
                 onClick={scrollToAbout}
-                className="group flex flex-col items-center text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300"
+                className="group flex flex-col items-center text-theme-light-text dark:text-theme-dark-text transition-colors duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
             >

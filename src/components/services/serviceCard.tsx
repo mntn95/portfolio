@@ -48,7 +48,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, service }) => {
             }}
             viewport={{ once: true }}
             key={index}
-            className={`flex flex-col items-center gap-y-4 p-6 rounded-lg border border-yellow-400 text-gray-600 dark:text-white bg-zinc-50 dark:bg-zinc-700 transition-all duration-300 hover:shadow-lg`}
+            className={`flex flex-col items-center gap-y-4 p-6 rounded-lg border border-border text-theme-light-text dark:text-theme-dark-text bg-theme-light-surface dark:bg-theme-dark-surface transition-all duration-300 hover:shadow-lg`}
         >
             <div className="flex justify-center">{icon}</div>
             <h3 className="text-xl font-bold mb-2 text-center">
@@ -73,7 +73,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, service }) => {
                     <h4
                         className={classNames(
                             "text-sm font-semibold mb-2",
-                            "text-red-400",
+                            "text-warning",
                         )}
                     >
                         {example.title}
