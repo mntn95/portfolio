@@ -12,15 +12,18 @@ const Toggle: React.FC<ToggleProps> = ({ children }) => {
 
     const mainRef = React.useRef<HTMLDivElement>(null);
 
-    const toggleDarkTheme = (value: boolean) => {
-        if (value) {
-            mainRef.current?.classList.add("dark");
-        } else {
-            mainRef.current?.classList.remove("dark");
-        }
-        setDarkTheme(value);
-        reactLocalStorage.set("darkTheme", value);
-    };
+    const toggleDarkTheme = React.useCallback(
+        (value: boolean) => {
+            if (value) {
+                mainRef.current?.classList.add("dark");
+            } else {
+                mainRef.current?.classList.remove("dark");
+            }
+            setDarkTheme(value);
+            reactLocalStorage.set("darkTheme", value);
+        },
+        [setDarkTheme],
+    );
 
     React.useEffect(() => {
         const darkTheme = reactLocalStorage.get("darkTheme");
@@ -34,7 +37,7 @@ const Toggle: React.FC<ToggleProps> = ({ children }) => {
             darkTheme === undefined ? systemTheme : darkThemeParsed;
 
         toggleDarkTheme(shouldUseDarkTheme);
-    }, []);
+    }, [toggleDarkTheme]);
 
     return (
         <main ref={mainRef}>
