@@ -1,25 +1,5 @@
 import type { Config } from "tailwindcss";
 import twColors from "tailwindcss/colors";
-import {
-    oneDark,
-    dracula,
-    nord,
-    catppuccin,
-    solarized,
-    gruvbox,
-    monokai,
-    material,
-    fluent,
-    glassmorphism,
-    tailwindUI,
-    horizon,
-    neumorphism,
-    nightOwl,
-    github,
-    awwwards,
-    dribbble,
-    softPastelDark,
-} from "./src/lib/theme_collection";
 
 const config: Config = {
     content: [
@@ -32,7 +12,21 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                ...monokai.colors,
+                border: "var(--color-border)",
+                warning: "var(--color-warning)",
+                link: "var(--color-link)",
+                theme: {
+                    light: {
+                        background: "var(--color-theme-light-background)",
+                        surface: "var(--color-theme-light-surface)",
+                        text: "var(--color-theme-light-text)",
+                    },
+                    dark: {
+                        background: "var(--color-theme-dark-background)",
+                        surface: "var(--color-theme-dark-surface)",
+                        text: "var(--color-theme-dark-text)",
+                    },
+                },
             },
         },
         screens: {

@@ -5,3 +5,18 @@
 html {
     scroll-behavior: smooth !important;
 }
+
+/* Default CSS variables for theming (will be overridden by runtime switcher) */
+:root {
+    --color-border: #61afef;
+    --color-warning: #e06c75;
+    --color-link: #61afef;
+
+    --color-theme-light-background: #fafafa;
+    --color-theme-light-surface: #e5e5e5;
+    --color-theme-light-text: #383a42;
+
+    --color-theme-dark-background: #282c34;
+    --color-theme-dark-surface: #21252b;
+    --color-theme-dark-text: #abb2bf;
+}

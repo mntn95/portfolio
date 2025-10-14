@@ -1,0 +1,43 @@
+import {
+    oneDark,
+    dracula,
+    nord,
+    catppuccin,
+    solarized,
+    gruvbox,
+    monokai,
+    material,
+    fluent,
+    glassmorphism,
+    tailwindUI,
+    horizon,
+    neumorphism,
+    nightOwl,
+    github,
+    awwwards,
+    dribbble,
+    softPastelDark,
+} from "./theme_collection";
+
+export const THEMES = {
+    oneDark,
+    dracula,
+    nord,
+    catppuccin,
+    solarized,
+    gruvbox,
+    monokai,
+    material,
+    fluent,
+    glassmorphism,
+    tailwindUI,
+    horizon,
+    neumorphism,
+    nightOwl,
+    github,
+    awwwards,
+    dribbble,
+    softPastelDark,
+} as const;
+
+export type ThemeName = keyof typeof THEMES;
