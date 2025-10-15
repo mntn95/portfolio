@@ -17,6 +17,7 @@ export interface LinkProps {
     className?: string;
     children: React.ReactNode;
     isDownloadLink?: boolean;
+    onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export interface HeroIconProps {
@@ -27,10 +28,13 @@ export interface HeroIconProps {
 
 export interface NavBarProps {
     id: string;
+    orientation?: "horizontal" | "vertical";
 }
 
 export interface NavBarNavigationProps {
-    currentId: string;
+    layout: "row" | "col";
+    showLabelsOnHover: boolean;
+    onItemClick?: (id: string) => void;
 }
 
 export interface NavBarItemData {

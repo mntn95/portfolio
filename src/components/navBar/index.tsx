@@ -1,15 +1,113 @@
 import React from "react";
 import type { NavBarProps } from "@/types";
-import NavBarLogo from "./navBarLogo";
 import NavBarNavigation from "./navBarNavigation";
-import NavBarCopyright from "./navBarCopyright";
+import MenuLineIcon from "remixicon-react/MenuLineIcon";
+import {
+    lockBodyScroll,
+    unlockBodyScroll,
+    smoothScrollToId,
+    trapFocus,
+} from "@/lib/ui/navHelpers";
 
-const NavBar: React.FC<NavBarProps> = ({ id }) => (
-    <div className="dark:bg-theme-dark-background bg-theme-light-background w-[70px] h-full fixed left-0 top-0 flex flex-col justify-between border-r border-theme-light-gray200 dark:border-theme-dark-gray200 px-4 py-10 xl:py-6 z-10">
-        <NavBarLogo />
-        <NavBarNavigation currentId={id} />
-        <NavBarCopyright />
-    </div>
-);
+const NavBar: React.FC<NavBarProps> = ({ id }) => {
+    const [open, setOpen] = React.useState(false);
+    const drawerRef = React.useRef<HTMLDivElement | null>(null);
+    const cleanupTrapRef = React.useRef<null | (() => void)>(null);
+
+    React.useEffect(() => {
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setOpen(false);
+            }
+        };
+        if (open) {
+            document.addEventListener("keydown", onKeyDown);
+            lockBodyScroll();
+            const drawerEl = drawerRef.current;
+            if (drawerEl) {
+                // Focus first focusable element
+                const firstLink =
+                    drawerEl.querySelector<HTMLElement>("a[href]");
+                firstLink?.focus();
+                cleanupTrapRef.current = trapFocus(drawerEl);
+            }
+        } else {
+            document.removeEventListener("keydown", onKeyDown);
+            unlockBodyScroll();
+            if (cleanupTrapRef.current) {
+                cleanupTrapRef.current();
+                cleanupTrapRef.current = null;
+            }
+        }
+        return () => {
+            document.removeEventListener("keydown", onKeyDown);
+            if (cleanupTrapRef.current) {
+                cleanupTrapRef.current();
+                cleanupTrapRef.current = null;
+            }
+            unlockBodyScroll();
+        };
+    }, [open]);
+
+    return (
+        <nav className="w-full z-30 pointer-events-auto">
+            {/* Mobile top bar: burger */}
+            <div className="hidden absolute top-0 left-0 md:flex w-full items-center justify-between py-3 px-4 z-30">
+                <button
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded={open}
+                    onClick={() => setOpen(true)}
+                    className="text-link"
+                >
+                    <MenuLineIcon />
+                </button>
+            </div>
+
+            {/* Desktop top bar: horizontal nav */}
+            <div className="flex md:hidden w-full items-center justify-end py-4 px-6 z-30">
+                <NavBarNavigation layout="row" showLabelsOnHover={true} />
+            </div>
+            <div
+                ref={drawerRef}
+                role="dialog"
+                aria-modal="true"
+                className={`fixed inset-y-0 left-0 w-80 bg-theme-light-background dark:bg-theme-dark-background border-r border-theme-light-gray200 dark:border-theme-dark-gray200 overflow-y-auto transform transition-transform duration-200 ease-out z-50 hidden md:block ${open ? "translate-x-0" : "-translate-x-full"}`}
+            >
+                <div className="flex items-center justify-between py-3 px-4">
+                    <span className="text-sm text-theme-light-text dark:text-theme-dark-text">
+                        Menu
+                    </span>
+                    <button
+                        type="button"
+                        aria-label="Close menu"
+                        aria-expanded={open}
+                        onClick={() => setOpen(false)}
+                        className="text-link"
+                    >
+                        ✕
+                    </button>
+                </div>
+                <div className="px-4 pb-6">
+                    <NavBarNavigation
+                        layout="col"
+                        showLabelsOnHover={false}
+                        onItemClick={(sectionId: string) => {
+                            setOpen(false);
+                            smoothScrollToId(sectionId);
+                        }}
+                    />
+                </div>
+            </div>
+            {/* Overlay */}
+            {open && (
+                <div
+                    className="fixed inset-0 bg-black/40 z-40 hidden md:block"
+                    onClick={() => setOpen(false)}
+                />
+            )}
+        </nav>
+    );
+};
 
 export default NavBar;

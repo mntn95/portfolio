@@ -10,14 +10,16 @@ export const metadata: Metadata = {
     description: "My Portfolio Website",
 };
 
-export default function RootLayout({
+const RootLayout: React.FC<{
+    children: React.ReactNode;
+}> = ({
     children,
 }: Readonly<{
     children: React.ReactNode;
-}>) {
-    return (
-        <html lang="en">
-            <body className={outfit.className}>{children}</body>
-        </html>
-    );
-}
+}>) => (
+    <html lang="en">
+        <body className={outfit.className}>{children}</body>
+    </html>
+);
+
+export default RootLayout;

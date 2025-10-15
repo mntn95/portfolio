@@ -30,6 +30,7 @@ const config: Config = {
             },
         },
         screens: {
+            xxl: { min: "1401px" },
             xl: { max: "1400px" },
             lg: { max: "1150px" },
             md: { max: "767px" },

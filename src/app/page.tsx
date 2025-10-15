@@ -48,10 +48,7 @@ const Home = () => {
             <Loader />
             <Toggle>
                 <NavBar id={id} />
-                <div
-                    className="w-full mx-auto max-w-[calc(100vw-600px)] lg:max-w-[calc(100vw-400px)] md:max-w-[calc(100vw-200px)] sm:max-w-[calc(100vw-100px)]"
-                    ref={componentsRef}
-                >
+                <div className="w-full mx-auto" ref={componentsRef}>
                     <Hero />
                     <About />
                     <Skills />

@@ -109,7 +109,7 @@ const ParticlesBackground: React.FC = () => {
         <div
             ref={particlesRef}
             id="particles-js"
-            className="absolute inset-0 w-screen h-full"
+            className="absolute inset-0 w-screen h-full pointer-events-none"
             style={{ zIndex: 0, left: "calc(-50vw + 50%)" }}
         />
     );

@@ -42,10 +42,10 @@ const Toggle: React.FC<ToggleProps> = ({ children }) => {
     return (
         <main ref={mainRef}>
             <div className="bg-theme-light-background dark:bg-theme-dark-background">
-                <div className="w-full mx-auto flex justify-start xl:px-[90px] sm:pl-[80px] sm:pr-5 overflow-hidden">
+                <div className="w-full mx-auto flex flex-col justify-start px-5 md:px-10 xl:px-[90px] overflow-hidden">
                     <button
                         onClick={() => toggleDarkTheme(!darkTheme)}
-                        className="fixed right-14 sm:right-10 top-10 text-link z-40"
+                        className="fixed right-14 sm:right-10 top-10 text-link z-30"
                     >
                         <ThemeIcon darkTheme={darkTheme} showWhenDark={false}>
                             {moonIcon}
