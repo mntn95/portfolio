@@ -8,3 +8,4 @@ export { default as Reviews } from "./reviews";
 export { default as Skills } from "./skills";
 export { default as Toggle } from "./toggle";
 export { default as Services } from "./services";
+export { default as Footer } from "./footer";

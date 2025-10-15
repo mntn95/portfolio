@@ -3,6 +3,7 @@
 import * as React from "react";
 import { animate, motion } from "framer-motion";
 import { projectsButton } from "@/assets";
+import cn from "classnames";
 import type { ProjectsButtonType } from "@/types";
 
 type ProjectsButtonsT = {
@@ -48,11 +49,15 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
                             setTech(label);
                             setIndex(buttonIndex);
                         }}
-                        className={`border border-border rounded-xl px-2 py-1 text-sm font-light tracking-wider bg-theme-light-surface dark:bg-theme-dark-surface text-theme-light-text dark:text-theme-dark-text ${
-                            buttonIndex === index
-                                ? "opacity-100"
-                                : "opacity-50 hover:opacity-100"
-                        }`}
+                        className={cn(
+                            "border border-border rounded-xl px-2 py-1 text-sm font-light tracking-wider",
+                            "bg-theme-light-surface dark:bg-theme-dark-surface text-theme-light-text dark:text-theme-dark-text",
+                            {
+                                "opacity-100": buttonIndex === index,
+                                "opacity-50 hover:opacity-100":
+                                    buttonIndex !== index,
+                            },
+                        )}
                     >
                         {label}
                     </motion.button>

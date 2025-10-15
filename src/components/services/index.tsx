@@ -1,21 +1,15 @@
 "use client";
 
 import * as React from "react";
-import { Heading } from "@/base-components";
+import { Layout } from "@/base-components";
 import ServicesList from "./servicesList";
 
 const Services: React.FC = () => (
-    <>
-        <Heading text="Prestations" />
-        <div
-            id="services"
-            className="min-h-screen flex flex-col items-center justify-center px-4"
-        >
-            <div className="w-full max-w-6xl mx-auto">
-                <ServicesList />
-            </div>
+    <Layout id="services" title="Prestations">
+        <div className="w-full max-w-6xl mx-auto">
+            <ServicesList />
         </div>
-    </>
+    </Layout>
 );
 
 export default Services;

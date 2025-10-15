@@ -6,7 +6,7 @@ import type { WindowOffSet, MouseEventCoords } from "@/types";
 import HeroButtons from "./heroButtons";
 import HeroContent from "./heroContent";
 import ParticlesBackground from "./particlesBackground";
-import ScrollArrow from "./scrollArrow";
+import { Layout } from "@/base-components";
 
 const Hero: React.FC = () => {
     const [windowOffSet, setWindowOffSet] = React.useState<WindowOffSet>({
@@ -36,27 +36,27 @@ const Hero: React.FC = () => {
     };
 
     return (
-        <div
-            id="home"
-            className="h-screen w-full relative flex flex-col"
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-        >
-            <ParticlesBackground />
-            <div className="relative z-0 w-full flex-1 flex justify-center items-center">
-                <div className="w-full max-w-full">
-                    <HeroContent
-                        axisX={x}
-                        axisY={y}
-                        buttonHover={buttonHover}
-                        isMouseMoving={isMouseMoving}
-                        windowOffSet={windowOffSet}
-                    />
-                    <HeroButtons setButtonHover={setButtonHover} />
+        <Layout id="home" showHeading={false}>
+            <div
+                className="h-full w-full relative flex flex-col"
+                onMouseMove={handleMouseMove}
+                onMouseEnter={handleMouseEnter}
+            >
+                <ParticlesBackground />
+                <div className="relative z-0 w-full flex-1 flex justify-center items-center">
+                    <div className="w-full max-w-full">
+                        <HeroContent
+                            axisX={x}
+                            axisY={y}
+                            buttonHover={buttonHover}
+                            isMouseMoving={isMouseMoving}
+                            windowOffSet={windowOffSet}
+                        />
+                        <HeroButtons setButtonHover={setButtonHover} />
+                    </div>
                 </div>
             </div>
-            <ScrollArrow />
-        </div>
+        </Layout>
     );
 };
 

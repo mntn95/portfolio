@@ -1,9 +1,13 @@
 export const smoothScrollToId = (id: string): void => {
     if (typeof document === "undefined") return;
     const el = document.getElementById(id);
-    if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-    }
+    if (!el) return;
+
+    const prefersReduced =
+        typeof window !== "undefined" &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    el.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth" });
 };
 
 export const lockBodyScroll = (): void => {

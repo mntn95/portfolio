@@ -1,14 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { Heading } from "@/base-components";
+import { Layout } from "@/base-components";
 import SkillsList from "./skillsList";
 
 const Skills: React.FC = () => (
-    <div id="skills" className="min-h-screen flex flex-col justify-center">
-        <Heading text="Skills" />
+    <Layout id="skills" title="Skills">
         <SkillsList />
-    </div>
+    </Layout>
 );
 
 export default Skills;

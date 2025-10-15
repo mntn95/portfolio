@@ -3,6 +3,7 @@
 import * as React from "react";
 import { THEMES, type ThemeName } from "@/lib/theme/registry";
 import { applyTheme, initThemeFromStorage } from "@/lib/theme/applyTheme";
+import cn from "classnames";
 
 const ThemeSwitcher: React.FC = () => {
     const [current, setCurrent] = React.useState<ThemeName>("oneDark");
@@ -26,9 +27,14 @@ const ThemeSwitcher: React.FC = () => {
                     <button
                         key={name}
                         onClick={() => onPick(name)}
-                        className={`px-2 py-1 text-xs rounded-md border transition-colors
-                            ${isActive ? "bg-warning text-white border-border" : "bg-theme-light-surface dark:bg-theme-dark-surface text-theme-light-text dark:text-theme-dark-text border-border"}
-                        `}
+                        className={cn(
+                            "px-2 py-1 text-xs rounded-md border transition-colors",
+                            {
+                                "bg-warning text-white border-border": isActive,
+                                "bg-theme-light-surface dark:bg-theme-dark-surface text-theme-light-text dark:text-theme-dark-text border-border":
+                                    !isActive,
+                            },
+                        )}
                         aria-pressed={isActive}
                         title={name}
                     >

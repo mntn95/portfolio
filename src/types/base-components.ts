@@ -27,7 +27,6 @@ export interface HeroIconProps {
 }
 
 export interface NavBarProps {
-    id: string;
     orientation?: "horizontal" | "vertical";
 }
 
