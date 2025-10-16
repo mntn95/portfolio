@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { motion } from "framer-motion";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import { smoothScrollToId } from "@/lib/ui/navHelpers";
@@ -34,7 +35,10 @@ const ScrollArrow: React.FC<ScrollArrowProps> = ({ direction, targetId }) => {
     );
 
     return (
-        <button
+        <motion.button
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             type="button"
             role="button"
             aria-label={
@@ -54,7 +58,7 @@ const ScrollArrow: React.FC<ScrollArrowProps> = ({ direction, targetId }) => {
                     <KeyboardDoubleArrowUpIcon sx={{ fontSize: 40 }} />
                 )}
             </div>
-        </button>
+        </motion.button>
     );
 };
 

@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import { Heading } from "@/base-components";
-import ScrollArrow from "./scrollArrow";
 import { navbarData } from "@/assets";
+import ScrollArrow from "./scrollArrow";
 
 type LayoutProps = {
     id: string;
@@ -32,7 +32,6 @@ const Layout: React.FC<LayoutProps> = ({
     children,
 }) => {
     const sectionRef = React.useRef<HTMLElement | null>(null);
-
     const { prev, next } = React.useMemo(() => {
         const computed = getPrevNext(id);
         return {
@@ -41,19 +40,6 @@ const Layout: React.FC<LayoutProps> = ({
         };
     }, [id, prevId, nextId]);
 
-    /*     React.useEffect(() => {
-        // When arriving via scroll, focus h2 if present
-        const timeout = setTimeout(() => {
-            const h2 =
-                sectionRef.current?.querySelector<HTMLHeadingElement>("h2");
-            if (h2) {
-                h2.tabIndex = -1;
-                h2.focus();
-            }
-        }, 0);
-        return () => clearTimeout(timeout);
-    }, []);
- */
     return (
         <section
             id={id}

@@ -15,25 +15,23 @@ import {
     Footer,
 } from "@/components";
 
-const Home = () => {
-    return (
-        <>
-            <Loader />
-            <Toggle>
-                <NavBar />
-                <div className="grid grid-cols-1 gap-0 w-full mx-auto">
-                    <Hero />
-                    <About />
-                    <Skills />
-                    <Projects />
-                    <Reviews />
-                    <Services />
-                    <Questions />
-                    <Footer />
-                </div>
-            </Toggle>
-        </>
-    );
-};
+const Home = () => (
+    <>
+        <Loader />
+        <Toggle>
+            <NavBar />
+            <div className="grid grid-cols-1 gap-0 w-full mx-auto">
+                <Hero />
+                <About />
+                <Skills />
+                <Projects />
+                <Reviews />
+                <Services />
+                <Questions />
+                <Footer />
+            </div>
+        </Toggle>
+    </>
+);
 
 export default Home;
