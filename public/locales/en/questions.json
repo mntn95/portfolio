@@ -1,0 +1,41 @@
+{
+    "title": "Questions",
+    "questions": {
+        "cost": {
+            "question": "How much does a website cost?",
+            "answer": "The price depends mainly on the type of project and the level of customization. To give you an idea, a landing page starts at €500 while a more advanced version, optimized for conversion, is rather between €1000 and €1500. A showcase site generally costs between €1500 and €3000. For more complex projects, we can discuss the budget together."
+        },
+        "why_higher": {
+            "question": "Why might your prices seem higher than elsewhere?",
+            "answer": "The process I use to build your website takes some time because it requires a lot of planning and research. Unlike other colleagues, I don't use templates. Your website is built from scratch, which means you get a unique result adapted to your request. Buying a website from me should not simply be seen as an expense but rather as an investment. It's a sales tool that will make you money in the long run and largely repay the initial cost."
+        },
+        "how_long": {
+            "question": "How long does it take to create a site?",
+            "answer": "A landing page can be created in about 1 week, while a showcase site generally takes between 3 and 6 weeks depending on the size of the project and the responsiveness of exchanges. For more complex projects, the duration is defined on a case-by-case basis after analysis, because each project is unique."
+        },
+        "communication": {
+            "question": "How does communication work during the project?",
+            "answer": "It all starts with a discovery call to understand your needs. Then, we will communicate mainly by email or messages, to keep a clear record of exchanges. I will send you regular progress updates and you can follow the development at each step."
+        },
+        "dont_like": {
+            "question": "What if I don't like the site?",
+            "answer": "Don't worry. Before starting development, I present you with a mockup or preview of the final result. You can give me your feedback at this stage and we will adjust until we get a result that meets your expectations. Nothing is launched without your validation."
+        },
+        "payments": {
+            "question": "How do payments work?",
+            "answer": "It all depends on the type of project. For website creations, I will ask you for a 50% deposit before starting development. The rest will be paid on delivery of the project. For freelance missions, I offer pricing per day rate or deliverable but we can discuss it together. For maintenance, I offer monthly or annual payment."
+        },
+        "only_online": {
+            "question": "Can I only pay when the site is online?",
+            "answer": "No, because most of the work is done well before going online. I invoice according to the schedule agreed at the start. This ensures a regular pace and good organization on both sides."
+        },
+        "hosting": {
+            "question": "Who takes care of hosting?",
+            "answer": "Two options are available to you: You manage your own hosting (I help you configure it), or I take care of it as part of a monthly maintenance package. I use the same host for all my clients (except special request), which makes management simpler and ensures optimal security."
+        },
+        "source_code": {
+            "question": "Can I have access to the source code once the project is finished?",
+            "answer": "Absolutely. The code belongs to you once the project is delivered. You can access it freely to modify it, evolve it or pass it on to another developer. If you opt for a maintenance offer, I remain the technical manager as long as the follow-up is active, to ensure the consistency of the project."
+        }
+    }
+}

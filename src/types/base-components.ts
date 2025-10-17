@@ -38,6 +38,7 @@ export interface NavBarNavigationProps {
 
 export interface NavBarItemData {
     id: string;
-    name: string;
+    name?: string;
+    nameKey?: string;
     icon: React.ReactNode;
 }

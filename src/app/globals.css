@@ -6,6 +6,12 @@ html {
     scroll-behavior: smooth !important;
 }
 
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 /* Default CSS variables for theming (will be overridden by runtime switcher) */
 :root {
     --color-border: #61afef;

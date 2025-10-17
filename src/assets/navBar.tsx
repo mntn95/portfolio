@@ -15,37 +15,37 @@ import QuestionAnswerLineIcon from "remixicon-react/QuestionAnswerLineIcon";
 export const navbarData = [
     {
         id: "home",
-        name: "Accueil",
+        nameKey: "home",
         icon: <Home5LineIcon />,
     },
     {
         id: "about",
-        name: "À propos",
+        nameKey: "about",
         icon: <UserLineIcon />,
     },
     {
         id: "skills",
-        name: "Skills",
+        nameKey: "skills",
         icon: <BriefcaseLineIcon />,
     },
     {
         id: "projects",
-        name: "Projets",
+        nameKey: "projects",
         icon: <ProjectorLineIcon />,
     },
     {
         id: "reviews",
-        name: "Avis",
+        nameKey: "reviews",
         icon: <UserStarLineIcon />,
     },
     {
         id: "services",
-        name: "Prestations",
+        nameKey: "services",
         icon: <PriceTag3LineIcon />,
     },
     {
         id: "questions",
-        name: "Questions",
+        nameKey: "questions",
         icon: <QuestionAnswerLineIcon />,
     },
 ];

@@ -15,7 +15,7 @@ import {
     Footer,
 } from "@/components";
 
-const Home = () => (
+const Home: React.FC = () => (
     <>
         <Loader />
         <Toggle>

@@ -1,0 +1,10 @@
+{
+    "title": "À propos de moi",
+    "text": {
+        "1": "Je suis développeur front-end. Mon truc c'est concevoir des interfaces web claires, rapides et durables, qui montrent clairement ce que vous faites et pourquoi on devrait vous faire confiance. J'aime prendre vos idées et les faire grandir, pour qu'elles deviennent plus fortes, plus claires et plus impactantes que vous ne l'imaginiez.",
+        "2": "J'ai déjà exploré plusieurs domaines : e-commerce, restauration, CRM, SaaS... et je suis impatient de me lancer dans de nouvelles expériences.",
+        "3": "Je me sens chez moi dans l'écosystème JavaScript, mais j'aime aussi explorer d'autres technologies quand le contexte l'exige.",
+        "4": "Pour moi, chaque projet est une aventure unique. Si vous avez envie de donner vie à une idée ou de créer quelque chose de nouveau, parlons-en !"
+    },
+    "button": "Télécharger CV"
+}

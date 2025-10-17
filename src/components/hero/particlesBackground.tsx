@@ -13,7 +13,6 @@ const ParticlesBackground: React.FC = () => {
             const mainElement = document.querySelector("main");
             const isDark = mainElement?.classList.contains("dark") || false;
             setDarkTheme(isDark);
-            console.log("Theme detected:", isDark ? "dark" : "light");
         };
 
         // Vérifier le thème initial
@@ -67,15 +66,9 @@ const ParticlesBackground: React.FC = () => {
 
             // Générer la nouvelle config basée sur le thème
             const config = getParticlesConfig(darkTheme);
-            console.log(
-                "Particles config for theme:",
-                darkTheme ? "dark" : "light",
-                config,
-            );
 
             // Initialiser les particules avec la nouvelle config
             window.particlesJS("particles-js", config);
-            console.log("Particles initialized successfully");
         } catch (error) {
             console.error("Error loading particles.js:", error);
         }

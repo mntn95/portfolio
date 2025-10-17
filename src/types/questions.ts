@@ -1,6 +1,8 @@
 export interface QuestionData {
-    question: string;
-    answer: string;
+    question?: string;
+    answer?: string;
+    questionKey?: string;
+    answerKey?: string;
 }
 
 export interface QuestionProps {

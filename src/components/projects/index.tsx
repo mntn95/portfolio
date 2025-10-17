@@ -1,16 +1,18 @@
 "use client";
 
 import React from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import { Layout } from "@/base-components";
 import ProjectsButtons from "./projectsButtons";
 import ProjectsList from "./projectsList";
 
 const Projects: React.FC = () => {
-    const [tech, setTech] = React.useState<string>("All");
+    const { t } = useTranslation("projects");
+    const [tech, setTech] = React.useState<string>("all");
     const [index, setIndex] = React.useState<number>(0);
 
     return (
-        <Layout id="projects" title="Projets">
+        <Layout id="projects" title={t("title")}>
             <ProjectsButtons
                 setTech={setTech}
                 index={index}

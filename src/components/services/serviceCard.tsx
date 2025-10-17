@@ -3,25 +3,27 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import classNames from "classnames";
+import { useTranslation } from "@/hooks/useTranslation";
 import { DesktopMonitorIcon, AtomSymbolIcon, FlutterLogoIcon } from "./icons";
 import type { ServiceCardProps } from "@/types";
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ index, service }) => {
-    const { variant, title, subtitle, description, examples } = service;
+    const { t } = useTranslation("services");
+    const { key } = service;
 
     const getVariantConfig = () => {
-        switch (variant) {
-            case "software-dev":
+        switch (key) {
+            case "websites":
                 return {
                     icon: <DesktopMonitorIcon />,
                     highlightColor: "text-pink-400",
                 };
-            case "frontend-dev":
+            case "collaboration":
                 return {
                     icon: <AtomSymbolIcon />,
                     highlightColor: "text-blue-400",
                 };
-            case "flutter-dev":
+            case "maintenance":
                 return {
                     icon: <FlutterLogoIcon />,
                     highlightColor: "text-orange-400",
@@ -52,39 +54,30 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, service }) => {
         >
             <div className="flex justify-center">{icon}</div>
             <h3 className="text-xl font-bold mb-2 text-center">
-                <span className={highlightColor}>{title.split(" ")[0]}</span>
-                {title.split(" ").slice(1).length > 0 && (
-                    <span> {title.split(" ").slice(1).join(" ")}</span>
-                )}
+                <span className={highlightColor}>{t(service.title)}</span>
             </h3>
-            {subtitle && <p className="text-lg mb-3">{subtitle}</p>}
-            {Array.isArray(description) ? (
-                description.map((item, index) => (
-                    <p key={index} className="text-sm leading-relaxed">
-                        {item}
-                    </p>
-                ))
-            ) : (
-                <p className="text-sm leading-relaxed">{description}</p>
-            )}
-
-            {examples.map((example, exampleIndex) => (
-                <div key={exampleIndex} className="w-full">
-                    <h4
-                        className={classNames(
-                            "text-sm font-semibold mb-2",
-                            "text-warning",
-                        )}
-                    >
-                        {example.title}
-                    </h4>
-                    <ul className="text-xs text-left space-y-1">
-                        {example.content.map((item, itemIndex) => (
-                            <li key={itemIndex}>{item}</li>
-                        ))}
-                    </ul>
-                </div>
+            <p className="text-lg mb-3">{t(service.subtitle)}</p>
+            {Object.values(service.description).map((item, descIndex) => (
+                <p key={descIndex} className="text-sm leading-relaxed">
+                    {t(item)}
+                </p>
             ))}
+
+            <div className="w-full">
+                <h4
+                    className={classNames(
+                        "text-sm font-semibold mb-2",
+                        "text-warning",
+                    )}
+                >
+                    {t("examples")}
+                </h4>
+                <ul className="text-xs text-left space-y-1">
+                    {Object.values(service.examples).map((item, itemIndex) => (
+                        <li key={itemIndex}>{t(item as string)}</li>
+                    ))}
+                </ul>
+            </div>
         </motion.div>
     );
 };

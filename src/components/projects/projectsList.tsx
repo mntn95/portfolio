@@ -15,7 +15,7 @@ const ProjectsList: React.FC<ProjectsListT> = ({ tech }) => (
         {projectsData
             .filter((project) =>
                 project.tech.some((item) =>
-                    tech === "All" ? true : item === tech,
+                    tech === "all" ? true : item === tech,
                 ),
             )
             .map((data: ProjectData, index: number) => (

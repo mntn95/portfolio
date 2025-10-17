@@ -1,12 +1,13 @@
 export interface ReviewData {
-    image: string;
-    name: string;
-    comment: string;
+    nameKey?: string;
+    commentKey?: string;
     stars: number[];
 }
 
 export interface ReviewProps extends ReviewData {
     slides: HTMLDivElement[];
+    review: ReviewData;
+    stars: number[];
 }
 
 export interface ReviewsState {

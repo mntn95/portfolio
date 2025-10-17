@@ -1,12 +1,12 @@
 export interface ServiceData {
-    variant: "software-dev" | "frontend-dev" | "flutter-dev";
+    key: string;
     title: string;
-    subtitle?: string;
+    subtitle: string;
     description: string[];
     examples: {
         title: string;
         content: string[];
-    }[];
+    };
 }
 
 export interface ServiceCardProps {

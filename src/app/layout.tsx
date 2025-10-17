@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 
 import "./globals.css";
+import { I18nProvider } from "@/lib/i18n/provider";
 
 const outfit = Roboto_Mono({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ const RootLayout: React.FC<{
     children: React.ReactNode;
 }>) => (
     <html lang="en">
-        <body className={outfit.className}>{children}</body>
+        <body className={outfit.className}>
+            <I18nProvider>{children}</I18nProvider>
+        </body>
     </html>
 );
 

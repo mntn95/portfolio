@@ -3,6 +3,7 @@
 import * as React from "react";
 import { animate, motion } from "framer-motion";
 import { projectsButton } from "@/assets";
+import { useTranslation } from "@/hooks/useTranslation";
 import cn from "classnames";
 import type { ProjectsButtonType } from "@/types";
 
@@ -17,6 +18,7 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
     index,
     setIndex,
 }) => {
+    const { t } = useTranslation("projects");
     const prevIndex = React.useRef<number>(0);
     const buttonsRef = React.useRef<Array<HTMLDivElement>>([]);
 
@@ -59,7 +61,7 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
                             },
                         )}
                     >
-                        {label}
+                        {t(`buttons.${label}`)}
                     </motion.button>
                 ),
             )}

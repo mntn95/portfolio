@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
 import { QuestionArrow } from "@/assets";
 import type { QuestionProps, AnimationVariants } from "@/types";
 
 const Question: React.FC<QuestionProps> = ({ question, index }) => {
-    const { question: questionText, answer } = question;
+    const { t } = useTranslation("questions");
     const [show, setShow] = React.useState<boolean>(false);
 
     const variants: AnimationVariants = {
@@ -18,6 +19,8 @@ const Question: React.FC<QuestionProps> = ({ question, index }) => {
         }),
         hidden: { opacity: 0, x: -30 },
     };
+
+    if (!question || !question.questionKey || !question.answerKey) return null;
 
     return (
         <motion.li
@@ -35,7 +38,7 @@ const Question: React.FC<QuestionProps> = ({ question, index }) => {
                 <motion.span animate={{ rotate: show ? 180 : 0 }}>
                     {QuestionArrow}
                 </motion.span>
-                <span>{questionText}</span>
+                <span>{t(question.questionKey)}</span>
             </h3>
             <motion.p
                 initial={{ scaleY: 0, height: 0, opacity: 0 }}
@@ -60,7 +63,7 @@ const Question: React.FC<QuestionProps> = ({ question, index }) => {
                 }}
                 className="box-border origin-top pl-8 text-lg font-extralight tracking-wide text-theme-light-text first-letter:pl-3 dark:text-theme-dark-text"
             >
-                {answer}
+                {t(question.answerKey)}
             </motion.p>
         </motion.li>
     );

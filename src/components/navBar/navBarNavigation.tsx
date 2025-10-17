@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import { Link } from "@/base-components";
 import { navbarData } from "@/assets";
+import { useTranslation } from "@/hooks/useTranslation";
 import type { NavBarNavigationProps } from "@/types";
 
 const NavBarNavigation: React.FC<NavBarNavigationProps> = ({
@@ -8,6 +10,7 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({
     showLabelsOnHover,
     onItemClick,
 }) => {
+    const { t, i18n } = useTranslation("navigation");
     const isRow = layout === "row";
 
     const containerClass = isRow
@@ -29,9 +32,12 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({
                                 {item.icon}
                             </span>
                             <span
+                                suppressHydrationWarning
                                 className={`text-[10px] tracking-wide text-theme-light-text dark:text-theme-dark-text ${showLabelsOnHover ? "opacity-0 group-hover:opacity-100 transition-opacity duration-200" : "opacity-100"}`}
                             >
-                                {item.name}
+                                {i18n.isInitialized
+                                    ? t(item.nameKey)
+                                    : item.nameKey}
                             </span>
                         </Link>
                     );
@@ -54,8 +60,13 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({
                             <span className="text-2xl transition-colors text-link">
                                 {item.icon}
                             </span>
-                            <span className="text-base md:text-lg tracking-wide text-theme-light-text dark:text-theme-dark-text">
-                                {item.name}
+                            <span
+                                suppressHydrationWarning
+                                className="text-base md:text-lg tracking-wide text-theme-light-text dark:text-theme-dark-text"
+                            >
+                                {i18n.isInitialized
+                                    ? t(item.nameKey)
+                                    : item.nameKey}
                             </span>
                         </div>
                     </Link>

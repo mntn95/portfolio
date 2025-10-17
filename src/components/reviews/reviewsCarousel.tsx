@@ -22,6 +22,9 @@ const ReviewsCarousel: React.FC<ReviewsCarouselT> = ({ index, direction }) => {
         const currentSlide = slides.current[index];
         const previousSlide = slides.current[prevIndex.current];
 
+        // Guard: ensure slides are mounted before animating
+        if (!currentSlide || !previousSlide) return;
+
         const isIndexPair = isPair(index);
 
         if (direction) {
@@ -46,7 +49,12 @@ const ReviewsCarousel: React.FC<ReviewsCarouselT> = ({ index, direction }) => {
             className="relative w-[800px] lg:w-[600px] md:w-[95%] sm:w-[280px] h-[500px] lg:h-[450px] md:h-[400px] sm:h-[600px] flex items-center justify-center overflow-hidden hover:drop-shadow-[0px_0px_3px_var(--color-border)]"
         >
             {reviews.map((review: ReviewData, reviewIndex: number) => (
-                <Review {...review} key={reviewIndex} slides={slides.current} />
+                <Review
+                    review={review}
+                    key={reviewIndex}
+                    slides={slides.current}
+                    stars={review.stars}
+                />
             ))}
         </motion.div>
     );
