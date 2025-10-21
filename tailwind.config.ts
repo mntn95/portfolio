@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import twColors from "tailwindcss/colors";
 
 const config: Config = {
     content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],

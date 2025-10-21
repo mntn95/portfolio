@@ -3,6 +3,7 @@ import { Roboto_Mono } from "next/font/google";
 
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n/provider";
+import BackToTopButton from "@/base-components/backToTopButton";
 
 const outfit = Roboto_Mono({ subsets: ["latin"] });
 
@@ -20,7 +21,10 @@ const RootLayout: React.FC<{
 }>) => (
     <html lang="en">
         <body className={outfit.className}>
-            <I18nProvider>{children}</I18nProvider>
+            <I18nProvider>
+                {children}
+                <BackToTopButton />
+            </I18nProvider>
         </body>
     </html>
 );
