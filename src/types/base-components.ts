@@ -10,6 +10,7 @@ export interface BaseImageProps {
     width?: number;
     height?: number;
     className?: string;
+    priority?: boolean;
 }
 
 export interface LinkProps {

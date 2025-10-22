@@ -11,6 +11,7 @@ type LayoutProps = {
     showHeading?: boolean;
     prevId?: string;
     nextId?: string;
+    alignTop?: boolean;
     children: React.ReactNode;
 };
 
@@ -30,6 +31,7 @@ const Layout: React.FC<LayoutProps> = ({
     prevId,
     nextId,
     children,
+    alignTop = false,
 }) => {
     const sectionRef = React.useRef<HTMLElement | null>(null);
     const { prev, next } = React.useMemo(() => {
@@ -47,7 +49,7 @@ const Layout: React.FC<LayoutProps> = ({
             className="min-h-[100dvh] relative w-full overflow-hidden"
         >
             <div
-                className={`h-full sm:w-[90%] md:w-[80%] lg:w-[80%] xl:w-[90%] xxl:w-[90%] mx-auto sm:m-3 md:m-3 flex flex-col justify-center ${id === "about" ? "items-start" : "items-center"}`}
+                className={`h-full sm:w-[90%] md:w-[80%] lg:w-[80%] xl:w-[90%] xxl:w-[90%] mx-auto sm:m-3 md:m-3 flex flex-col ${alignTop ? "justify-start pt-20" : "justify-center"} ${id === "about" ? "items-start" : "items-center"}`}
             >
                 {showHeading && title && <Heading text={title} />}
                 {children}

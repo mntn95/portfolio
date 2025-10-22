@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
     const [index, setIndex] = React.useState<number>(0);
 
     return (
-        <Layout id="projects" title={t("title")}>
+        <Layout id="projects" title={t("title")} alignTop>
             <ProjectsButtons
                 setTech={setTech}
                 index={index}

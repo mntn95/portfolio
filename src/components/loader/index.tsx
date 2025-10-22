@@ -22,6 +22,7 @@ const Loader = () => {
                     width={150}
                     height={150}
                     src="/catloader.gif"
+                    priority
                     alt="spinner"
                 />
             )}

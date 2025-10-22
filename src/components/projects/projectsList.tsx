@@ -11,7 +11,7 @@ type ProjectsListT = {
 };
 
 const ProjectsList: React.FC<ProjectsListT> = ({ tech }) => (
-    <div className="min-h-[1000px] flex flex-wrap items-center justify-center gap-5">
+    <div className="flex flex-wrap items-center justify-center gap-5">
         {projectsData
             .filter((project) =>
                 project.tech.some((item) =>
