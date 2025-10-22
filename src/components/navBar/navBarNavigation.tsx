@@ -21,19 +21,18 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({
         <div className={containerClass}>
             {navbarData.map((item, index) => {
                 if (isRow) {
-                    // Desktop: items as vertical mini-stacks, labels on hover only
                     return (
                         <Link
                             key={index}
-                            className="group flex flex-col items-center gap-y-1 text-link hover:text-warning"
+                            className="group w-[3.5rem] block text-link hover:text-warning"
                             href={`/#${item.id}`}
                         >
-                            <span className="text-2xl transition-colors">
+                            <span className="group text-2xl transition-colors">
                                 {item.icon}
                             </span>
                             <span
                                 suppressHydrationWarning
-                                className={`text-[10px] tracking-wide text-theme-light-text dark:text-theme-dark-text ${showLabelsOnHover ? "opacity-0 group-hover:opacity-100 transition-opacity duration-200" : "opacity-100"}`}
+                                className={`text-[10px] tracking-wide text-theme-text ${showLabelsOnHover ? "opacity-0 group-hover:opacity-100 transition-opacity duration-200" : "opacity-100"}`}
                             >
                                 {i18n.isInitialized
                                     ? t(item.nameKey)
@@ -43,7 +42,6 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({
                     );
                 }
 
-                // Mobile drawer: items stacked; inside each item arrange icon + label right
                 return (
                     <Link
                         key={index}
@@ -62,7 +60,7 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({
                             </span>
                             <span
                                 suppressHydrationWarning
-                                className="text-base md:text-lg tracking-wide text-theme-light-text dark:text-theme-dark-text"
+                                className="text-base md:text-lg tracking-wide text-theme-text"
                             >
                                 {i18n.isInitialized
                                     ? t(item.nameKey)

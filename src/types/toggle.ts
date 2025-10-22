@@ -1,8 +1,8 @@
 import React from "react";
 
-export interface ThemeIconProps {
-    darkTheme: boolean;
-    showWhenDark: boolean;
+export interface LanguageIconProps {
+    currentLanguage: string;
+    showWhenLanguage: string;
     children: React.ReactNode;
 }
 

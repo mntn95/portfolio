@@ -26,7 +26,7 @@ const ScrollArrow: React.FC<ScrollArrowProps> = ({ direction, targetId }) => {
     };
 
     const buttonClassName = cn(
-        "sm:hidden md:hidden lg:hidden group text-theme-light-text dark:text-theme-dark-text",
+        "sm:hidden md:hidden lg:hidden group text-theme-text",
         "absolute left-1/2 -translate-x-1/2 z-20 pointer-events-auto",
         {
             "bottom-8": direction === "down",

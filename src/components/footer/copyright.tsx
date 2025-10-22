@@ -10,7 +10,7 @@ const Copyright: React.FC = () => {
 
     return (
         <div className="flex items-end justify-end sm:items-center sm:justify-center md:items-center md:justify-center lg:items-center lg:justify-center">
-            <span className="dark:text-theme-dark-text flex items-center gap-2 transition-colors">
+            <span className="text-theme-text flex items-center gap-2 transition-colors">
                 {copyRightIcon} 2024 - {currentYear} Mathieu Nguyen.{" "}
                 {t("copyright")}
             </span>

@@ -53,7 +53,7 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
                         }}
                         className={cn(
                             "border border-border rounded-xl px-2 py-1 text-sm font-light tracking-wider",
-                            "bg-theme-light-surface dark:bg-theme-dark-surface text-theme-light-text dark:text-theme-dark-text",
+                            "bg-theme-surface text-theme-text",
                             {
                                 "opacity-100": buttonIndex === index,
                                 "opacity-50 hover:opacity-100":

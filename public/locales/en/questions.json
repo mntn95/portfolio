@@ -3,11 +3,7 @@
     "questions": {
         "cost": {
             "question": "How much does a website cost?",
-            "answer": "The price depends mainly on the type of project and the level of customization. To give you an idea, a landing page starts at €500 while a more advanced version, optimized for conversion, is rather between €1000 and €1500. A showcase site generally costs between €1500 and €3000. For more complex projects, we can discuss the budget together."
-        },
-        "why_higher": {
-            "question": "Why might your prices seem higher than elsewhere?",
-            "answer": "The process I use to build your website takes some time because it requires a lot of planning and research. Unlike other colleagues, I don't use templates. Your website is built from scratch, which means you get a unique result adapted to your request. Buying a website from me should not simply be seen as an expense but rather as an investment. It's a sales tool that will make you money in the long run and largely repay the initial cost."
+            "answer": "The cost of a website varies considerably depending on your specific needs and the features you wish to integrate. Every project is unique, which is why I encourage you to provide as much detail as possible when you first contact me: this will allow me to offer you a custom quote that's perfectly tailored to your project. The final price will depend on factors such as the level of customization desired, the features to be developed, and the technical complexity of your site."
         },
         "how_long": {
             "question": "How long does it take to create a site?",

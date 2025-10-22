@@ -29,12 +29,12 @@ const Project: React.FC<ProjectProps> = ({ data, index }) => {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: show ? 1 : 0 }}
-                className="absolute top-0 w-full h-full flex flex-col items-center justify-center grap-y-2 bg-text-white p-6 rounded-lg dark:bg-theme-dark-surface/95 transition-colors"
+                className="absolute top-0 w-full h-full flex flex-col items-center justify-center grap-y-2 bg-text-white p-6 rounded-lg bg-theme-surface/95 transition-colors"
             >
-                <h2 className="text-lg font-bold tracking-wide text-theme-light-text dark:text-theme-dark-text transition-colors">
+                <h2 className="text-lg font-bold tracking-wide text-theme-text transition-colors">
                     {t(data.nameKey)}
                 </h2>
-                <p className="text-justify text-theme-light-text first-letter:pl-2 dark:text-theme-dark-text transition-colors">
+                <p className="text-justify text-theme-text first-letter:pl-2 transition-colors">
                     {t(data.descKey)}
                 </p>
             </motion.div>

@@ -1,18 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
-import type { ThemeIconProps } from "@/types";
+import type { LanguageIconProps } from "@/types";
 
-const ThemeIcon: React.FC<ThemeIconProps> = ({
-    darkTheme,
-    showWhenDark,
+const LanguageIcon: React.FC<LanguageIconProps> = ({
+    currentLanguage,
+    showWhenLanguage,
     children,
 }) => (
     <motion.span
-        animate={{ scale: darkTheme === showWhenDark ? 1 : 0 }}
-        className="absolute block rounded-full bg-white p-1 text-4xl dark:bg-theme-dark-background"
+        animate={{ scale: currentLanguage === showWhenLanguage ? 1 : 0 }}
+        className="absolute block rounded-full bg-white p-1 text-4xl bg-theme-background"
     >
         {children}
     </motion.span>
 );
 
-export default ThemeIcon;
+export default LanguageIcon;

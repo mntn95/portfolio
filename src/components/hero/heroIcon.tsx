@@ -6,7 +6,7 @@ const HeroIcon: React.FC<HeroIconProps> = ({ icon, href, index }) => (
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative rounded-lg hover:bg-warning hover:text-white dark:hover:text-theme-dark-white transition-colors"
+        className="relative rounded-lg hover:bg-warning hover:text-white transition-colors"
         style={{
             top: index === 1 ? "1px" : "0px",
         }}

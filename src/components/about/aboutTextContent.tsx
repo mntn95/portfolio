@@ -11,7 +11,7 @@ const AboutTextContent: React.FC = () => {
 
     return (
         <div className="relative max-w-[800px] text-justify translate-x-0">
-            <ul className="text-lg sm:text-sm font-light text-theme-light-text lg:text-[16px] sm:text-[14px] dark:text-theme-dark-text transition-colors">
+            <ul className="text-lg sm:text-sm font-light text-theme-text lg:text-[16px] sm:text-[14px] transition-colors">
                 {Object.values(textArray).map((item: string, index: number) => (
                     <li key={index}>{item}</li>
                 ))}

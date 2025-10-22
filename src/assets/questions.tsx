@@ -4,10 +4,6 @@ export const questions = [
         answerKey: "questions.cost.answer",
     },
     {
-        questionKey: "questions.why_higher.question",
-        answerKey: "questions.why_higher.answer",
-    },
-    {
         questionKey: "questions.how_long.question",
         answerKey: "questions.how_long.answer",
     },

@@ -72,12 +72,10 @@ const NavBar: React.FC<NavBarProps> = () => {
                 ref={drawerRef}
                 role="dialog"
                 aria-modal="true"
-                className={`fixed inset-y-0 left-0 w-80 bg-theme-light-background dark:bg-theme-dark-background border-r border-theme-light-gray200 dark:border-theme-dark-gray200 overflow-y-auto transform transition-transform duration-200 ease-out z-50 block xxl:hidden ${open ? "translate-x-0" : "-translate-x-full"}`}
+                className={`fixed inset-y-0 left-0 w-80 bg-theme-background border-r border-border overflow-y-auto transform transition-transform duration-200 ease-out z-50 block xxl:hidden ${open ? "translate-x-0" : "-translate-x-full"}`}
             >
                 <div className="flex items-center justify-between py-3 px-4">
-                    <span className="text-sm text-theme-light-text dark:text-theme-dark-text">
-                        Menu
-                    </span>
+                    <span className="text-sm text-theme-text">Menu</span>
                     <button
                         type="button"
                         aria-label="Close menu"

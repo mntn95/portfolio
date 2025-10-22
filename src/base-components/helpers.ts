@@ -1,6 +1,6 @@
 const isPair = (index: number): boolean => index % 2 === 0;
 
-const getParticlesConfig = (isDarkTheme: boolean) => ({
+const getParticlesConfig = () => ({
     particles: {
         number: {
             value: 80,
@@ -10,17 +10,17 @@ const getParticlesConfig = (isDarkTheme: boolean) => ({
             },
         },
         color: {
-            value: isDarkTheme ? "#ffffff" : "#374151", // mapped in theme: particle.dark / particle.light
+            value: "#ffffff",
         },
         shape: {
             type: "circle",
             stroke: {
                 width: 0,
-                color: isDarkTheme ? "#ffffff" : "#374151",
+                color: "#ffffff",
             },
         },
         opacity: {
-            value: isDarkTheme ? 0.3 : 0.8, // Plus visibles en light
+            value: 0.3,
             random: false,
             anim: {
                 enable: false,
@@ -42,8 +42,8 @@ const getParticlesConfig = (isDarkTheme: boolean) => ({
         line_linked: {
             enable: true,
             distance: 150,
-            color: isDarkTheme ? "#ffffff" : "#374151", // mapped in theme: particle.dark / particle.light
-            opacity: isDarkTheme ? 0.2 : 0.5, // Plus visibles en light
+            color: "#ffffff",
+            opacity: 0.2,
             width: 1,
         },
         move: {

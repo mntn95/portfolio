@@ -16,7 +16,7 @@ const Review: React.FC<ReviewProps> = ({ review, slides, stars }) => {
     return (
         <motion.div
             initial={{ x: "100%" }}
-            className="absolute inset-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-4 border border-border bg-theme-light-surface p-14 lg:p-5 rounded-xl dark:bg-theme-dark-surface transition-colors"
+            className="absolute inset-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-4 border border-border bg-theme-surface p-14 lg:p-5 rounded-xl transition-colors"
             ref={(element: HTMLDivElement) => {
                 if (slides) slides.push(element);
             }}
@@ -24,7 +24,7 @@ const Review: React.FC<ReviewProps> = ({ review, slides, stars }) => {
             <h1 className="text-2xl md:text-xl text-center tracking-wider text-link">
                 {t(review.nameKey)}
             </h1>
-            <p className="text-lg md:text-sm text-justify tracking-wide text-theme-light-text first-letter:pl-2 dark:text-theme-dark-text transition-colors">
+            <p className="text-lg md:text-sm text-justify tracking-wide text-theme-text first-letter:pl-2 transition-colors">
                 {t(review.commentKey)}
             </p>
             <div className="flex flex-col items-center justify-center gap-y-2">

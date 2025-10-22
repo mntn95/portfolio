@@ -5,32 +5,6 @@ import { getParticlesConfig } from "@/base-components/helpers";
 
 const ParticlesBackground: React.FC = () => {
     const particlesRef = React.useRef<HTMLDivElement>(null);
-    const [darkTheme, setDarkTheme] = React.useState(false);
-
-    // Détecter le thème depuis le DOM (synchronisé avec le composant Toggle)
-    React.useEffect(() => {
-        const checkTheme = () => {
-            const mainElement = document.querySelector("main");
-            const isDark = mainElement?.classList.contains("dark") || false;
-            setDarkTheme(isDark);
-        };
-
-        // Vérifier le thème initial
-        checkTheme();
-
-        // Observer les changements de classe sur l'élément main
-        const observer = new MutationObserver(checkTheme);
-        const mainElement = document.querySelector("main");
-
-        if (mainElement) {
-            observer.observe(mainElement, {
-                attributes: true,
-                attributeFilter: ["class"],
-            });
-        }
-
-        return () => observer.disconnect();
-    }, []);
 
     // Fonction pour initialiser les particules
     const initializeParticles = React.useCallback(async () => {
@@ -65,14 +39,14 @@ const ParticlesBackground: React.FC = () => {
             }
 
             // Générer la nouvelle config basée sur le thème
-            const config = getParticlesConfig(darkTheme);
+            const config = getParticlesConfig();
 
             // Initialiser les particules avec la nouvelle config
             window.particlesJS("particles-js", config);
         } catch (error) {
             console.error("Error loading particles.js:", error);
         }
-    }, [darkTheme]);
+    }, []);
 
     React.useEffect(() => {
         initializeParticles();

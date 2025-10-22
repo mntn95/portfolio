@@ -1,59 +1,106 @@
 "use client";
 import React from "react";
-import { reactLocalStorage } from "reactjs-localstorage";
-import { sunIcon, moonIcon } from "@/assets";
+import { earthIcon } from "@/assets";
 import type { ToggleProps } from "@/types";
-import { useTheme } from "@/hooks/useTheme";
+import { useLanguage } from "@/hooks/useLanguage";
 
-import ThemeIcon from "./themeIcon";
+import DropdownMenu from "./dropdownMenu";
 
 const Toggle: React.FC<ToggleProps> = ({ children }) => {
-    const { darkTheme, setDarkTheme } = useTheme();
+    const { currentLanguage, toggleLanguage, isLoading } = useLanguage();
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const buttonRef = React.useRef<HTMLButtonElement>(null);
+    const menuRef = React.useRef<HTMLDivElement>(null);
 
-    const mainRef = React.useRef<HTMLDivElement>(null);
+    const toggleMenu = React.useCallback(() => {
+        setIsMenuOpen((prev) => !prev);
+    }, []);
 
-    const toggleDarkTheme = React.useCallback(
-        (value: boolean) => {
-            if (value) {
-                mainRef.current?.classList.add("dark");
-            } else {
-                mainRef.current?.classList.remove("dark");
+    const closeMenu = React.useCallback(() => {
+        setIsMenuOpen(false);
+    }, []);
+
+    const handleLanguageSelect = React.useCallback(
+        (language: string) => {
+            if (language !== currentLanguage) {
+                toggleLanguage();
             }
-            setDarkTheme(value);
-            reactLocalStorage.set("darkTheme", value);
         },
-        [setDarkTheme],
+        [currentLanguage, toggleLanguage],
     );
 
+    const handleKeyDown = React.useCallback(
+        (event: KeyboardEvent) => {
+            if (event.ctrlKey && event.key === "l") {
+                event.preventDefault();
+                toggleMenu();
+            }
+            if (event.key === "Escape" && isMenuOpen) {
+                event.preventDefault();
+                closeMenu();
+            }
+        },
+        [toggleMenu, closeMenu, isMenuOpen],
+    );
+
+    // Click outside to close menu
     React.useEffect(() => {
-        const darkTheme = reactLocalStorage.get("darkTheme");
-        const darkThemeParsed =
-            darkTheme !== undefined && JSON.parse(String(darkTheme));
-        const systemTheme =
-            typeof window !== "undefined" &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                isMenuOpen &&
+                buttonRef.current &&
+                menuRef.current &&
+                !buttonRef.current.contains(event.target as Node) &&
+                !menuRef.current.contains(event.target as Node)
+            ) {
+                closeMenu();
+            }
+        };
 
-        const shouldUseDarkTheme =
-            darkTheme === undefined ? systemTheme : darkThemeParsed;
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isMenuOpen, closeMenu]);
 
-        toggleDarkTheme(shouldUseDarkTheme);
-    }, [toggleDarkTheme]);
+    React.useEffect(() => {
+        document.addEventListener("keydown", handleKeyDown);
+        return () => {
+            document.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [handleKeyDown]);
 
     return (
-        <main ref={mainRef}>
-            <div className="bg-theme-light-background dark:bg-theme-dark-background">
+        <main>
+            <div className="bg-theme-background">
                 <div className="w-full mx-auto flex flex-col justify-start px-5 md:px-10 xl:px-[90px] overflow-hidden">
-                    <button
-                        onClick={() => toggleDarkTheme(!darkTheme)}
-                        className="fixed right-14 sm:right-10 top-10 text-link z-30"
-                    >
-                        <ThemeIcon darkTheme={darkTheme} showWhenDark={false}>
-                            {moonIcon}
-                        </ThemeIcon>
-                        <ThemeIcon darkTheme={darkTheme} showWhenDark={true}>
-                            {sunIcon}
-                        </ThemeIcon>
-                    </button>
+                    <div className="absolute right-14 sm:right-10 top-4 z-40">
+                        <button
+                            ref={buttonRef}
+                            onClick={toggleMenu}
+                            disabled={isLoading}
+                            className="text-link disabled:opacity-50 relative hover:text-warning"
+                            aria-label="Open language selection menu"
+                            aria-expanded={isMenuOpen}
+                            aria-haspopup="menu"
+                            title="Language selection (Ctrl+L)"
+                        >
+                            {earthIcon}
+                            {isLoading && (
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current"></div>
+                                </div>
+                            )}
+                        </button>
+                        <div ref={menuRef}>
+                            <DropdownMenu
+                                isOpen={isMenuOpen}
+                                currentLanguage={currentLanguage}
+                                onLanguageSelect={handleLanguageSelect}
+                                onClose={closeMenu}
+                            />
+                        </div>
+                    </div>
                     {children}
                 </div>
             </div>
