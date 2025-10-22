@@ -19,7 +19,7 @@ const RootLayout: React.FC<{
 }: Readonly<{
     children: React.ReactNode;
 }>) => (
-    <html lang="en">
+    <html suppressHydrationWarning>
         <body className={outfit.className}>
             <I18nProvider>
                 {children}

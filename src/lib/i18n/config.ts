@@ -52,7 +52,6 @@ const resources = {
 if (!i18n.isInitialized) {
     const instance = i18n.use(initReactI18next);
 
-    // Keep backend only on client for potential future lazy namespaces
     if (typeof window !== "undefined") {
         instance.use(Backend);
     }

@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
                 onMouseEnter={handleMouseEnter}
             >
                 <ParticlesBackground />
-                <div className="relative z-0 w-full flex-1 flex justify-center items-center">
+                <div className="relative z-0 w-full flex-1 flex justify-center items-center pointer-events-none">
                     <div className="w-full max-w-full">
                         <HeroContent
                             axisX={x}

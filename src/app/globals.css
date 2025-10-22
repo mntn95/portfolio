@@ -12,7 +12,6 @@ body {
     overflow-y: auto;
 }
 
-/* Default CSS variables for theming (will be overridden by runtime switcher) */
 :root {
     --color-border: #61afef;
     --color-warning: #e06c75;

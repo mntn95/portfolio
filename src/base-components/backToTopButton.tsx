@@ -34,7 +34,7 @@ const BackToTopButton: React.FC = () => {
             type="button"
             aria-label="Back to top"
             onClick={scrollToTop}
-            className={`text-[#abb2bf] fixed z-50 right-4 bottom-4 transition-opacity duration-400 ${visibility}`}
+            className={`text-[#abb2bf] fixed z-50 right-8 bottom-8 transition-opacity duration-400 ${visibility}`}
         >
             <KeyboardDoubleArrowUpIcon sx={{ fontSize: 40 }} />
         </button>

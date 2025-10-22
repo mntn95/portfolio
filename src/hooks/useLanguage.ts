@@ -1,48 +1,42 @@
 import { useState, useEffect, useCallback } from "react";
-import { reactLocalStorage } from "reactjs-localstorage";
 import i18n from "@/lib/i18n/config";
+import { detectBrowserLanguage } from "@/lib/i18n/helpers";
 
 export const useLanguage = () => {
-    const [currentLanguage, setCurrentLanguage] = useState<string>("en");
+    const [currentLanguage, setCurrentLanguage] = useState<string>(() =>
+        detectBrowserLanguage(),
+    );
     const [isLoading, setIsLoading] = useState(false);
 
-    const toggleLanguage = useCallback(async () => {
+    const changeLanguage = useCallback(async (newLanguage: string) => {
         setIsLoading(true);
-        const newLanguage = currentLanguage === "en" ? "fr" : "en";
 
         try {
             await i18n.changeLanguage(newLanguage);
             setCurrentLanguage(newLanguage);
-            reactLocalStorage.set("language", newLanguage);
+
+            if (document?.documentElement) {
+                document.documentElement.lang = newLanguage;
+            }
         } catch (error) {
             console.error("Error changing language:", error);
         } finally {
             setIsLoading(false);
         }
-    }, [currentLanguage]);
+    }, []);
 
     useEffect(() => {
-        const savedLanguage = reactLocalStorage.get("language");
-        const browserLanguage =
-            typeof window !== "undefined"
-                ? navigator.language.split("-")[0]
-                : "en";
+        const browserLanguage = detectBrowserLanguage();
+        setCurrentLanguage(browserLanguage);
 
-        const detectedLanguage =
-            (savedLanguage as string) ||
-            (browserLanguage === "fr" ? "fr" : "en");
-
-        setCurrentLanguage(detectedLanguage);
-
-        if (i18n.language !== detectedLanguage) {
-            i18n.changeLanguage(detectedLanguage);
+        if (i18n.language !== browserLanguage) {
+            void i18n.changeLanguage(browserLanguage);
         }
     }, []);
 
     return {
         currentLanguage,
-        setCurrentLanguage,
-        toggleLanguage,
+        changeLanguage,
         isLoading,
         isFrench: currentLanguage === "fr",
         isEnglish: currentLanguage === "en",

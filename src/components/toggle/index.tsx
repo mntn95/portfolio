@@ -7,7 +7,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import DropdownMenu from "./dropdownMenu";
 
 const Toggle: React.FC<ToggleProps> = ({ children }) => {
-    const { currentLanguage, toggleLanguage, isLoading } = useLanguage();
+    const { currentLanguage, changeLanguage, isLoading } = useLanguage();
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const buttonRef = React.useRef<HTMLButtonElement>(null);
     const menuRef = React.useRef<HTMLDivElement>(null);
@@ -22,11 +22,9 @@ const Toggle: React.FC<ToggleProps> = ({ children }) => {
 
     const handleLanguageSelect = React.useCallback(
         (language: string) => {
-            if (language !== currentLanguage) {
-                toggleLanguage();
-            }
+            changeLanguage(language);
         },
-        [currentLanguage, toggleLanguage],
+        [changeLanguage],
     );
 
     const handleKeyDown = React.useCallback(
@@ -43,7 +41,6 @@ const Toggle: React.FC<ToggleProps> = ({ children }) => {
         [toggleMenu, closeMenu, isMenuOpen],
     );
 
-    // Click outside to close menu
     React.useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (
