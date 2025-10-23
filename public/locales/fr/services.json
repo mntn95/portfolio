@@ -1,0 +1,50 @@
+{
+    "title": "Prestations",
+    "examples": "Exemples",
+    "services": {
+        "websites": {
+            "title": "Création de sites web sur mesure",
+            "subtitle": "Je crée des sites qui inspirent confiance et convertissent vos visiteurs en clients.",
+            "description": {
+                "unique": "Chaque projet est unique : je m'adapte à votre identité, vos objectifs et votre budget.",
+                "mockup": "Avec ou sans maquette : je peux travailler à partir de vos designs ou en créer avec un designer partenaire."
+            },
+            "examples": {
+                "showcase": "- Site vitrine pour votre activité ou entreprise.",
+                "landing": "- Landing page axée sur la conversion.",
+                "creative": "- Portfolio créatif ou site personnel.",
+                "ecommerce": "- Plateforme e-commerce",
+                "blog": "- Blog ou magazine"
+            }
+        },
+        "collaboration": {
+            "title": "Collaboration front-end",
+            "subtitle": "J'intègre vos effectifs pour construire ou faire évoluer votre projet web.",
+            "description": {
+                "join": "Je rejoins vos équipes en freelance pour assurer la qualité et la continuité de votre développement.",
+                "adapt": "Je m'adapte à vos outils, process et rythme de travail."
+            },
+            "examples": {
+                "short_long": "- Mission courte ou longue en collaboration directe avec votre staff.",
+                "integration": "- Intégration ou refonte d'interfaces existantes.",
+                "reviews": "- Participation aux revues de code.",
+                "design": "- Mise en place ou évolution d'un design system.",
+                "backend": "- Collaboration avec les designers et le backend."
+            }
+        },
+        "maintenance": {
+            "title": "Maintenance & support",
+            "subtitle": "Je m'occupe de la maintenance de votre site pour qu'il reste performant et sécurisé.",
+            "description": {
+                "preventive": "Maintenance préventive et corrective de votre site web.",
+                "regular": "Mises à jour de sécurité et de performance régulières."
+            },
+            "examples": {
+                "update": "- Mise à jour des dépendances et plugins.",
+                "regular": "- Sauvegardes régulières et monitoring.",
+                "bug": "- Corrections de bugs et optimisations.",
+                "technical": "- Support technique et conseils."
+            }
+        }
+    }
+}

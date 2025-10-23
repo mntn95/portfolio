@@ -1,8 +1,8 @@
 export interface ProjectData {
-    name: string;
-    desc: string;
+    nameKey: string;
+    descKey: string;
     url: string;
-    tech: (string | undefined)[];
+    tech: string[];
 }
 
 export interface ProjectProps {

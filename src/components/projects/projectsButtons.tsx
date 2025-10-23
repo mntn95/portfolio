@@ -3,6 +3,8 @@
 import * as React from "react";
 import { animate, motion } from "framer-motion";
 import { projectsButton } from "@/assets";
+import { useTranslation } from "@/hooks/useTranslation";
+import cn from "classnames";
 import type { ProjectsButtonType } from "@/types";
 
 type ProjectsButtonsT = {
@@ -16,17 +18,18 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
     index,
     setIndex,
 }) => {
+    const { t } = useTranslation("projects");
     const prevIndex = React.useRef<number>(0);
     const buttonsRef = React.useRef<Array<HTMLDivElement>>([]);
 
     React.useEffect(() => {
         animate(buttonsRef.current[prevIndex.current], {
-            opacity: 0.5,
             scale: 1,
+            opacity: 0.5,
         });
         animate(buttonsRef.current[index], {
-            opacity: 1,
             scale: 1.2,
+            opacity: 1,
         });
         prevIndex.current = index;
     }, [index]);
@@ -37,7 +40,6 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
                 (label: ProjectsButtonType, buttonIndex: number) => (
                     <motion.button
                         initial={{
-                            opacity: buttonIndex === 0 ? 1 : 0.5,
                             scale: buttonIndex === 0 ? 1.2 : 1,
                         }}
                         key={`button-${buttonIndex}`}
@@ -49,9 +51,17 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
                             setTech(label);
                             setIndex(buttonIndex);
                         }}
-                        className="border border-yellow-500 rounded-xl px-2 py-1 text-sm font-light tracking-wider text-gray-400"
+                        className={cn(
+                            "border border-border rounded-xl px-2 py-1 text-sm font-light tracking-wider",
+                            "bg-theme-surface text-theme-text",
+                            {
+                                "opacity-100": buttonIndex === index,
+                                "opacity-50 hover:opacity-100":
+                                    buttonIndex !== index,
+                            },
+                        )}
                     >
-                        {label}
+                        {t(`buttons.${label}`)}
                     </motion.button>
                 ),
             )}

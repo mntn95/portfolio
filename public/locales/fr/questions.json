@@ -1,0 +1,37 @@
+{
+    "title": "Questions",
+    "questions": {
+        "cost": {
+            "question": "Combien coûte un site web ?",
+            "answer": "Chaque projet étant unique, le prix varie en fonction de vos besoins : design personnalisé, fonctionnalités spécifiques, complexité technique... Plus vous me communiquez d'informations sur votre projet, plus je peux vous établir un devis précis et transparent. N'hésitez pas à me contacter pour en discuter !"
+        },
+        "how_long": {
+            "question": "Combien de temps faut-il pour créer un site ?",
+            "answer": "Une landing page peut être créée en environ 1 semaine, tandis qu'un site vitrine prend généralement entre 3 et 6 semaines selon la taille du projet et la réactivité des échanges. Les projets plus complexes, la durée est définie au cas par cas après analyse, car chaque projet est unique."
+        },
+        "communication": {
+            "question": "Comment se déroule la communication pendant le projet ?",
+            "answer": "Tout commence par un appel découverte pour comprendre vos besoins. Ensuite, nous communiquerons principalement par email ou par messages, pour garder une trace claire des échanges.Je vous enverrai des points d'avancement réguliers et vous pourrez suivre le développement à chaque étape."
+        },
+        "dont_like": {
+            "question": "Et si le site ne me plaît pas ?",
+            "answer": "Pas d'inquiétude. Avant de commencer le développement, je vous présente une maquette ou un aperçu du rendu final. Vous pourrez me faire vos retours à cette étape et nous ajusterons jusqu'à obtenir un résultat conforme à vos attentes. Rien n'est lancé sans votre validation."
+        },
+        "payments": {
+            "question": "Comment fonctionnent les paiements ?",
+            "answer": "Tout dépend du type de projet. Pour les créations de sites web, je vous demanderai un acompte de 50% avant de commencer le développement. Le reste sera payé à la livraison du projet. Pour les missions en freelance, je propose une tarification au TJM ou au livrable mais nous pourrons en rediscuter ensemble. Pour la maintenance, je propose un paiement mensuel ou annuel."
+        },
+        "only_online": {
+            "question": "Puis-je payer uniquement lorsque le site est en ligne ?",
+            "answer": "Non, car la plus grande partie du travail est réalisée bien avant la mise en ligne. Je facture selon le calendrier convenu au départ. Cela permet d'assurer un rythme régulier et une bonne organisation de part et d'autre."
+        },
+        "hosting": {
+            "question": "Qui s'occupe de l'hébergement ?",
+            "answer": "Deux options s'offrent à vous : Vous gérez votre propre hébergement (je vous accompagne pour le configurer), ou je m'en occupe dans le cadre d'un forfait de maintenance mensuel. J'utilise le même hébergeur pour tous mes clients (sauf demande particulière), ce qui rend la gestion plus simple et permet de garantir une sécurité optimale."
+        },
+        "source_code": {
+            "question": "Puis-je avoir accès au code source une fois le projet terminé ?",
+            "answer": "Absolument. Le code vous appartient une fois le projet livré. Vous pourrez y accéder librement pour le modifier, le faire évoluer ou le transmettre à un autre développeur. Si vous optez pour une offre de maintenance, j'en reste le responsable technique tant que le suivi est actif, afin d'assurer la cohérence du projet."
+        }
+    }
+}

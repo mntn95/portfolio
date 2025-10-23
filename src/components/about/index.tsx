@@ -1,24 +1,20 @@
 "use client";
 
 import * as React from "react";
-import { aboutText } from "@/assets";
-import { Heading } from "@/base-components";
-import AboutImage from "./aboutImage";
+import { useTranslation } from "@/hooks/useTranslation";
+import { Layout } from "@/base-components";
 import AboutTextContent from "./aboutTextContent";
-import AboutAchievements from "./aboutAchievements";
 
-const About: React.FC = () => (
-    <div
-        id="about"
-        className="min-h-screen flex flex-col items-center justify-center"
-    >
-        <Heading text="About Me" />
-        <div className="w-full flex items-center justify-between md:justify-center">
-            <AboutImage src="/aboutme.gif" alt="About Image" />
-            <AboutTextContent text={aboutText} />
-        </div>
-        <AboutAchievements />
-    </div>
-);
+const About: React.FC = () => {
+    const { t } = useTranslation("about");
+
+    return (
+        <Layout id="about" title={t("title")}>
+            <div className="w-full flex items-center justify-between md:justify-center">
+                <AboutTextContent />
+            </div>
+        </Layout>
+    );
+};
 
 export default About;

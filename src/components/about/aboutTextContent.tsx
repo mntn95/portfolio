@@ -1,30 +1,31 @@
 "use client";
 
 import * as React from "react";
-import { arrowLeftIcon, downloadIcon } from "@/assets";
+import { downloadIcon } from "@/assets";
 import { Link } from "@/base-components";
+import { useTranslation } from "@/hooks/useTranslation";
 
-type AboutTextContentT = {
-    text: string;
+const AboutTextContent: React.FC = () => {
+    const { t } = useTranslation("about");
+    const textArray = t("text", { returnObjects: true }) as string[];
+
+    return (
+        <div className="relative max-w-[800px] text-justify translate-x-0">
+            <ul className="text-lg sm:text-sm font-light text-theme-text lg:text-[16px] sm:text-[14px]">
+                {Object.values(textArray).map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                ))}
+            </ul>
+            <Link
+                className="w-max flex items-center gap-x-2 mt-6 rounded-full border border-white bg-warning px-3 py-2 font-light text-white hover:bg-warning"
+                href="/my-cv.pdf"
+                isDownloadLink
+            >
+                <span>{t("button")}</span>
+                <span className="text-xl">{downloadIcon}</span>
+            </Link>
+        </div>
+    );
 };
-
-const AboutTextContent: React.FC<AboutTextContentT> = ({ text }) => (
-    <div className="relative max-w-[800px] rounded-xl bg-zinc-100 p-5 text-justify dark:bg-zinc-700 translate-x-0">
-        <span className="absolute -left-5 top-20 scale-[2.5] text-zinc-100 md:hidden dark:text-zinc-700 transition-colors">
-            {arrowLeftIcon}
-        </span>
-        <p className="text-lg font-light text-gray-700 first-letter:pl-3 lg:text-[16px] sm:text-[14px] dark:text-white transition-colors">
-            {text}
-        </p>
-        <Link
-            className="w-max flex items-center gap-x-2 mt-6 rounded-full border border-gray-300 bg-red-400 px-3 py-2 font-light text-white hover:bg-red-500 transition-colors"
-            href="/my-cv.pdf"
-            isDownloadLink
-        >
-            <span>Download CV</span>
-            <span className="text-xl">{downloadIcon}</span>
-        </Link>
-    </div>
-);
 
 export default AboutTextContent;

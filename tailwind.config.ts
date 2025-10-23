@@ -1,21 +1,24 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-    content: [
-        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    ],
+    content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
     darkMode: "class",
     plugins: [],
     theme: {
         extend: {
             colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
+                border: "var(--color-border)",
+                warning: "var(--color-warning)",
+                link: "var(--color-link)",
+                theme: {
+                    background: "var(--color-theme-background)",
+                    surface: "var(--color-theme-surface)",
+                    text: "var(--color-theme-text)",
+                },
             },
         },
         screens: {
+            xxl: { min: "1401px" },
             xl: { max: "1400px" },
             lg: { max: "1150px" },
             md: { max: "767px" },

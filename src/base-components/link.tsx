@@ -6,8 +6,14 @@ const Link: React.FC<LinkProps> = ({
     className,
     children,
     isDownloadLink = false,
+    onClick,
 }) => (
-    <a href={href} download={isDownloadLink} className={className}>
+    <a
+        href={href}
+        download={isDownloadLink}
+        className={className}
+        onClick={onClick}
+    >
         {children}
     </a>
 );

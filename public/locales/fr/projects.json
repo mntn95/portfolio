@@ -1,0 +1,43 @@
+{
+    "title": "Projets",
+    "projects": {
+        "afflelou": {
+            "name": "Alain Afflelou",
+            "desc": "Une plateforme e-commerce internationale dédiée à l'optique, accompagnée de son système de gestion back-office."
+        },
+        "vamos": {
+            "name": "Vamos!",
+            "desc": "Une solution CRM sur-mesure conçue pour optimiser le recrutement et la gestion des collaborateurs."
+        },
+        "merci_lartiste": {
+            "name": "Merci l'Artiste",
+            "desc": "Site Web d'un barbier coiffeur d'inspiration vintage offrant un système de réservation moderne."
+        },
+        "timeweaver": {
+            "name": "Timeweaver",
+            "desc": "Une plateforme de gestion du temps et des clients pour entrepreneurs solos et petites structures."
+        },
+        "terra_oliva": {
+            "name": "Terra Oliva",
+            "desc": "La vitrine digitale d'un restaurant aux saveurs méditerranéennes."
+        },
+        "paris_tours": {
+            "name": "Paris Tours",
+            "desc": "Une landing page dédiée à l'organisation de visites guidées dans Paris."
+        }
+    },
+    "buttons": {
+        "all": "Tous",
+        "bootstrap": "Bootstrap",
+        "cypress": "Cypress",
+        "graphql": "GraphQL",
+        "html": "HTML",
+        "jest": "Jest",
+        "lovable": "Lovable",
+        "next": "Next",
+        "react": "React",
+        "scss": "SCSS",
+        "tailwind": "Tailwind",
+        "typescript": "Typescript/Flow"
+    }
+}

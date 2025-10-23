@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
 import { QuestionArrow } from "@/assets";
 import type { QuestionProps, AnimationVariants } from "@/types";
 
 const Question: React.FC<QuestionProps> = ({ question, index }) => {
-    const { question: questionText, answer } = question;
+    const { t } = useTranslation("questions");
     const [show, setShow] = React.useState<boolean>(false);
 
     const variants: AnimationVariants = {
@@ -19,23 +20,25 @@ const Question: React.FC<QuestionProps> = ({ question, index }) => {
         hidden: { opacity: 0, x: -30 },
     };
 
+    if (!question || !question.questionKey || !question.answerKey) return null;
+
     return (
         <motion.li
             custom={index}
             initial="hidden"
             whileInView="visible"
             viewport={{ margin: "50px", once: true }}
-            className="border border-yellow-500 p-1 rounded-lg"
+            className="border border-border p-1 rounded-lg"
             variants={variants}
         >
             <h3
                 onClick={() => setShow(!show)}
-                className={`flex items-center text-xl font-extralight text-gray-800 hover:text-yellow-600 tracking-wide cursor-pointer dark:text-white dark:hover:text-yellow-600 ${show && "border-b text-yellow-600"}`}
+                className={`flex items-center text-xl font-extralight text-theme-text hover:text-link tracking-wide cursor-pointer ${show && "border-b text-link"}`}
             >
                 <motion.span animate={{ rotate: show ? 180 : 0 }}>
                     {QuestionArrow}
                 </motion.span>
-                <span>{questionText}</span>
+                <span>{t(question.questionKey)}</span>
             </h3>
             <motion.p
                 initial={{ scaleY: 0, height: 0, opacity: 0 }}
@@ -58,9 +61,9 @@ const Question: React.FC<QuestionProps> = ({ question, index }) => {
                     stiffness: show ? 250 : 50,
                     opacity: { delay: show ? 0.2 : 0 },
                 }}
-                className="box-border origin-top pl-8 text-lg font-extralight tracking-wide text-gray-900 first-letter:pl-3 dark:text-gray-200"
+                className="box-border origin-top pl-8 text-lg font-extralight tracking-wide text-theme-text first-letter:pl-3"
             >
-                {answer}
+                {t(question.answerKey)}
             </motion.p>
         </motion.li>
     );

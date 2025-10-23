@@ -1,0 +1,50 @@
+{
+    "title": "Services",
+    "examples": "Examples",
+    "services": {
+        "websites": {
+            "title": "Custom website creation",
+            "subtitle": "I create websites that inspire trust and convert your visitors into customers.",
+            "description": {
+                "unique": "Each project is unique: I adapt to your identity, your goals and your budget.",
+                "mockup": "With or without mockup: I can work from your designs or create them with a partner designer."
+            },
+            "examples": {
+                "showcase": "- Showcase site for your activity or business.",
+                "landing": "- Landing page focused on conversion.",
+                "creative": "- Creative portfolio or personal site.",
+                "ecommerce": "- E-commerce platform",
+                "blog": "- Blog or magazine"
+            }
+        },
+        "collaboration": {
+            "title": "Front-end collaboration",
+            "subtitle": "I integrate your staff to build or evolve your web project.",
+            "description": {
+                "join": "I join your teams as a freelancer to ensure the quality and continuity of your development.",
+                "adapt": "I adapt to your tools, processes and work pace."
+            },
+            "examples": {
+                "short_long": "- Short or long mission in direct collaboration with your staff.",
+                "integration": "- Integration or redesign of existing interfaces.",
+                "reviews": "- Participation in code reviews.",
+                "design": "- Implementation or evolution of a design system.",
+                "backend": "- Collaboration with designers and backend."
+            }
+        },
+        "maintenance": {
+            "title": "Maintenance & support",
+            "subtitle": "I take care of the maintenance of your site so that it remains efficient and secure.",
+            "description": {
+                "preventive": "Preventive and corrective maintenance of your website.",
+                "regular": "Regular security and performance updates."
+            },
+            "examples": {
+                "update": "- Update dependencies and plugins.",
+                "regular": "- Regular backups and monitoring.",
+                "bug": "- Bug fixes and optimizations.",
+                "technical": "- Technical support and advice."
+            }
+        }
+    }
+}

@@ -1,38 +1,40 @@
 "use client";
-
 import * as React from "react";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
+import { useTranslation } from "@/hooks/useTranslation";
 import type { HeroContentProps } from "@/types";
 
-import HeroLogo from "./heroLogo";
+const HeroContent: React.FC<HeroContentProps> = () => {
+    const { t } = useTranslation("hero");
 
-const HeroContent: React.FC<HeroContentProps> = ({
-    axisX,
-    axisY,
-    buttonHover,
-    isMouseMoving,
-    windowOffSet,
-}) => (
-    <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
-        className="flex flex-col items-center justify-center gap-y-3 font-light capitalize"
-    >
-        <HeroLogo
-            axisX={axisX}
-            axisY={axisY}
-            buttonHover={buttonHover}
-            isMouseMoving={isMouseMoving}
-            windowOffSet={windowOffSet}
-        />
-        <h1 className="text-center text-3xl font-bold tracking-wider text-gray-500 sm:text-2xl dark:text-white transition-colors">
-            My name is Mathieu Nguyen &
-        </h1>
-        <p className="text-lg tracking-wider text-gray-700 dark:text-gray-200 transition-colors">
-            I am a Front-End Web Developer 🙃
-        </p>
-    </motion.div>
-);
+    return (
+        <div className="flex flex-col gap-y-3 font-light capitalize">
+            <h1 className="text-center text-8xl uppercase font-bold tracking-wider text-theme-text sm:text-5xl">
+                <TypeAnimation
+                    sequence={["Mathieu Nguyen"]}
+                    speed={50}
+                    cursor={false}
+                />
+            </h1>
+            <motion.p
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.4 }}
+                className="text-2xl sm:text-lg uppercase tracking-wider text-theme-text text-center"
+            >
+                {t("subtitle")}
+            </motion.p>
+            <motion.p
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.6 }}
+                className="text-md sm:text-sm text-center tracking-wider text-warning"
+            >
+                {t("technologies")}
+            </motion.p>
+        </div>
+    );
+};
 
 export default HeroContent;

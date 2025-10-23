@@ -8,6 +8,7 @@ const BaseImage: React.FC<BaseImageProps> = ({
     width = 400,
     height = 400,
     className,
+    priority = false,
 }) => (
     <Image
         src={src}
@@ -15,6 +16,7 @@ const BaseImage: React.FC<BaseImageProps> = ({
         width={width}
         height={height}
         className={className}
+        priority={priority}
     />
 );
 
