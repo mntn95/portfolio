@@ -4,6 +4,7 @@ import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n/provider";
 import BackToTopButton from "@/base-components/backToTopButton";
+import { ScrollProgressBar } from "@/base-components";
 
 const outfit = Roboto_Mono({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ const RootLayout: React.FC<{
 }>) => (
     <html suppressHydrationWarning>
         <body className={outfit.className}>
+            <ScrollProgressBar />
             <I18nProvider>
                 {children}
                 <BackToTopButton />

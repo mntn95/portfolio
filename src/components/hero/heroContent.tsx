@@ -10,7 +10,7 @@ const HeroContent: React.FC<HeroContentProps> = () => {
 
     return (
         <div className="flex flex-col gap-y-3 font-light capitalize">
-            <h1 className="text-center text-8xl uppercase font-bold tracking-wider text-theme-text sm:text-5xl transition-colors">
+            <h1 className="text-center text-8xl uppercase font-bold tracking-wider text-theme-text sm:text-5xl">
                 <TypeAnimation
                     sequence={["Mathieu Nguyen"]}
                     speed={50}
@@ -21,7 +21,7 @@ const HeroContent: React.FC<HeroContentProps> = () => {
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.4 }}
-                className="text-2xl sm:text-lg uppercase tracking-wider text-theme-text transition-colors text-center"
+                className="text-2xl sm:text-lg uppercase tracking-wider text-theme-text text-center"
             >
                 {t("subtitle")}
             </motion.p>
@@ -29,7 +29,7 @@ const HeroContent: React.FC<HeroContentProps> = () => {
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.6 }}
-                className="text-md sm:text-sm text-center tracking-wider text-warning transition-colors"
+                className="text-md sm:text-sm text-center tracking-wider text-warning"
             >
                 {t("technologies")}
             </motion.p>

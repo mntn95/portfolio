@@ -12,7 +12,6 @@ import {
     Projects,
     Toggle,
     Services,
-    Footer,
 } from "@/components";
 
 const Home: React.FC = () => (
@@ -28,7 +27,6 @@ const Home: React.FC = () => (
                 <Reviews />
                 <Services />
                 <Questions />
-                <Footer />
             </div>
         </Toggle>
     </>

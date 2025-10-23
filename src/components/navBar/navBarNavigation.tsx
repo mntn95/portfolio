@@ -27,9 +27,7 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({
                             className="group w-[3.5rem] block text-link hover:text-warning"
                             href={`/#${item.id}`}
                         >
-                            <span className="group text-2xl transition-colors">
-                                {item.icon}
-                            </span>
+                            <span className="group text-2xl">{item.icon}</span>
                             <span
                                 suppressHydrationWarning
                                 className={`text-[10px] tracking-wide text-theme-text ${showLabelsOnHover ? "opacity-0 group-hover:opacity-100 transition-opacity duration-200" : "opacity-100"}`}
@@ -55,7 +53,7 @@ const NavBarNavigation: React.FC<NavBarNavigationProps> = ({
                         }}
                     >
                         <div className="flex flex-row items-center gap-x-3 py-2">
-                            <span className="text-2xl transition-colors text-link">
+                            <span className="text-2xl text-link">
                                 {item.icon}
                             </span>
                             <span

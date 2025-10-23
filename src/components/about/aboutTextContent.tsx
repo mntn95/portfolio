@@ -11,13 +11,13 @@ const AboutTextContent: React.FC = () => {
 
     return (
         <div className="relative max-w-[800px] text-justify translate-x-0">
-            <ul className="text-lg sm:text-sm font-light text-theme-text lg:text-[16px] sm:text-[14px] transition-colors">
+            <ul className="text-lg sm:text-sm font-light text-theme-text lg:text-[16px] sm:text-[14px]">
                 {Object.values(textArray).map((item: string, index: number) => (
                     <li key={index}>{item}</li>
                 ))}
             </ul>
             <Link
-                className="w-max flex items-center gap-x-2 mt-6 rounded-full border border-white bg-warning px-3 py-2 font-light text-white hover:bg-warning transition-colors"
+                className="w-max flex items-center gap-x-2 mt-6 rounded-full border border-white bg-warning px-3 py-2 font-light text-white hover:bg-warning"
                 href="/my-cv.pdf"
                 isDownloadLink
             >
