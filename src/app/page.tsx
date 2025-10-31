@@ -22,10 +22,10 @@ const Home: React.FC = () => (
             <div className="grid grid-cols-1 gap-0 w-full mx-auto">
                 <Hero />
                 <About />
+                <Services />
                 <Skills />
                 <Projects />
                 <Reviews />
-                <Services />
                 <Questions />
             </div>
         </Toggle>

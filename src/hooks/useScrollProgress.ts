@@ -14,7 +14,6 @@ export const useScrollProgress = (): number => {
             const scrollHeight = document.documentElement.scrollHeight;
             const clientHeight = window.innerHeight;
             const denominator = scrollHeight - clientHeight;
-            console.log({ denominator });
 
             if (denominator <= 0) {
                 setProgress(0);
@@ -41,7 +40,6 @@ export const useScrollProgress = (): number => {
         };
 
         calculateProgress();
-        console.log({ progress });
 
         window.addEventListener("scroll", handleScroll, { passive: true });
 

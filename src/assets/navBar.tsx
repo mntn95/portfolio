@@ -24,6 +24,11 @@ export const navbarData = [
         icon: <UserLineIcon />,
     },
     {
+        id: "services",
+        nameKey: "services",
+        icon: <PriceTag3LineIcon />,
+    },
+    {
         id: "skills",
         nameKey: "skills",
         icon: <BriefcaseLineIcon />,
@@ -37,11 +42,6 @@ export const navbarData = [
         id: "reviews",
         nameKey: "reviews",
         icon: <UserStarLineIcon />,
-    },
-    {
-        id: "services",
-        nameKey: "services",
-        icon: <PriceTag3LineIcon />,
     },
     {
         id: "questions",

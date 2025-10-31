@@ -73,9 +73,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, service }) => {
                     {t("examples")}
                 </h4>
                 <ul className="text-xs text-left space-y-1">
-                    {Object.values(service.examples).map((item, itemIndex) => (
-                        <li key={itemIndex}>{t(item as string)}</li>
-                    ))}
+                    {Object.values(service.examples.content).map(
+                        (item, itemIndex) => (
+                            <li key={itemIndex}>{t(item as string)}</li>
+                        ),
+                    )}
                 </ul>
             </div>
         </motion.div>
