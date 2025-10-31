@@ -1,25 +1,13 @@
 {
     "title": "Avis",
     "reviews": {
-        "mark_t": {
-            "name": "Mark T., Graphiste Freelance",
-            "comment": "Votre travail sur notre site web a été phénoménal. Le design est visuellement époustouflant et incroyablement convivial. Nous avons reçu d'innombrables compliments de nos clients, et nos ventes ont considérablement augmenté. Merci d'avoir capturé l'essence de notre marque si parfaitement !"
+        "virgile_p": {
+            "name": "Virgile P., Coiffeur Barbier",
+            "comment": "Excellente expérience avec Mathieu. Le site qu’il a réalisé est à la fois esthétique et fonctionnel. La partie  prise de rendez-vous personnalisé a été pensée dans les moindres détails et facilite énormément la gestion de mes clients. Sérieux, réactif et à l’écoute. je recommande vivement !"
         },
-        "sarah_b": {
-            "name": "Sarah B., Propriétaire de Boutique E-commerce",
-            "comment": "Travailler avec vous a été un plaisir absolu. Le site portfolio que vous avez créé pour moi est élégant, moderne et met magnifiquement en valeur mon travail. Votre attention aux détails et votre flair créatif sont vraiment impressionnants. Je ne pourrais pas être plus heureuse du résultat final !"
-        },
-        "emily_r": {
-            "name": "Emily R., PDG de Startup Tech",
-            "comment": "La refonte de notre site web d'entreprise a dépassé toutes les attentes. Vos idées innovantes et votre exécution professionnelle nous ont donné un site qui est non seulement visuellement attrayant mais aussi très fonctionnel. Nous avons vu une amélioration significative de l'engagement des utilisateurs grâce à votre expertise."
-        },
-        "bob_w": {
-            "name": "Bob W., Blogueur Lifestyle",
-            "comment": "J'adore absolument le design de blog que vous avez créé pour moi. C'est exactement ce que j'envisageais - stylé, unique et facile à naviguer. Votre réactivité et vos conseils créatifs ont été inestimables. Mes lecteurs sont enthousiastes à propos du nouveau look, et je ne pourrais pas être plus ravi !"
-        },
-        "david_h": {
-            "name": "David H., Directeur d'Organisation à but non lucratif",
-            "comment": "Votre travail sur le site web de notre organisation à but non lucratif a été transformateur. Le design est épuré, engageant et transmet efficacement notre mission. Nous avons vu une augmentation des dons en ligne et des inscriptions de bénévoles, tout cela grâce à votre design fantastique. Votre dévouement et votre talent sont grandement appréciés !"
+        "ibrahim_b": {
+            "name": "Ibrahim B., UX/UI Designer",
+            "comment": "J’ai bossé avec Mathieu pendant plus de 3 ans chez Extia, dans la team Vamos, où il intervenait comme développeur front-end React sur notre CRM interne. C’est quelqu’un de super impliqué, sérieux dans son taf, toujours à l’écoute des retours et avec une vraie envie de progresser. Il a toujours su prendre les feedbacks de manière constructive, et ça se sentait dans la qualité de son travail. En plus d’être un bon dev, c’est aussi une personne vraiment sympa, toujours partant pour filer un coup de main et mettre une bonne ambiance dans l’équipe. Bref, un vrai plaisir de bosser avec lui. Je le recommande les yeux fermés !"
         }
     }
 }

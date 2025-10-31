@@ -24,6 +24,10 @@
         "paris_tours": {
             "name": "Paris Tours",
             "desc": "A landing page dedicated to organizing guided tours in Paris."
+        },
+        "freelances_coach": {
+            "name": "Coach for freelances",
+            "desc": "A website for a freelances coach who offers a personalized coaching to increase their revenue."
         }
     },
     "buttons": {
@@ -39,5 +43,6 @@
         "scss": "SCSS",
         "tailwind": "Tailwind",
         "typescript": "Typescript/Flow"
-    }
+    },
+    "link_to_website": "Visit"
 }

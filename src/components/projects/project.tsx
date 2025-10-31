@@ -5,7 +5,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "@/hooks/useTranslation";
 
-import { Image, isPair } from "@/base-components";
+import { Image, isPair, Link } from "@/base-components";
 import type { ProjectProps } from "@/types";
 
 const Project: React.FC<ProjectProps> = ({ data, index }) => {
@@ -22,7 +22,7 @@ const Project: React.FC<ProjectProps> = ({ data, index }) => {
             transition={{ duration: 1, type: "spring", stiffness: 100 }}
         >
             <Image
-                src={data.url}
+                src={data.imageUrl}
                 className="rounded-lg opacity-70"
                 alt="project-image"
             />
@@ -37,6 +37,17 @@ const Project: React.FC<ProjectProps> = ({ data, index }) => {
                 <p className="text-justify text-theme-text first-letter:pl-2 transition-colors">
                     {t(data.descKey)}
                 </p>
+                {data.url && (
+                    <div className="p-2">
+                        <Link
+                            href={data.url}
+                            target="_blank"
+                            className={`${show ? "pointer-events-auto" : "pointer-events-none"} text-theme-text hover:underline`}
+                        >
+                            {t("link_to_website")}
+                        </Link>
+                    </div>
+                )}
             </motion.div>
         </motion.div>
     );

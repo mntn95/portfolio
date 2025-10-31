@@ -16,28 +16,13 @@ export const arrowIcons = [
 
 export const reviews = [
     {
-        nameKey: "reviews.mark_t.name",
-        commentKey: "reviews.mark_t.comment",
-        stars: [1, 1, 1, 1, 0.5],
-    },
-    {
-        nameKey: "reviews.sarah_b.name",
-        commentKey: "reviews.sarah_b.comment",
+        nameKey: "reviews.virgile_p.name",
+        commentKey: "reviews.virgile_p.comment",
         stars: [1, 1, 1, 1, 1],
     },
     {
-        nameKey: "reviews.emily_r.name",
-        commentKey: "reviews.emily_r.comment",
-        stars: [1, 1, 1, 1, 1],
-    },
-    {
-        nameKey: "reviews.bob_w.name",
-        commentKey: "reviews.bob_w.comment",
-        stars: [1, 1, 1, 1, 0.5],
-    },
-    {
-        nameKey: "reviews.david_h.name",
-        commentKey: "reviews.david_h.comment",
+        nameKey: "reviews.ibrahim_b.name",
+        commentKey: "reviews.ibrahim_b.comment",
         stars: [1, 1, 1, 1, 1],
     },
 ];

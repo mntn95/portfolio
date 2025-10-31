@@ -24,6 +24,10 @@
         "paris_tours": {
             "name": "Paris Tours",
             "desc": "Une landing page dédiée à l'organisation de visites guidées dans Paris."
+        },
+        "freelances_coach": {
+            "name": "Coach pour freelances",
+            "desc": "Un site web pour un coach de freelances qui propose un accompagnement personnalisé pour augmenter leur chiffre d'affaires."
         }
     },
     "buttons": {
@@ -33,11 +37,11 @@
         "graphql": "GraphQL",
         "html": "HTML",
         "jest": "Jest",
-        "lovable": "Lovable",
         "next": "Next",
         "react": "React",
         "scss": "SCSS",
         "tailwind": "Tailwind",
         "typescript": "Typescript/Flow"
-    }
+    },
+    "link_to_website": "Visiter"
 }

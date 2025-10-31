@@ -15,6 +15,7 @@ export interface BaseImageProps {
 
 export interface LinkProps {
     href: string;
+    target?: string;
     className?: string;
     children: React.ReactNode;
     isDownloadLink?: boolean;

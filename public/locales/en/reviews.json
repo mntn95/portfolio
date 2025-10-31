@@ -1,13 +1,13 @@
 {
     "title": "Reviews",
     "reviews": {
-        "mark_t": {
-            "name": "Mark T., Freelance Graphic Designer",
-            "comment": "Your work on our website has been phenomenal. The design is visually stunning and incredibly user-friendly. We've received countless compliments from our customers, and our sales have noticeably increased. Thank you for capturing our brand's essence so perfectly!"
+        "virgile_p": {
+            "name": "Virgile P., Hairdresser & Barber",
+            "comment": "Excellent experience with Mathieu. The website he created is both attractive and functional. The personalized appointment booking feature has been designed with great attention to detail and makes managing my clients much easier. Professional, responsive, and attentive. I highly recommend him!"
         },
-        "sarah_b": {
-            "name": "Sarah B., E-commerce Store Owner",
-            "comment": "Working with you, has been an absolute pleasure. The portfolio website you created for me is sleek, modern, and beautifully showcases my work. Your attention to detail and creative flair are truly impressive. I couldn't be happier with the final result!"
+        "ibra_b": {
+            "name": "Ibrahim B., UX/UI Designer",
+            "comment": "I worked with Mathieu for over three years at Extia, in the Vamos team, where he worked as a React front-end developer on our internal CRM. He is extremely dedicated, serious about his work, always open to feedback, and genuinely eager to improve. He has always taken feedback constructively, and this was reflected in the quality of his work. In addition to being a good developer, he is also a really nice person, always willing to lend a hand and create a good atmosphere within the team. In short, it's a real pleasure to work with him. I recommend him without hesitation!"
         },
         "emily_r": {
             "name": "Emily R., CEO of Tech Startup",

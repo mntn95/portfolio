@@ -1,8 +1,9 @@
 export interface ProjectData {
     nameKey: string;
     descKey: string;
-    url: string;
+    imageUrl: string;
     tech: string[];
+    url?: string;
 }
 
 export interface ProjectProps {
