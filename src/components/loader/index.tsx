@@ -8,12 +8,18 @@ const Loader = () => {
 
     React.useEffect(() => {
         setIsLoading(true);
+        const timeout = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+        return () => {
+            clearTimeout(timeout);
+        };
     }, []);
 
     return (
         <motion.div
             initial={{ top: 0 }}
-            animate={{ top: isLoading ? "-100%" : 0 }}
+            animate={{ top: isLoading ? 0 : "-100%" }}
             transition={{ duration: 0.5 }}
             className="fixed h-full w-full left-0 top-0 flex items-center justify-center bg-gradient-to-t from-yellow-50 to-red-50 z-50"
         >
