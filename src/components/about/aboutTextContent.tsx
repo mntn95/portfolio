@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { downloadIcon } from "@/assets";
-import { Link } from "@/base-components";
+import { Button, Link } from "@/base-components";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const AboutTextContent: React.FC = () => {
@@ -16,13 +16,11 @@ const AboutTextContent: React.FC = () => {
                     <li key={index}>{item}</li>
                 ))}
             </ul>
-            <Link
-                className="w-max flex items-center gap-x-2 mt-6 rounded-full border border-white bg-warning px-3 py-2 font-light text-white hover:bg-warning"
-                href="/my-cv.pdf"
-                isDownloadLink
-            >
-                <span>{t("button")}</span>
-                <span className="text-xl">{downloadIcon}</span>
+            <Link href="/my-cv.pdf" isDownloadLink>
+                <Button>
+                    <span>{t("button")}</span>
+                    <span className="text-xl">{downloadIcon}</span>
+                </Button>
             </Link>
         </div>
     );

@@ -32,6 +32,10 @@
         "source_code": {
             "question": "Puis-je avoir accès au code source une fois le projet terminé ?",
             "answer": "Absolument. Le code vous appartient une fois le projet livré. Vous pourrez y accéder librement pour le modifier, le faire évoluer ou le transmettre à un autre développeur. Si vous optez pour une offre de maintenance, j'en reste le responsable technique tant que le suivi est actif, afin d'assurer la cohérence du projet."
+        },
+        "contact": {
+            "question": "Comment puis-je vous joindre ?",
+            "answer": "Vous pouvez me contacter par email à mathieu.nguyen@proton.me ou via mon profil LinkedIn (https://www.linkedin.com/in/mathieu-ng/). Je répond généralement dans les heures qui suivent."
         }
     }
 }

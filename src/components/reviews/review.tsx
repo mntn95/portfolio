@@ -29,7 +29,7 @@ const Review: React.FC<ReviewProps> = ({ review, slides, stars }) => {
             </p>
             <div className="flex flex-col items-center justify-center gap-y-2">
                 <span className="text-lg font-light text-link mr-3">
-                    {getStarValue(stars)}
+                    {getStarValue(stars)} / 5
                 </span>
                 <div className="flex items-center gap-x-2 text-2xl text-border">
                     {stars.map((starValue, index) => (

@@ -32,6 +32,10 @@
         "source_code": {
             "question": "Can I access the source code once the project is completed?",
             "answer": "Absolutely. The code belongs to you once the project is delivered. You'll be able to access it freely to modify it, develop it further, or pass it on to another developer. If you opt for a maintenance package, I remain the technical manager as long as the support is active, to ensure project consistency."
+        },
+        "contact": {
+            "question": "How can I contact you?",
+            "answer": "You can contact me by email at mathieu.nguyen@proton.me or from my LinkedIn profile (https://www.linkedin.com/in/mathieu-ng/). I usually respond within a couple of hours."
         }
     }
 }

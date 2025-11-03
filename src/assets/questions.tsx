@@ -31,6 +31,10 @@ export const questions = [
         questionKey: "questions.source_code.question",
         answerKey: "questions.source_code.answer",
     },
+    {
+        questionKey: "questions.contact.question",
+        answerKey: "questions.contact.answer",
+    },
 ];
 
 import ArrowDropDownLineIcon from "remixicon-react/ArrowDropDownLineIcon";

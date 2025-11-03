@@ -2,17 +2,14 @@ import * as React from "react";
 import type { HeroIconProps } from "@/types";
 
 const HeroIcon: React.FC<HeroIconProps> = ({ icon, href, index }) => (
-    <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+    <div
         className="relative rounded-lg hover:bg-warning hover:text-white"
         style={{
             top: index === 1 ? "1px" : "0px",
         }}
     >
         {icon}
-    </a>
+    </div>
 );
 
 export default HeroIcon;

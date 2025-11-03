@@ -8,10 +8,12 @@ export const heroIcons = [
 
 export const heroLinks = [
     {
+        label: "LinkedIn",
         href: "https://www.linkedin.com/in/mathieu-ng/",
         icon: <LinkedInLineIcon />,
     },
     {
+        label: "Contact",
         href: "mailto:mathieu.nguyen@proton.me",
         icon: <MailLineIcon />,
     },

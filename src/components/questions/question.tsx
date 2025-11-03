@@ -62,6 +62,9 @@ const Question: React.FC<QuestionProps> = ({ question, index }) => {
                     opacity: { delay: show ? 0.2 : 0 },
                 }}
                 className="box-border origin-top pl-8 text-lg font-extralight tracking-wide text-theme-text first-letter:pl-3"
+                style={{
+                    wordWrap: "break-word",
+                }}
             >
                 {t(question.answerKey)}
             </motion.p>
