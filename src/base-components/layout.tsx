@@ -46,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({
         <section
             id={id}
             ref={sectionRef}
-            className="min-h-[100dvh] relative w-full overflow-hidden"
+            className="min-h-[100dvh] relative w-full"
         >
             <div
                 className={`h-full sm:w-[90%] md:w-[80%] lg:w-[80%] xl:w-[90%] xxl:w-[90%] mx-auto sm:m-3 md:m-3 flex flex-col ${alignTop ? "justify-start pt-20" : "justify-center"} ${id === "about" ? "items-start" : "items-center"}`}

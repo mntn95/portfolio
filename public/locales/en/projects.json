@@ -3,7 +3,7 @@
     "projects": {
         "afflelou": {
             "name": "Alain Afflelou",
-            "desc": "An international e-commerce platform dedicated to optics, accompanied by its back-office management system."
+            "desc": "An international e-commerce platform dedicated to eyewear, along with its back-office management system."
         },
         "vamos": {
             "name": "Vamos!",
@@ -11,23 +11,23 @@
         },
         "merci_lartiste": {
             "name": "Merci l'Artiste",
-            "desc": "Website for a vintage-inspired barber hairdresser offering a modern booking system."
+            "desc": "Website for a vintage-inspired barber shop offering a modern booking system."
         },
         "timeweaver": {
             "name": "Timeweaver",
-            "desc": "A time and client management platform for solo entrepreneurs and small structures."
+            "desc": "A time and client management platform for solo entrepreneurs and small businesses."
         },
         "terra_oliva": {
             "name": "Terra Oliva",
-            "desc": "The digital showcase of a restaurant with Mediterranean flavors."
+            "desc": "The digital showcase of a Mediterranean cuisine restaurant."
         },
         "paris_tours": {
             "name": "Paris Tours",
             "desc": "A landing page dedicated to organizing guided tours in Paris."
         },
         "freelances_coach": {
-            "name": "Coach for freelances",
-            "desc": "A website for a freelances coach who offers a personalized coaching to increase their revenue."
+            "name": "Freelance Coach",
+            "desc": "A website for a freelance coach offering personalized support to increase their revenue."
         }
     },
     "buttons": {
@@ -37,7 +37,6 @@
         "graphql": "GraphQL",
         "html": "HTML",
         "jest": "Jest",
-        "lovable": "Lovable",
         "next": "Next",
         "react": "React",
         "scss": "SCSS",

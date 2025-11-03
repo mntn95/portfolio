@@ -1,37 +1,37 @@
 {
-    "title": "Questions",
+    "title": "FAQ",
     "questions": {
         "cost": {
             "question": "How much does a website cost?",
-            "answer": "The cost of a website varies considerably depending on your specific needs and the features you wish to integrate. Every project is unique, which is why I encourage you to provide as much detail as possible when you first contact me: this will allow me to offer you a custom quote that's perfectly tailored to your project. The final price will depend on factors such as the level of customization desired, the features to be developed, and the technical complexity of your site."
+            "answer": "Since every project is unique, the price varies depending on your needs: custom design, specific features, technical complexity... The more information you provide about your project, the more accurate and transparent a quote I can give you. Don't hesitate to contact me to discuss it!"
         },
         "how_long": {
-            "question": "How long does it take to create a site?",
-            "answer": "A landing page can be created in about 1 week, while a showcase site generally takes between 3 and 6 weeks depending on the size of the project and the responsiveness of exchanges. For more complex projects, the duration is defined on a case-by-case basis after analysis, because each project is unique."
+            "question": "How long does it take to create a website?",
+            "answer": "A landing page can be delivered in 3 days, while a showcase website takes one week. More complex projects with API integration require several weeks, depending on scope and collaboration efficiency."
         },
         "communication": {
             "question": "How does communication work during the project?",
-            "answer": "It all starts with a discovery call to understand your needs. Then, we will communicate mainly by email or messages, to keep a clear record of exchanges. I will send you regular progress updates and you can follow the development at each step."
+            "answer": "Everything starts with a discovery call to understand your needs. Then, we'll communicate mainly by email or messages to keep a clear record of our exchanges. I'll send you regular progress updates and you'll be able to follow the development at every step."
         },
         "dont_like": {
-            "question": "What if I don't like the site?",
-            "answer": "Don't worry. Before starting development, I present you with a mockup or preview of the final result. You can give me your feedback at this stage and we will adjust until we get a result that meets your expectations. Nothing is launched without your validation."
+            "question": "What if I don't like the website?",
+            "answer": "No worries. Before starting development, I'll present you with a mockup or preview of the final result. You'll be able to give me your feedback at this stage and we'll adjust until we achieve a result that meets your expectations. Nothing is launched without your approval."
         },
         "payments": {
             "question": "How do payments work?",
-            "answer": "It all depends on the type of project. For website creations, I will ask you for a 50% deposit before starting development. The rest will be paid on delivery of the project. For freelance missions, I offer pricing per day rate or deliverable but we can discuss it together. For maintenance, I offer monthly or annual payment."
+            "answer": "It depends on the type of project. For website creation, I'll ask for a 50% deposit before starting development. The rest will be paid upon project delivery. For freelance assignments, I offer daily rate or deliverable-based pricing, but we can discuss this together. For maintenance, I offer monthly or annual payment."
         },
         "only_online": {
-            "question": "Can I only pay when the site is online?",
-            "answer": "No, because most of the work is done well before going online. I invoice according to the schedule agreed at the start. This ensures a regular pace and good organization on both sides."
+            "question": "Can I pay only when the site is online?",
+            "answer": "No, because most of the work is done well before the site goes live. I invoice according to the schedule agreed upon at the start. This ensures a regular pace and good organization on both sides."
         },
         "hosting": {
-            "question": "Who takes care of hosting?",
-            "answer": "Two options are available to you: You manage your own hosting (I help you configure it), or I take care of it as part of a monthly maintenance package. I use the same host for all my clients (except special request), which makes management simpler and ensures optimal security."
+            "question": "Who handles hosting?",
+            "answer": "You have two options: You manage your own hosting (I'll help you configure it), or I take care of it as part of a monthly maintenance package. I use the same hosting provider for all my clients (unless specifically requested), which makes management simpler and ensures optimal security."
         },
         "source_code": {
-            "question": "Can I have access to the source code once the project is finished?",
-            "answer": "Absolutely. The code belongs to you once the project is delivered. You can access it freely to modify it, evolve it or pass it on to another developer. If you opt for a maintenance offer, I remain the technical manager as long as the follow-up is active, to ensure the consistency of the project."
+            "question": "Can I access the source code once the project is completed?",
+            "answer": "Absolutely. The code belongs to you once the project is delivered. You'll be able to access it freely to modify it, develop it further, or pass it on to another developer. If you opt for a maintenance package, I remain the technical manager as long as the support is active, to ensure project consistency."
         }
     }
 }

@@ -1,10 +1,10 @@
 {
-    "title": "About me",
+    "title": "About Me",
     "text": {
-        "1": "I am a front-end developer. My thing is designing clear, fast and durable web interfaces that clearly show what you do and why you should be trusted. I like to take your ideas and make them grow, so they become stronger, clearer and more impactful than you imagined.",
-        "2": "I have already explored several areas: e-commerce, catering, CRM, SaaS... and I am eager to embark on new experiences.",
-        "3": "I feel at home in the JavaScript ecosystem, but I also like to explore other technologies when the context requires it.",
-        "4": "For me, each project is a unique adventure. If you want to bring an idea to life or create something new, let's talk about it!"
+        "1": "I'm a front-end developer. My thing is designing clear, fast, and sustainable web interfaces that clearly show what you do and why people should trust you. I love taking your ideas and helping them grow, so they become stronger, clearer, and more impactful than you ever imagined.",
+        "2": "I've already explored several fields: e-commerce, catering, CRM, SaaS... and I'm eager to dive into new experiences.",
+        "3": "I feel at home in the JavaScript ecosystem, but I also enjoy exploring other technologies when the context requires it.",
+        "4": "For me, every project is a unique adventure. If you want to bring an idea to life or create something new, let's talk about it!"
     },
-    "button": "Download CV"
+    "button": "Download Resume"
 }
