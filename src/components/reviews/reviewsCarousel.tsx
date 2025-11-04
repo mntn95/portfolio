@@ -46,7 +46,7 @@ const ReviewsCarousel: React.FC<ReviewsCarouselT> = ({ index, direction }) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="relative w-[800px] lg:w-[580px] md:w-[95%] sm:w-[300px] h-[500px] lg:h-[450px] md:h-[400px] sm:h-[600px] flex items-center justify-center overflow-hidden hover:drop-shadow-[0px_0px_3px_var(--color-border)]"
+            className="relative w-[800px] lg:w-[580px] md:w-[95%] sm:w-[300px] h-[500px] lg:h-[600px] md:h-[600px] sm:h-[700px] flex items-center justify-center overflow-hidden hover:drop-shadow-[0px_0px_3px_var(--color-border)]"
         >
             {reviews.map((review: ReviewData, reviewIndex: number) => (
                 <Review

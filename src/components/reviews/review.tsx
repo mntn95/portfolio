@@ -16,7 +16,7 @@ const Review: React.FC<ReviewProps> = ({ review, slides, stars }) => {
     return (
         <motion.div
             initial={{ x: "100%" }}
-            className="absolute inset-0 flex flex-col items-center justify-center gap-y-7 lg:gap-y-4 border border-border bg-theme-surface p-14 lg:p-5 rounded-xl transition-colors"
+            className="absolute inset-0 flex flex-col items-center justify-evenly gap-y-7 lg:gap-y-4 border border-border bg-theme-surface p-8 lg:p-5 rounded-xl transition-colors"
             ref={(element: HTMLDivElement) => {
                 if (slides) slides.push(element);
             }}

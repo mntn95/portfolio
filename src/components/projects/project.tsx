@@ -34,7 +34,7 @@ const Project: React.FC<ProjectProps> = ({ data, index }) => {
                 <h2 className="text-lg font-bold tracking-wide text-theme-text transition-colors">
                     {t(data.nameKey)}
                 </h2>
-                <p className="text-justify text-theme-text first-letter:pl-2 transition-colors">
+                <p className="text-justify text-sm text-theme-text first-letter:pl-2 transition-colors">
                     {t(data.descKey)}
                 </p>
                 {data.url && (
