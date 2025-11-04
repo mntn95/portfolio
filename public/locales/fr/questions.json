@@ -1,33 +1,53 @@
 {
     "title": "Questions",
     "questions": {
+        "services": {
+            "question": "Quels types de prestations proposez-vous ?",
+            "answer": "Je propose trois types de prestations : la création de sites web sur mesure (landing pages, sites vitrines, etc), la maintenance de sites web existants et l'intégration en mission longue au sein d'équipes tech en tant que développeur front-end. Selon vos besoins, je peux intervenir pour un projet ponctuel ou rejoindre votre équipe sur plusieurs mois."
+        },
+        "freelance_mission": {
+            "question": "Comment se passe une mission en freelance au sein d'une équipe ?",
+            "answer": "Je m'intègre à votre équipe existante pour renforcer vos capacités de développement front-end. Je m'adapte à vos process, outils (Git, Jira, Slack...) et méthodologies (Agile, Scrum...). Je participe aux daily meetings, code reviews et sprints comme un membre à part entière de l'équipe. L'objectif est d'apporter de la valeur rapidement tout en respectant vos standards de qualité."
+        },
+        "tjm": {
+            "question": "Quel est votre TJM (Taux Journalier Moyen) ?",
+            "answer": "Mon TJM varie en fonction de la durée de la mission, de sa complexité et des technologies utilisées. Pour une mission longue (3 mois et plus), je propose des tarifs préférentiels. Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé."
+        },
+        "availability": {
+            "question": "Quelle est votre disponibilité ?",
+            "answer": "Pour les missions longues, je suis disponible immédiatement. Pour les créations de sites web, ma disponibilité dépend de mes projets en cours : si j'en ai un, vous serez le suivant sur ma liste. N'hésitez pas à me contacter pour confirmer mes disponibilités actuelles."
+        },
+        "tech_stack": {
+            "question": "Avec quelles technologies travaillez-vous ?",
+            "answer": "Je suis spécialisé dans l'écosystème JavaScript moderne : React, Next.js, TypeScript, Tailwind CSS. J'ai également de l'expérience avec GraphQL, Redux, Jest, Cypress et d'autres outils front-end. Je m'adapte rapidement à de nouveaux frameworks si le projet l'exige."
+        },
+        "remote_onsite": {
+            "question": "Travaillez-vous en remote ou sur site ?",
+            "answer": "Pour les créations de sites web, je travaille exclusivement en remote. Pour les missions longues, je suis flexible : je peux travailler entièrement en remote ou me déplacer en région parisienne selon vos préférences et les besoins du projet."
+        },
         "cost": {
             "question": "Combien coûte un site web ?",
             "answer": "Chaque projet étant unique, le prix varie en fonction de vos besoins : design personnalisé, fonctionnalités spécifiques, complexité technique... Plus vous me communiquez d'informations sur votre projet, plus je peux vous établir un devis précis et transparent. N'hésitez pas à me contacter pour en discuter !"
         },
         "how_long": {
             "question": "Combien de temps faut-il pour créer un site ?",
-            "answer": "Une landing page peut être créée en 3 jours, tandis qu'un site vitrine prend une semaine. Un projet plus complexe avec une API prend plusieurs semaines selon la taille du projet et la réactivité des échanges."
+            "answer": "Une landing page peut être créée en 3 jours, tandis qu'un site vitrine prend généralement une semaine. Un projet plus complexe avec une API prend plusieurs semaines selon la taille du projet et la réactivité des échanges."
         },
         "communication": {
             "question": "Comment se déroule la communication pendant le projet ?",
-            "answer": "Tout commence par un appel découverte pour comprendre vos besoins. Ensuite, nous communiquerons principalement par email ou par messages, pour garder une trace claire des échanges.Je vous enverrai des points d'avancement réguliers et vous pourrez suivre le développement à chaque étape."
+            "answer": "Tout commence par un appel découverte pour comprendre vos besoins. Ensuite, nous communiquerons principalement par email ou par messages, pour garder une trace claire des échanges. Je vous enverrai des points d'avancement réguliers et vous pourrez suivre le développement à chaque étape."
+        },
+        "payments": {
+            "question": "Comment fonctionnent les paiements ?",
+            "answer": "Tout dépend du type de projet. Pour les créations de sites web, je demande un acompte de 50% avant de commencer le développement, le reste étant payé à la livraison. Pour les missions en freelance longue durée, je facture au TJM avec une fréquence convenue ensemble. Pour la maintenance, je propose un paiement mensuel ou annuel."
         },
         "dont_like": {
             "question": "Et si le site ne me plaît pas ?",
             "answer": "Pas d'inquiétude. Avant de commencer le développement, je vous présente une maquette ou un aperçu du rendu final. Vous pourrez me faire vos retours à cette étape et nous ajusterons jusqu'à obtenir un résultat conforme à vos attentes. Rien n'est lancé sans votre validation."
         },
-        "payments": {
-            "question": "Comment fonctionnent les paiements ?",
-            "answer": "Tout dépend du type de projet. Pour les créations de sites web, je vous demanderai un acompte de 50% avant de commencer le développement. Le reste sera payé à la livraison du projet. Pour les missions en freelance, je propose une tarification au TJM ou au livrable mais nous pourrons en rediscuter ensemble. Pour la maintenance, je propose un paiement mensuel ou annuel."
-        },
-        "only_online": {
-            "question": "Puis-je payer uniquement lorsque le site est en ligne ?",
-            "answer": "Non, car la plus grande partie du travail est réalisée bien avant la mise en ligne. Je facture selon le calendrier convenu au départ. Cela permet d'assurer un rythme régulier et une bonne organisation de part et d'autre."
-        },
         "hosting": {
             "question": "Qui s'occupe de l'hébergement ?",
-            "answer": "Deux options s'offrent à vous : Vous gérez votre propre hébergement (je vous accompagne pour le configurer), ou je m'en occupe dans le cadre d'un forfait de maintenance mensuel. J'utilise le même hébergeur pour tous mes clients (sauf demande particulière), ce qui rend la gestion plus simple et permet de garantir une sécurité optimale."
+            "answer": "Deux options s'offrent à vous : vous gérez votre propre hébergement (je vous accompagne pour le configurer), ou je m'en occupe dans le cadre d'un forfait de maintenance mensuel. J'utilise le même hébergeur pour tous mes clients (sauf demande particulière), ce qui rend la gestion plus simple et permet de garantir une sécurité optimale."
         },
         "source_code": {
             "question": "Puis-je avoir accès au code source une fois le projet terminé ?",
@@ -35,7 +55,7 @@
         },
         "contact": {
             "question": "Comment puis-je vous joindre ?",
-            "answer": "Vous pouvez me contacter par email à mathieu.nguyen@proton.me ou via mon profil LinkedIn (https://www.linkedin.com/in/mathieu-ng/). Je répond généralement dans les heures qui suivent."
+            "answer": "Vous pouvez me contacter par email à mathieu.nguyen@proton.me ou via mon profil LinkedIn (https://www.linkedin.com/in/mathieu-ng/). Je réponds généralement dans les heures qui suivent."
         }
     }
 }

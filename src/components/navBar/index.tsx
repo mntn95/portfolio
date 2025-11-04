@@ -2,52 +2,11 @@ import React from "react";
 import type { NavBarProps } from "@/types";
 import NavBarNavigation from "./navBarNavigation";
 import MenuLineIcon from "remixicon-react/MenuLineIcon";
-import {
-    lockBodyScroll,
-    unlockBodyScroll,
-    smoothScrollToId,
-    trapFocus,
-} from "@/lib/ui/navHelpers";
+import { smoothScrollToId } from "@/lib/ui/navHelpers";
 
 const NavBar: React.FC<NavBarProps> = () => {
     const [open, setOpen] = React.useState(false);
     const drawerRef = React.useRef<HTMLDivElement | null>(null);
-    const cleanupTrapRef = React.useRef<null | (() => void)>(null);
-
-    React.useEffect(() => {
-        const onKeyDown = (e: KeyboardEvent) => {
-            if (e.key === "Escape") {
-                setOpen(false);
-            }
-        };
-        if (open) {
-            document.addEventListener("keydown", onKeyDown);
-            lockBodyScroll();
-            const drawerEl = drawerRef.current;
-            if (drawerEl) {
-                // Focus first focusable element
-                const firstLink =
-                    drawerEl.querySelector<HTMLElement>("a[href]");
-                firstLink?.focus();
-                cleanupTrapRef.current = trapFocus(drawerEl);
-            }
-        } else {
-            document.removeEventListener("keydown", onKeyDown);
-            unlockBodyScroll();
-            if (cleanupTrapRef.current) {
-                cleanupTrapRef.current();
-                cleanupTrapRef.current = null;
-            }
-        }
-        return () => {
-            document.removeEventListener("keydown", onKeyDown);
-            if (cleanupTrapRef.current) {
-                cleanupTrapRef.current();
-                cleanupTrapRef.current = null;
-            }
-            unlockBodyScroll();
-        };
-    }, [open]);
 
     return (
         <nav className="w-full z-30 pointer-events-auto">
