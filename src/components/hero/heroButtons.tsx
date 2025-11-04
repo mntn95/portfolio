@@ -24,6 +24,7 @@ const HeroButtons: React.FC<HeroButtonsProps> = () => {
                     className={cn(isMobile ? "mx-auto" : undefined)}
                     href={href}
                     target="_blank"
+                    key={index}
                 >
                     <Button variant={index === 0 ? "default" : "filled"}>
                         <span className="text-xl">
