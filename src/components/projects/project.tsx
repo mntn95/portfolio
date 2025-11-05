@@ -15,7 +15,7 @@ const Project: React.FC<ProjectProps> = ({ data, index }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: isPair(index) ? 100 : -100 }}
-            className="relative w-[350px] sm:w-full h-max border border-border rounded-lg cursor-pointer"
+            className="relative sm:w-full h-max border border-border rounded-lg cursor-pointer"
             whileInView={{ opacity: 1, y: 0 }}
             onClick={() => setShow(!show)}
             viewport={{ once: true }}
@@ -25,11 +25,13 @@ const Project: React.FC<ProjectProps> = ({ data, index }) => {
                 src={data.imageUrl}
                 className="rounded-lg opacity-70"
                 alt="project-image"
+                width={data.width}
+                height={data.height}
             />
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: show ? 1 : 0 }}
-                className="absolute top-0 w-full h-full flex flex-col items-center justify-center grap-y-2 bg-text-white p-6 rounded-lg bg-theme-surface"
+                className="absolute top-0 w-full h-full flex flex-col items-center justify-center gap-y-2 bg-text-white p-6 rounded-lg bg-theme-surface"
             >
                 <h2 className="text-lg font-bold tracking-wide text-theme-text transition-colors">
                     {t(data.nameKey)}

@@ -4,6 +4,8 @@ export interface ProjectData {
     imageUrl: string;
     tech: string[];
     url?: string;
+    width: number;
+    height: number;
 }
 
 export interface ProjectProps {

@@ -5,12 +5,16 @@ export const projectsData = [
         imageUrl: "/projects/alain_afflelou.png",
         tech: ["html", "scss", "react", "bootstrap"],
         url: "https://www.alainafflelou.com/",
+        width: 350,
+        height: 190,
     },
     {
         nameKey: "projects.vamos.name",
         descKey: "projects.vamos.desc",
         imageUrl: "/projects/vamosdesktopmobile.webp",
         tech: ["cypress", "react", "typescript", "graphql", "next", "jest"],
+        width: 350,
+        height: 200,
     },
     {
         nameKey: "projects.merci_lartiste.name",
@@ -18,18 +22,24 @@ export const projectsData = [
         imageUrl: "/projects/merci_lartiste_2.png",
         tech: ["react", "tailwind", "typescript"],
         url: "https://www.merci-lartiste.com/",
+        width: 350,
+        height: 170,
     },
     {
         nameKey: "projects.timeweaver.name",
         descKey: "projects.timeweaver.desc",
         imageUrl: "/projects/timeweaver.png",
         tech: ["react", "next", "typescript", "tailwind", "jest"],
+        width: 350,
+        height: 180,
     },
     {
         nameKey: "projects.terra_oliva.name",
         descKey: "projects.terra_oliva.desc",
         imageUrl: "/projects/terraoliva.png",
         tech: ["next", "react", "typescript", "tailwind", "jest"],
+        width: 350,
+        height: 205,
     },
     {
         nameKey: "projects.freelances_coach.name",
@@ -37,6 +47,8 @@ export const projectsData = [
         imageUrl: "/projects/freelances_coach.png",
         tech: ["react", "tailwind", "next", "typescript"],
         url: "https://main.d3rz0kte5h5b6q.amplifyapp.com/",
+        width: 350,
+        height: 230,
     },
 ];
 

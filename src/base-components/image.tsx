@@ -17,6 +17,7 @@ const BaseImage: React.FC<BaseImageProps> = ({
         height={height}
         className={className}
         priority={priority}
+        loading="eager"
     />
 );
 

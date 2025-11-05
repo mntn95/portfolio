@@ -50,7 +50,7 @@ const ParticlesBackground: React.FC = () => {
 
     React.useEffect(() => {
         initializeParticles();
-    }, [initializeParticles]);
+    }, []);
 
     React.useEffect(() => {
         return () => {

@@ -50,7 +50,7 @@ export const useScrollProgress = (): number => {
                 requestAnimationFrameId.current = null;
             }
         };
-    }, [progress]);
+    }, []);
 
     return progress;
 };
