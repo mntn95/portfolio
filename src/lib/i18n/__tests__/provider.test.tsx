@@ -1,27 +1,38 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { I18nProvider } from "../provider";
+
+// Mock dependencies - must be defined before jest.mock calls
+jest.mock("../config", () => {
+    const mockChangeLanguageFn = jest.fn().mockResolvedValue(undefined);
+    return {
+        __esModule: true,
+        default: {
+            language: "en",
+            changeLanguage: mockChangeLanguageFn,
+            isInitialized: true,
+        },
+    };
+});
+
+jest.mock("../helpers", () => ({
+    detectBrowserLanguage: jest.fn(),
+}));
+
+// Import after mocks are set up
 import i18n from "../config";
 import { detectBrowserLanguage } from "../helpers";
 
-// Mock dependencies
-jest.mock("../config");
-jest.mock("../helpers");
-
-const mockDetectBrowserLanguage = detectBrowserLanguage as jest.MockedFunction<
-    typeof detectBrowserLanguage
->;
-
-const mockI18n = {
-    language: "en",
-    changeLanguage: jest.fn().mockResolvedValue(undefined),
-    isInitialized: true,
-};
+const mockDetectBrowserLanguageTyped =
+    detectBrowserLanguage as jest.MockedFunction<typeof detectBrowserLanguage>;
 
 beforeEach(() => {
     jest.clearAllMocks();
-    (i18n as any) = mockI18n;
-    mockDetectBrowserLanguage.mockReturnValue("en");
-    mockI18n.language = "en";
+    if (i18n.changeLanguage) {
+        // @ts-expect-error - Accessing mock for testing
+        i18n.changeLanguage.mockResolvedValue(undefined);
+    }
+    mockDetectBrowserLanguageTyped.mockReturnValue("en");
+    i18n.language = "en";
 
     // Reset document language
     if (document?.documentElement) {
@@ -31,9 +42,10 @@ beforeEach(() => {
 
 describe("I18nProvider", () => {
     it("should not render children until language is initialized", async () => {
-        mockDetectBrowserLanguage.mockReturnValue("fr");
-        mockI18n.language = "en";
-        mockI18n.changeLanguage.mockImplementation(
+        mockDetectBrowserLanguageTyped.mockReturnValue("fr");
+        i18n.language = "en";
+        // @ts-expect-error - Accessing mock for testing
+        i18n.changeLanguage.mockImplementation(
             () =>
                 new Promise<void>((resolve) => {
                     setTimeout(resolve, 100);
@@ -59,8 +71,8 @@ describe("I18nProvider", () => {
     });
 
     it("should render children after language initialization completes", async () => {
-        mockDetectBrowserLanguage.mockReturnValue("en");
-        mockI18n.language = "en";
+        mockDetectBrowserLanguageTyped.mockReturnValue("en");
+        i18n.language = "en";
 
         render(
             <I18nProvider>
@@ -74,7 +86,7 @@ describe("I18nProvider", () => {
     });
 
     it("should detect browser language on mount", () => {
-        mockDetectBrowserLanguage.mockReturnValue("fr");
+        mockDetectBrowserLanguageTyped.mockReturnValue("fr");
 
         render(
             <I18nProvider>
@@ -82,13 +94,14 @@ describe("I18nProvider", () => {
             </I18nProvider>,
         );
 
-        expect(mockDetectBrowserLanguage).toHaveBeenCalled();
+        expect(mockDetectBrowserLanguageTyped).toHaveBeenCalled();
     });
 
     it("should set document language attribute to detected language", async () => {
-        mockDetectBrowserLanguage.mockReturnValue("fr");
-        mockI18n.language = "en";
-        mockI18n.changeLanguage.mockResolvedValue(undefined);
+        mockDetectBrowserLanguageTyped.mockReturnValue("fr");
+        i18n.language = "en";
+        // @ts-expect-error - Accessing mock for testing
+        i18n.changeLanguage.mockResolvedValue(undefined);
 
         render(
             <I18nProvider>
@@ -102,8 +115,8 @@ describe("I18nProvider", () => {
     });
 
     it("should change i18n language when browser language differs", async () => {
-        mockDetectBrowserLanguage.mockReturnValue("fr");
-        mockI18n.language = "en";
+        mockDetectBrowserLanguageTyped.mockReturnValue("fr");
+        i18n.language = "en";
 
         render(
             <I18nProvider>
@@ -112,13 +125,13 @@ describe("I18nProvider", () => {
         );
 
         await waitFor(() => {
-            expect(mockI18n.changeLanguage).toHaveBeenCalledWith("fr");
+            expect(i18n.changeLanguage).toHaveBeenCalledWith("fr");
         });
     });
 
     it("should not change language when browser language matches i18n language", async () => {
-        mockDetectBrowserLanguage.mockReturnValue("en");
-        mockI18n.language = "en";
+        mockDetectBrowserLanguageTyped.mockReturnValue("en");
+        i18n.language = "en";
         jest.clearAllMocks(); // Clear any previous calls
 
         render(

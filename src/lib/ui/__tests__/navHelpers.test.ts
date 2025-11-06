@@ -51,7 +51,7 @@ describe("smoothScrollToId", () => {
 
     it("should handle server-side rendering gracefully", () => {
         const originalDocument = global.document;
-        // @ts-ignore
+        // @ts-expect-error - Intentionally deleting document for SSR test
         delete global.document;
 
         expect(() => {

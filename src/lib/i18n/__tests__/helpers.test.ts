@@ -13,7 +13,7 @@ describe("detectBrowserLanguage", () => {
 
     it("should return English as default for server-side rendering", () => {
         // Simulate SSR environment by temporarily removing window
-        // @ts-ignore
+        // @ts-expect-error - Intentionally deleting window for SSR test
         delete global.window;
 
         const result = detectBrowserLanguage();

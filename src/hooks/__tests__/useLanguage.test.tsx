@@ -1,4 +1,4 @@
-import { renderHook, act, waitFor } from "@testing-library/react";
+import { renderHook, act } from "@testing-library/react";
 
 // Mock dependencies - must be defined before jest.mock calls
 const mockChangeLanguage = jest.fn().mockResolvedValue(undefined);
@@ -20,8 +20,6 @@ jest.mock("@/lib/i18n/helpers", () => ({
 
 // Import after mocks are set up
 import { useLanguage } from "../useLanguage";
-import i18n from "@/lib/i18n/config";
-import { detectBrowserLanguage } from "@/lib/i18n/helpers";
 
 beforeEach(() => {
     jest.clearAllMocks();

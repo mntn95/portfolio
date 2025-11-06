@@ -22,8 +22,8 @@ describe("useTranslation", () => {
 
         mockUseI18nTranslation.mockReturnValue({
             t: mockT,
-            i18n: mockI18n as any,
-        } as any);
+            i18n: mockI18n,
+        } as unknown as ReturnType<typeof useI18nTranslation>);
 
         const { result } = renderHook(() => useTranslation());
 
@@ -38,8 +38,8 @@ describe("useTranslation", () => {
 
         mockUseI18nTranslation.mockReturnValue({
             t: jest.fn(),
-            i18n: mockI18n as any,
-        } as any);
+            i18n: mockI18n,
+        } as unknown as ReturnType<typeof useI18nTranslation>);
 
         const { result } = renderHook(() => useTranslation());
 
@@ -53,8 +53,8 @@ describe("useTranslation", () => {
 
         mockUseI18nTranslation.mockReturnValue({
             t: jest.fn(),
-            i18n: mockI18n as any,
-        } as any);
+            i18n: mockI18n,
+        } as unknown as ReturnType<typeof useI18nTranslation>);
 
         const { result } = renderHook(() => useTranslation());
 
@@ -69,8 +69,8 @@ describe("useTranslation", () => {
 
         mockUseI18nTranslation.mockReturnValue({
             t: jest.fn(),
-            i18n: mockI18n as any,
-        } as any);
+            i18n: mockI18n,
+        } as unknown as ReturnType<typeof useI18nTranslation>);
 
         const { result } = renderHook(() => useTranslation());
 
@@ -86,8 +86,8 @@ describe("useTranslation", () => {
 
         mockUseI18nTranslation.mockReturnValue({
             t: mockT,
-            i18n: mockI18n as any,
-        } as any);
+            i18n: mockI18n,
+        } as unknown as ReturnType<typeof useI18nTranslation>);
 
         renderHook(() => useTranslation("hero"));
 
@@ -102,8 +102,8 @@ describe("useTranslation", () => {
 
         mockUseI18nTranslation.mockReturnValue({
             t: mockT,
-            i18n: mockI18n as any,
-        } as any);
+            i18n: mockI18n,
+        } as unknown as ReturnType<typeof useI18nTranslation>);
 
         renderHook(() => useTranslation());
 
@@ -125,8 +125,8 @@ describe("useTranslation", () => {
 
         mockUseI18nTranslation.mockReturnValue({
             t: mockT,
-            i18n: mockI18n as any,
-        } as any);
+            i18n: mockI18n,
+        } as unknown as ReturnType<typeof useI18nTranslation>);
 
         const { result } = renderHook(() => useTranslation("hero"));
 
@@ -147,8 +147,8 @@ describe("useTranslation", () => {
 
         mockUseI18nTranslation.mockReturnValue({
             t: jest.fn(),
-            i18n: mockI18n as any,
-        } as any);
+            i18n: mockI18n,
+        } as unknown as ReturnType<typeof useI18nTranslation>);
 
         const { result, rerender } = renderHook(() => useTranslation());
 
@@ -171,8 +171,8 @@ describe("useTranslation", () => {
 
         mockUseI18nTranslation.mockReturnValue({
             t: mockT,
-            i18n: mockI18n as any,
-        } as any);
+            i18n: mockI18n,
+        } as unknown as ReturnType<typeof useI18nTranslation>);
 
         // User uses hero namespace
         const { result: heroResult } = renderHook(() => useTranslation("hero"));

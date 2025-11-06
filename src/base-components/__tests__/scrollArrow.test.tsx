@@ -8,11 +8,10 @@ jest.mock("framer-motion", () => ({
     motion: {
         button: ({
             children,
-            whileInView,
-            initial,
-            transition,
             ...props
-        }: any) => <button {...props}>{children}</button>,
+        }: React.ButtonHTMLAttributes<HTMLButtonElement> & {
+            children: React.ReactNode;
+        }) => <button {...props}>{children}</button>,
     },
 }));
 

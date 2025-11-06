@@ -10,7 +10,7 @@ const mockRequestAnimationFrame = jest.fn((callback: FrameRequestCallback) => {
     return ++rafId;
 });
 
-const mockCancelAnimationFrame = jest.fn((id: number) => {
+const mockCancelAnimationFrame = jest.fn(() => {
     rafCallbacks = [];
 });
 
