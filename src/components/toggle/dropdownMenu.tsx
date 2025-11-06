@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { englishFlagIcon, frenchFlagIcon } from "@/assets";
+import { englishFlagIcon, frenchFlagIcon } from "@/constants";
 
 interface DropdownMenuProps {
     isOpen: boolean;
@@ -76,4 +76,3 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
 };
 
 export default DropdownMenu;
-

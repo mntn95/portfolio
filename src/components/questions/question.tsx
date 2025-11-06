@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "@/hooks/useTranslation";
-import { QuestionArrow } from "@/assets";
+import { QuestionArrow } from "@/constants";
 import type { QuestionProps, AnimationVariants } from "@/types";
 
 const Question: React.FC<QuestionProps> = ({ question, index }) => {

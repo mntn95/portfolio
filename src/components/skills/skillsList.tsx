@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { skills } from "@/assets";
+import { skills } from "@/data";
 import type { SkillData } from "@/types";
 import Skill from "./skill";
 

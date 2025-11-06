@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { copyRightIcon } from "@/assets";
+import { copyRightIcon } from "@/constants";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const Copyright: React.FC = () => {

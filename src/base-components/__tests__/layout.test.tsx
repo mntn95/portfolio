@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Layout from "../layout";
-import { navbarData } from "@/assets";
+import { navbarData } from "@/constants";
 
 // Mock ScrollArrow
 jest.mock("../scrollArrow", () => ({

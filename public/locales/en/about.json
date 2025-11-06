@@ -6,5 +6,6 @@
         "3": "I feel at home in the JavaScript ecosystem, but I also enjoy exploring other technologies when the context requires it.",
         "4": "For me, every project is a unique adventure. If you want to bring an idea to life or create something new, let's talk about it!"
     },
-    "button": "Download Resume"
+    "downloadButton": "Download Resume",
+    "contactButton": "Contact"
 }

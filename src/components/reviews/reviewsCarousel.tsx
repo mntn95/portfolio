@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { animate, motion } from "framer-motion";
-import { reviews } from "@/assets";
+import { reviews } from "@/data";
 import { isPair } from "@/base-components";
 import type { ReviewData } from "@/types";
 import Review from "./review";

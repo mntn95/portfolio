@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { services } from "@/assets";
+import { services } from "@/data";
 import type { ServiceData } from "@/types";
 import ServiceCard from "./serviceCard";
 

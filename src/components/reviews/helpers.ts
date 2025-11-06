@@ -1,4 +1,4 @@
-import { starIcons } from "@/assets";
+import { starIcons } from "@/constants";
 
 const getStarIcon = (starValue: number) => {
     if (starValue === 1) return starIcons[0];
@@ -7,10 +7,10 @@ const getStarIcon = (starValue: number) => {
     return starIcons[2];
 };
 
-const getStarValue = (stars: number[]) => stars.reduce(
-    (aggregatedValue, currentValue) =>
-        (aggregatedValue += currentValue),
-    0,
-)
+const getStarValue = (stars: number[]) =>
+    stars.reduce(
+        (aggregatedValue, currentValue) => (aggregatedValue += currentValue),
+        0,
+    );
 
-export {getStarIcon, getStarValue}
+export { getStarIcon, getStarValue };

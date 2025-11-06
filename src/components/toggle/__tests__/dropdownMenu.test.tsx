@@ -16,8 +16,8 @@ jest.mock("framer-motion", () => ({
     ),
 }));
 
-// Mock the assets
-jest.mock("@/assets", () => ({
+// Mock the constants
+jest.mock("@/constants", () => ({
     englishFlagIcon: <span data-testid="english-flag">🇬🇧</span>,
     frenchFlagIcon: <span data-testid="french-flag">🇫🇷</span>,
 }));

@@ -9,7 +9,7 @@ const NavBar: React.FC<NavBarProps> = () => {
     const drawerRef = React.useRef<HTMLDivElement | null>(null);
 
     return (
-        <nav className="w-full z-30 pointer-events-auto">
+        <nav className="w-full z-31 pointer-events-auto">
             {/* Mobile top bar: burger */}
             <div className="flex xxl:hidden absolute top-0 left-0 md:flex w-full items-center justify-between py-3 px-4 z-30">
                 <button

@@ -51,17 +51,3 @@ export const projectsData = [
         height: 230,
     },
 ];
-
-export const projectsButton = [
-    "all",
-    "bootstrap",
-    "cypress",
-    "graphql",
-    "html",
-    "jest",
-    "next",
-    "react",
-    "scss",
-    "tailwind",
-    "typescript",
-];

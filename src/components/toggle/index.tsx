@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { earthIcon } from "@/assets";
+import { earthIcon } from "@/constants";
 import type { ToggleProps } from "@/types";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -71,7 +71,7 @@ const Toggle: React.FC<ToggleProps> = ({ children }) => {
         <main>
             <div className="bg-theme-background">
                 <div className="w-full mx-auto flex flex-col justify-start px-5 md:px-10 xl:px-[90px] overflow-hidden">
-                    <div className="absolute right-14 sm:right-10 top-4 z-40">
+                    <div className="absolute right-14 sm:right-10 top-4 sm:z-31 z-40">
                         <button
                             ref={buttonRef}
                             onClick={toggleMenu}

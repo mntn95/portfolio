@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Heading } from "@/base-components";
-import { navbarData } from "@/assets";
+import { navbarData } from "@/constants";
 import ScrollArrow from "./scrollArrow";
 
 type LayoutProps = {

@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { arrowIcons, reviews } from "@/assets";
+import { arrowIcons } from "@/constants";
+import { reviews } from "@/data";
 
 type ReviewsNavigationT = {
     index: number;

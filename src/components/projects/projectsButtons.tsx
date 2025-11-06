@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { animate, motion } from "framer-motion";
-import { projectsButton } from "@/assets";
+import { projectsButton } from "@/constants";
 import { useTranslation } from "@/hooks/useTranslation";
 import cn from "classnames";
 import type { ProjectsButtonType } from "@/types";

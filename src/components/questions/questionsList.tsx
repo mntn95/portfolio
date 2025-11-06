@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { questions } from "@/assets";
+import { questions } from "@/data";
 import type { QuestionData } from "@/types";
 import Question from "./question";
 

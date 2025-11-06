@@ -1,8 +1,8 @@
 "use client";
-
 import * as React from "react";
-import { downloadIcon } from "@/assets";
+
 import { Button, Link } from "@/base-components";
+import { aboutLinks } from "@/constants";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const AboutTextContent: React.FC = () => {
@@ -16,12 +16,25 @@ const AboutTextContent: React.FC = () => {
                     <li key={index}>{item}</li>
                 ))}
             </ul>
-            <Link href="/my-cv.pdf" isDownloadLink>
-                <Button>
-                    <span>{t("button")}</span>
-                    <span className="text-xl">{downloadIcon}</span>
-                </Button>
-            </Link>
+            <div className="sm:block flex gap-x-4">
+                {aboutLinks.map(
+                    ({ href, icon, label, isDownloadLink }, index) => (
+                        <Link
+                            href={href}
+                            isDownloadLink={isDownloadLink}
+                            target="_blank"
+                            key={index}
+                        >
+                            <Button
+                                variant={index === 0 ? "default" : "filled"}
+                            >
+                                <span className="text-xl">{icon}</span>
+                                <span>{t(label)}</span>
+                            </Button>
+                        </Link>
+                    ),
+                )}
+            </div>
         </div>
     );
 };

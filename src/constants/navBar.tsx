@@ -1,9 +1,3 @@
-// import { PiCopyrightThin } from 'react-icons/pi'
-import CopyrightLineIcon from "remixicon-react/CopyrightLineIcon";
-
-// export const copyRightIcon = <PiCopyrightThin />
-export const copyRightIcon = <CopyrightLineIcon />;
-
 import Home5LineIcon from "remixicon-react/Home5LineIcon";
 import UserLineIcon from "remixicon-react/UserLineIcon";
 import BriefcaseLineIcon from "remixicon-react/BriefcaseLineIcon";

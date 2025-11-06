@@ -6,5 +6,6 @@
         "3": "Je me sens chez moi dans l'écosystème JavaScript, mais j'aime aussi explorer d'autres technologies quand le contexte l'exige.",
         "4": "Pour moi, chaque projet est une aventure unique. Si vous avez envie de donner vie à une idée ou de créer quelque chose de nouveau, parlons-en !"
     },
-    "button": "Télécharger CV"
+    "downloadButton": "Télécharger CV",
+    "contactButton": "Contact"
 }

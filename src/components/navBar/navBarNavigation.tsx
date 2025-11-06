@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Link } from "@/base-components";
-import { navbarData } from "@/assets";
+import { navbarData } from "@/constants";
 import { useTranslation } from "@/hooks/useTranslation";
 import type { NavBarNavigationProps } from "@/types";
 
