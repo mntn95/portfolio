@@ -18,8 +18,8 @@ const config: Config = {
             },
         },
         screens: {
-            xxl: { min: "1401px" },
-            xl: { max: "1400px" },
+            xxl: { min: "1440px" },
+            xl: { max: "1439px" },
             lg: { max: "1150px" },
             md: { max: "767px" },
             sm: { max: "639px" },

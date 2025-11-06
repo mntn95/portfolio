@@ -35,7 +35,7 @@ const Skill: React.FC<SkillProps> = ({ icon, index, name }) => {
                 alt={name}
                 width={100}
                 height={100}
-                className="h-[40px] w-auto"
+                className="sm:h-[25px] h-[40px] w-auto"
             />
             <p className="text-sm text-theme-text">{name}</p>
         </motion.div>

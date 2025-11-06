@@ -33,7 +33,7 @@ const Question: React.FC<QuestionProps> = ({ question, index }) => {
         >
             <h3
                 onClick={() => setShow(!show)}
-                className={`flex items-center text-xl font-extralight text-theme-text hover:text-link tracking-wide cursor-pointer ${show && "border-b text-link"}`}
+                className={`flex items-center sm:text-sm text-md font-extralight text-theme-text hover:text-link tracking-wide cursor-pointer ${show && "border-b text-link"}`}
             >
                 <motion.span animate={{ rotate: show ? 180 : 0 }}>
                     {QuestionArrow}
@@ -61,7 +61,7 @@ const Question: React.FC<QuestionProps> = ({ question, index }) => {
                     stiffness: show ? 250 : 50,
                     opacity: { delay: show ? 0.2 : 0 },
                 }}
-                className="box-border origin-top pl-8 text-lg font-extralight tracking-wide text-theme-text first-letter:pl-3"
+                className="box-border origin-top pl-8 sm:text-sm text-md font-extralight tracking-wide text-theme-text first-letter:pl-3"
                 style={{
                     wordWrap: "break-word",
                 }}

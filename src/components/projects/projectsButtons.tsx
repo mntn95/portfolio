@@ -35,7 +35,7 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
     }, [index]);
 
     return (
-        <div className="flex flex-wrap items-center justify-between gap-4 py-10">
+        <div className="flex flex-wrap items-center justify-between gap-4 py-5">
             {projectsButton.map(
                 (label: ProjectsButtonType, buttonIndex: number) => (
                     <motion.button
@@ -52,7 +52,7 @@ const ProjectsButtons: React.FC<ProjectsButtonsT> = ({
                             setIndex(buttonIndex);
                         }}
                         className={cn(
-                            "border border-border rounded-xl px-2 py-1 text-sm font-light tracking-wider",
+                            "border border-border rounded-xl px-2 py-1 sm:text-xs text-sm font-light tracking-wider",
                             "bg-theme-surface text-theme-text",
                             {
                                 "opacity-100": buttonIndex === index,

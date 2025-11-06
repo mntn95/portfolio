@@ -45,20 +45,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, service }) => {
             whileHover={{ scale: 1.05 }}
             transition={{
                 duration: 0.4,
-                delay: index * 0.2,
                 scale: { duration: 0.15 },
             }}
             viewport={{ once: true }}
             key={index}
-            className="flex flex-col items-center gap-y-4 p-6 rounded-lg border border-border text-theme-text bg-theme-surface transition-all duration-300 drop-shadow-[0px_0px_4px_var(--color-border)]"
+            className="flex flex-col items-center gap-y-4 p-4 rounded-lg border border-border text-theme-text bg-theme-surface transition-all duration-300 drop-shadow-[0px_0px_4px_var(--color-border)]"
         >
             <div className="flex justify-center">{icon}</div>
-            <h3 className="text-xl font-bold mb-2 text-center">
+            <h3 className="text-lg font-bold mb-2 text-center">
                 <span className={highlightColor}>{t(service.title)}</span>
             </h3>
-            <p className="text-lg mb-3">{t(service.subtitle)}</p>
+            <p className="text-sm mb-3">{t(service.subtitle)}</p>
             {Object.values(service.description).map((item, descIndex) => (
-                <p key={descIndex} className="text-sm leading-relaxed">
+                <p key={descIndex} className="text-xs leading-relaxed">
                     {t(item)}
                 </p>
             ))}
@@ -66,7 +65,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, service }) => {
             <div className="w-full">
                 <h4
                     className={classNames(
-                        "text-sm font-semibold mb-2",
+                        "text-xs font-semibold mb-2",
                         "text-warning",
                     )}
                 >
