@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running ESLint..."
+pnpm lint || exit 1
+
+echo "📝 Running TypeScript type check..."
+pnpm type-check || exit 1
+
+echo "🧪 Running Jest tests..."
+pnpm test || exit 1
+
+echo "✅ All pre-commit checks passed!"
